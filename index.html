@@ -1,0 +1,2212 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bihar Board Biology — Class 10</title>
+<meta name="description" content="Bihar Board (BSEB) Class 10 Biology Objective Questions & Test Portal. 120+ Hardcoded MCQs per chapter. वार्षिक परीक्षा Pattern.">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;800&family=Hind:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green: #1a7c3e;
+    --gl: #27ae60;
+    --gd: #0d5c2e;
+    --gp: #e8f5e9;
+    --gp2: #c8e6c9;
+    --red: #e74c3c;
+    --bg: #f0f7f0;
+    --text: #1a2e1a;
+    --muted: #5a7a5a;
+    --border: #c8e6c9;
+    --white: #fff;
+    --gold: #f1c40f;
+    --blue: #2980b9;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Hind', sans-serif;
+    background: linear-gradient(135deg, #1a3a2a, #0d2818 50%, #1a4a30);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* Phone-size container */
+  .app-shell {
+    width: 100%;
+    max-width: 420px;
+    min-height: 100vh;
+    background: var(--bg);
+    box-shadow: 0 0 40px rgba(0,0,0,0.4);
+    position: relative;
+  }
+  @media (max-width: 420px) {
+    .app-shell { box-shadow: none; }
+    body { background: var(--bg); }
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 7px; }
+  ::-webkit-scrollbar-track { background: var(--gp); }
+  ::-webkit-scrollbar-thumb { background: var(--gl); border-radius: 4px; }
+
+  /* Header */
+  header {
+    background: linear-gradient(135deg, #1a7c3e, #0d5c2e 60%, #27ae60);
+    color: #fff;
+    text-align: center;
+    padding: 24px 16px 20px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(26, 124, 62, 0.25);
+  }
+  header::before {
+    content: '🌿';
+    font-size: 90px;
+    position: absolute;
+    right: -12px;
+    top: -12px;
+    opacity: 0.12;
+    transform: rotate(20deg);
+  }
+  header::after {
+    content: '🧬';
+    font-size: 60px;
+    position: absolute;
+    left: -8px;
+    bottom: -8px;
+    opacity: 0.08;
+    transform: rotate(-15deg);
+  }
+  header h1 {
+    font-family: 'Baloo 2', cursive;
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1.1;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  }
+  header p {
+    font-size: 0.92rem;
+    opacity: 0.88;
+    margin-top: 4px;
+  }
+
+  /* Navigation */
+  nav {
+    display: flex;
+    background: #fff;
+    border-bottom: 2px solid var(--border);
+    overflow-x: auto;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+  nav button {
+    flex: 1;
+    min-width: 100px;
+    padding: 14px 8px;
+    border: none;
+    background: none;
+    font-family: 'Baloo 2', cursive;
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: var(--muted);
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition: all 0.2s;
+    white-space: nowrap;
+  }
+  nav button.active {
+    color: var(--green);
+    border-bottom-color: var(--green);
+    background: var(--gp);
+  }
+  nav button:hover:not(.active) { background: #f9f9f9; }
+
+  /* Main Container */
+  main {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 16px;
+  }
+
+  /* Page / View */
+  .page { display: none; animation: fadeIn 0.35s ease; }
+  .page.active { display: block; }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Section Titles */
+  .section-title {
+    font-family: 'Baloo 2', cursive;
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--green);
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  /* Chapter Grid */
+  .chapter-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 12px;
+  }
+  .chapter-card {
+    background: #fff;
+    border: 2px solid var(--border);
+    border-radius: 14px;
+    padding: 16px 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 11px;
+  }
+  .chapter-card:hover {
+    border-color: var(--gl);
+    box-shadow: 0 6px 18px rgba(26, 124, 62, 0.12);
+    transform: translateY(-3px);
+  }
+  .chapter-icon { font-size: 2rem; flex-shrink: 0; }
+  .chapter-card h3 {
+    font-family: 'Baloo 2', cursive;
+    font-size: 0.95rem;
+    font-weight: 700;
+    line-height: 1.3;
+  }
+  .chapter-card span {
+    font-size: 0.78rem;
+    color: var(--muted);
+  }
+  .chapter-card .qbadge {
+    margin-left: auto;
+    font-size: 0.72rem;
+    background: var(--gp);
+    color: var(--green);
+    border-radius: 8px;
+    padding: 3px 8px;
+    font-weight: 700;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  /* Back Button */
+  .back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--gp);
+    border: 1.5px solid var(--border);
+    color: var(--green);
+    font-family: 'Baloo 2', cursive;
+    font-weight: 600;
+    padding: 8px 18px;
+    border-radius: 22px;
+    cursor: pointer;
+    margin-bottom: 14px;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+  }
+  .back-btn:hover { background: var(--green); color: #fff; }
+
+  /* Q&A Accordion */
+  .qa-item {
+    background: #fff;
+    border: 1.5px solid var(--border);
+    border-radius: 12px;
+    margin-bottom: 9px;
+    overflow: hidden;
+    transition: box-shadow 0.2s;
+  }
+  .qa-item:hover {
+    box-shadow: 0 2px 8px rgba(26, 124, 62, 0.08);
+  }
+  .qa-q {
+    padding: 14px 16px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+    transition: background 0.2s;
+    font-size: 0.95rem;
+    line-height: 1.55;
+  }
+  .qa-q:hover { background: var(--gp); }
+  .qa-q .arrow {
+    color: var(--green);
+    font-size: 1rem;
+    flex-shrink: 0;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .qa-a {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease, padding 0.35s ease;
+    background: var(--gp);
+    border-top: 1.5px solid var(--border);
+    color: var(--green);
+    font-size: 0.92rem;
+    font-weight: 600;
+    padding: 0 16px;
+  }
+  .qa-a.open { max-height: 120px; padding: 12px 16px; }
+
+  /* Search Bar */
+  .search-bar {
+    width: 100%;
+    padding: 11px 15px;
+    border: 2px solid var(--border);
+    border-radius: 12px;
+    font-family: 'Hind', sans-serif;
+    font-size: 0.95rem;
+    outline: none;
+    margin-bottom: 14px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    background: #fff;
+  }
+  .search-bar:focus {
+    border-color: var(--green);
+    box-shadow: 0 0 0 3px rgba(26, 124, 62, 0.1);
+  }
+
+  .qa-count-badge {
+    display: inline-block;
+    background: var(--gl);
+    color: #fff;
+    border-radius: 8px;
+    padding: 2px 11px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-left: 8px;
+  }
+
+  /* Loading Spinner */
+  .loading-box {
+    background: #fff;
+    border: 2px solid var(--border);
+    border-radius: 18px;
+    padding: 36px 22px;
+    text-align: center;
+  }
+  .spinner {
+    width: 48px;
+    height: 48px;
+    border: 4px solid var(--gp);
+    border-top: 4px solid var(--green);
+    border-radius: 50%;
+    animation: spin 0.75s linear infinite;
+    margin: 0 auto 18px;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .loading-box h3 {
+    font-family: 'Baloo 2', cursive;
+    color: var(--green);
+    font-size: 1.15rem;
+    margin-bottom: 8px;
+  }
+  .loading-box p { color: var(--muted); font-size: 0.9rem; }
+  .prog-bar {
+    height: 8px;
+    background: var(--border);
+    border-radius: 4px;
+    margin-top: 16px;
+    overflow: hidden;
+  }
+  .prog-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--green), var(--gl));
+    border-radius: 4px;
+    transition: width 0.4s;
+  }
+
+  /* Error Box */
+  .error-box {
+    background: #fff5f5;
+    border: 2px solid #f5c6cb;
+    border-radius: 14px;
+    padding: 20px;
+    text-align: center;
+    color: var(--red);
+  }
+
+  /* Test Setup Form */
+  .test-setup {
+    background: #fff;
+    border-radius: 18px;
+    border: 2px solid var(--border);
+    padding: 24px;
+    margin-bottom: 14px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  }
+  .test-setup h2 {
+    font-family: 'Baloo 2', cursive;
+    font-size: 1.3rem;
+    color: var(--green);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .form-row { margin-bottom: 14px; }
+  .form-row label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+    font-size: 0.92rem;
+  }
+  .form-row select,
+  .form-row input[type=number] {
+    width: 100%;
+    padding: 10px 12px;
+    border: 2px solid var(--border);
+    border-radius: 10px;
+    font-family: 'Hind', sans-serif;
+    font-size: 0.95rem;
+    background: #fff;
+    color: var(--text);
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .form-row select:focus,
+  .form-row input:focus { border-color: var(--green); }
+
+  .start-btn {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, var(--green), var(--gl));
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-family: 'Baloo 2', cursive;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 4px 12px rgba(26, 124, 62, 0.2);
+  }
+  .start-btn:hover { background: var(--gd); transform: translateY(-1px); box-shadow: 0 6px 16px rgba(26, 124, 62, 0.3); }
+  .start-btn:disabled { background: #aaa; cursor: not-allowed; box-shadow: none; }
+
+  /* Quiz Active */
+  .quiz-header {
+    background: #fff;
+    border-radius: 12px;
+    border: 2px solid var(--border);
+    padding: 12px 16px;
+    margin-bottom: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .quiz-header .qcount {
+    font-family: 'Baloo 2', cursive;
+    font-weight: 700;
+    color: var(--green);
+    font-size: 1.05rem;
+  }
+  .timer {
+    font-family: 'Baloo 2', cursive;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--red);
+  }
+  .progress-bar {
+    height: 7px;
+    background: var(--border);
+    border-radius: 4px;
+    margin-bottom: 14px;
+    overflow: hidden;
+  }
+  .progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--green), var(--gl));
+    border-radius: 4px;
+    transition: width 0.3s;
+  }
+  .quiz-card {
+    background: #fff;
+    border-radius: 16px;
+    border: 2px solid var(--border);
+    padding: 20px;
+    margin-bottom: 14px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  }
+  .quiz-card .qno {
+    font-size: 0.8rem;
+    color: var(--muted);
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  .quiz-card .qtext {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.65;
+    margin-bottom: 16px;
+    color: var(--text);
+  }
+  .options { display: grid; gap: 10px; }
+  .option-btn {
+    padding: 12px 15px;
+    border: 2px solid var(--border);
+    border-radius: 10px;
+    background: #fff;
+    text-align: left;
+    cursor: pointer;
+    font-family: 'Hind', sans-serif;
+    font-size: 0.93rem;
+    font-weight: 500;
+    transition: all 0.15s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .option-btn:hover:not(:disabled) {
+    border-color: var(--gl);
+    background: var(--gp);
+    transform: translateX(3px);
+  }
+  .option-btn.correct {
+    border-color: var(--green);
+    background: #d4edda;
+    color: #1a7c3e;
+    box-shadow: 0 0 0 2px rgba(26, 124, 62, 0.15);
+  }
+  .option-btn.wrong {
+    border-color: var(--red);
+    background: #fde8e8;
+    color: var(--red);
+  }
+  .option-btn .opt-label {
+    font-weight: 700;
+    font-family: 'Baloo 2', cursive;
+    color: var(--green);
+    min-width: 22px;
+  }
+  .option-btn.correct .opt-label, .option-btn.wrong .opt-label { color: inherit; }
+  .option-btn:disabled { cursor: not-allowed; }
+
+  .next-btn {
+    width: 100%;
+    padding: 13px;
+    background: linear-gradient(135deg, var(--green), var(--gl));
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-family: 'Baloo 2', cursive;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: none;
+    transition: all 0.2s;
+    box-shadow: 0 4px 12px rgba(26, 124, 62, 0.2);
+  }
+  .next-btn.show { display: block; }
+  .next-btn:hover { background: var(--gd); }
+
+  /* Result Card */
+  .result-card {
+    background: #fff;
+    border-radius: 20px;
+    border: 2px solid var(--border);
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  }
+  .score-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--green), var(--gl));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+    color: #fff;
+    box-shadow: 0 8px 24px rgba(26, 124, 62, 0.3);
+  }
+  .score-circle .score-num {
+    font-family: 'Baloo 2', cursive;
+    font-size: 2.2rem;
+    font-weight: 800;
+    line-height: 1;
+  }
+  .score-circle .score-lbl { font-size: 0.8rem; opacity: 0.9; }
+  .result-card h2 {
+    font-family: 'Baloo 2', cursive;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--text);
+    margin-bottom: 8px;
+  }
+  .result-stats {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin: 16px 0 22px;
+    flex-wrap: wrap;
+  }
+  .stat-box {
+    background: var(--gp);
+    border-radius: 10px;
+    padding: 12px 18px;
+    min-width: 80px;
+  }
+  .stat-box .sv {
+    font-family: 'Baloo 2', cursive;
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--green);
+  }
+  .stat-box .sl { font-size: 0.78rem; color: var(--muted); }
+  .stat-box.wrong .sv { color: var(--red); }
+
+  .retry-btn {
+    padding: 12px 30px;
+    background: linear-gradient(135deg, var(--green), var(--gl));
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-family: 'Baloo 2', cursive;
+    font-size: 0.97rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin: 0 6px;
+    transition: all 0.2s;
+  }
+  .retry-btn:hover { background: var(--gd); }
+  .retry-btn.outline {
+    background: #fff;
+    color: var(--green);
+    border: 2px solid var(--green);
+  }
+  .retry-btn.outline:hover { background: var(--gp); }
+
+  .review-list { text-align: left; margin-top: 20px; }
+  .review-item {
+    border: 1.5px solid var(--border);
+    border-radius: 10px;
+    padding: 12px 14px;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+  }
+  .review-item.r-correct { border-color: var(--green); background: #f0fbf3; }
+  .review-item.r-wrong { border-color: var(--red); background: #fff5f5; }
+  .review-item .ri-q { font-weight: 600; margin-bottom: 6px; line-height: 1.5; }
+  .review-item .ri-your { color: var(--red); font-size: 0.85rem; }
+  .review-item .ri-correct { color: var(--green); font-size: 0.85rem; }
+
+  /* API Key Section */
+  .api-key-box {
+    background: #fff;
+    border: 2px solid var(--border);
+    border-radius: 14px;
+    padding: 18px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .api-key-box label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--green);
+    white-space: nowrap;
+  }
+  .api-key-box input {
+    flex: 1;
+    min-width: 200px;
+    padding: 9px 12px;
+    border: 2px solid var(--border);
+    border-radius: 10px;
+    font-family: 'Hind', sans-serif;
+    font-size: 0.88rem;
+    outline: none;
+  }
+  .api-key-box input:focus { border-color: var(--green); }
+  .api-key-box button {
+    padding: 9px 18px;
+    background: var(--green);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Baloo 2', cursive;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .api-key-box button:hover { background: var(--gd); }
+  .api-key-status {
+    font-size: 0.82rem;
+    margin-top: 6px;
+    width: 100%;
+  }
+  .api-key-status.ok { color: var(--green); }
+  .api-key-status.err { color: var(--red); }
+
+  /* Info Note */
+  .info-note {
+    background: #fffbe6;
+    border: 1.5px solid #f1c40f;
+    border-radius: 10px;
+    padding: 12px 14px;
+    margin-bottom: 14px;
+    font-size: 0.88rem;
+    color: #7d6608;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .info-note .icon { font-size: 1.2rem; flex-shrink: 0; }
+
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 22px 16px;
+    color: var(--muted);
+    font-size: 0.82rem;
+    border-top: 2px solid var(--border);
+    margin-top: 30px;
+    background: #fff;
+  }
+
+  /* Speaker Button */
+  .btn-speak {
+    background: linear-gradient(135deg, #27ae60, #1a7c3e);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: all 0.25s ease;
+    box-shadow: 0 2px 8px rgba(26, 124, 62, 0.25);
+    flex-shrink: 0;
+  }
+  .btn-speak:hover {
+    transform: scale(1.15);
+    box-shadow: 0 4px 14px rgba(26, 124, 62, 0.4);
+  }
+  .btn-speak:active { transform: scale(0.95); }
+  .btn-speak.speaking {
+    animation: speakPulse 1s infinite;
+    background: linear-gradient(135deg, #e67e22, #d35400);
+  }
+  @keyframes speakPulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(230, 126, 34, 0.5); }
+    50% { box-shadow: 0 0 0 10px rgba(230, 126, 34, 0); }
+  }
+  .qa-q-left {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    flex: 1;
+  }
+  .tq-speak-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  /* 3D Human Body */
+  .body3d-wrapper {
+    perspective: 800px;
+    display: flex;
+    justify-content: center;
+    padding: 16px 0 8px;
+  }
+  .body3d-card {
+    background: linear-gradient(145deg, rgba(255,255,255,0.95), rgba(232,245,233,0.9));
+    border-radius: 20px;
+    padding: 16px 10px 12px;
+    box-shadow: 0 8px 32px rgba(26,124,62,0.15), inset 0 1px 0 rgba(255,255,255,0.8);
+    border: 1.5px solid var(--border);
+    text-align: center;
+    width: 100%;
+    max-width: 340px;
+    animation: float3d 6s ease-in-out infinite;
+    transform-style: preserve-3d;
+  }
+  @keyframes float3d {
+    0%, 100% { transform: rotateY(-5deg) rotateX(2deg); }
+    50% { transform: rotateY(5deg) rotateX(-2deg); }
+  }
+  .body3d-title {
+    font-family: 'Baloo 2', cursive;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--green);
+    margin-bottom: 8px;
+  }
+  .body3d-scene {
+    position: relative;
+    width: 180px;
+    height: 340px;
+    margin: 0 auto;
+  }
+  .body3d-scene svg {
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 4px 12px rgba(26,124,62,0.15));
+  }
+  .organ-label {
+    position: absolute;
+    font-size: 0.65rem;
+    font-weight: 600;
+    color: var(--white);
+    background: var(--green);
+    padding: 2px 8px;
+    border-radius: 10px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.25s;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    z-index: 5;
+  }
+  .organ-label:hover {
+    transform: scale(1.15);
+    background: var(--gd);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  }
+  .organ-dot {
+    position: absolute;
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    z-index: 4;
+    animation: organPulse 2s ease-in-out infinite;
+  }
+  @keyframes organPulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(231,76,60,0.5); transform: scale(1); }
+    50% { box-shadow: 0 0 0 6px rgba(231,76,60,0); transform: scale(1.2); }
+  }
+  .body3d-hint {
+    font-size: 0.72rem;
+    color: var(--muted);
+    margin-top: 6px;
+  }
+
+  /* Kajal Personalized Card */
+  .kajal-card {
+    background: linear-gradient(135deg, #ffe0e9, #ffb6c1);
+    border: 2px dashed #ff8da1;
+    border-radius: 16px;
+    padding: 16px 12px;
+    margin: 16px 16px 8px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(255, 182, 193, 0.5);
+    animation: gentlePulse 2.5s ease-in-out infinite;
+  }
+  .kajal-card h2 {
+    color: #d81b60;
+    font-family: 'Baloo 2', cursive;
+    font-size: 1.4rem;
+    margin-bottom: 4px;
+    text-shadow: 0 1px 2px rgba(255,255,255,0.8);
+  }
+  .kajal-card p {
+    color: #ad1457;
+    font-size: 0.95rem;
+    font-weight: 600;
+  }
+  .kajal-card .heart {
+    display: inline-block;
+    animation: heartBeat 1s infinite;
+  }
+  @keyframes gentlePulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+  }
+  @keyframes heartBeat {
+    0%, 100% { transform: scale(1); }
+    15% { transform: scale(1.2); }
+    30% { transform: scale(1); }
+    45% { transform: scale(1.2); }
+    60% { transform: scale(1); }
+  }
+
+  /* Responsive */
+  @media (max-width: 600px) {
+    header h1 { font-size: 1.65rem; }
+    .chapter-grid { grid-template-columns: 1fr; }
+    .result-stats { gap: 8px; }
+    .stat-box { min-width: 68px; padding: 10px 14px; }
+    .btn-speak { width: 32px; height: 32px; min-width: 32px; font-size: 1rem; }
+  }
+</style>
+</head>
+<body>
+<div class="app-shell">
+
+<header>
+  <h1>🌿 Bihar Board Biology</h1>
+  <p>Class 10 NCERT • 720+ Objective Questions • वार्षिक परीक्षा Pattern</p>
+</header>
+
+<nav id="mainNav">
+  <button class="active" onclick="showTab('home')">🏠 Home</button>
+  <button onclick="showTab('objectives')">📚 Objectives</button>
+  <button onclick="showTab('test')">📝 Test</button>
+</nav>
+
+<main>
+
+<!-- ================= HOME ================= -->
+<div id="home" class="page active">
+
+  <!-- Special Greeting for Kajal -->
+  <div class="kajal-card">
+    <h2>🌸 All the best, Kajal! 🌸</h2>
+    <p>Made with <span class="heart">❤️</span> specially for my Cuti Pai</p>
+    <p style="font-size: 0.8rem; margin-top: 6px; opacity: 0.9;">Best of luck for your Bihar Board Exams! ✨</p>
+  </div>
+
+  <!-- 3D Human Body -->
+  <div class="body3d-wrapper">
+    <div class="body3d-card">
+      <div class="body3d-title">🫀 मानव शरीर — Human Body</div>
+      <div class="body3d-scene">
+        <svg viewBox="0 0 180 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Head -->
+          <ellipse cx="90" cy="32" rx="22" ry="26" fill="#fdd9b5" stroke="#d4a574" stroke-width="1.5"/>
+          <!-- Eyes -->
+          <circle cx="82" cy="28" r="2.5" fill="#2c3e50"/>
+          <circle cx="98" cy="28" r="2.5" fill="#2c3e50"/>
+          <!-- Mouth -->
+          <path d="M85 38 Q90 42 95 38" stroke="#c0392b" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+          <!-- Neck -->
+          <rect x="82" y="56" width="16" height="14" rx="4" fill="#fdd9b5" stroke="#d4a574" stroke-width="1"/>
+          <!-- Torso -->
+          <path d="M52 70 L68 68 L90 66 L112 68 L128 70 L126 170 L100 175 L90 176 L80 175 L54 170 Z" fill="#e8f5e9" stroke="#1a7c3e" stroke-width="1.5" rx="8"/>
+          <!-- Spine line -->
+          <line x1="90" y1="68" x2="90" y2="172" stroke="#c8e6c9" stroke-width="1" stroke-dasharray="3,3"/>
+          <!-- Ribs -->
+          <path d="M65 82 Q90 78 115 82" stroke="#c8e6c9" stroke-width="0.8" fill="none"/>
+          <path d="M62 94 Q90 90 118 94" stroke="#c8e6c9" stroke-width="0.8" fill="none"/>
+          <path d="M60 106 Q90 102 120 106" stroke="#c8e6c9" stroke-width="0.8" fill="none"/>
+          
+          <!-- Brain (inside head) -->
+          <ellipse cx="90" cy="24" rx="14" ry="12" fill="#f8bbd0" opacity="0.7" stroke="#e91e63" stroke-width="0.8"/>
+          <path d="M82 20 Q86 16 90 20 Q94 16 98 20" stroke="#e91e63" stroke-width="0.6" fill="none"/>
+          <path d="M80 24 Q85 28 90 24 Q95 28 100 24" stroke="#e91e63" stroke-width="0.6" fill="none"/>
+          
+          <!-- Lungs -->
+          <ellipse cx="72" cy="92" rx="14" ry="22" fill="#bbdefb" opacity="0.8" stroke="#1976d2" stroke-width="1"/>
+          <ellipse cx="108" cy="92" rx="14" ry="22" fill="#bbdefb" opacity="0.8" stroke="#1976d2" stroke-width="1"/>
+          <!-- Lung detail -->
+          <path d="M66 82 Q72 88 66 94 Q72 100 66 106" stroke="#1976d2" stroke-width="0.5" fill="none"/>
+          <path d="M114 82 Q108 88 114 94 Q108 100 114 106" stroke="#1976d2" stroke-width="0.5" fill="none"/>
+          
+          <!-- Heart -->
+          <path d="M84 88 C84 82 94 82 90 92 C86 82 96 82 96 88 C96 96 90 102 90 102 C90 102 84 96 84 88Z" fill="#ef5350" opacity="0.9" stroke="#c62828" stroke-width="1">
+            <animate attributeName="opacity" values="0.9;0.6;0.9" dur="1s" repeatCount="indefinite"/>
+          </path>
+          
+          <!-- Stomach -->
+          <ellipse cx="96" cy="128" rx="16" ry="12" fill="#fff9c4" opacity="0.8" stroke="#f9a825" stroke-width="1" transform="rotate(-10,96,128)"/>
+          
+          <!-- Liver -->
+          <path d="M68 118 Q80 112 92 118 Q86 130 68 126 Z" fill="#ffccbc" opacity="0.8" stroke="#e64a19" stroke-width="0.8"/>
+          
+          <!-- Intestines -->
+          <path d="M74 145 Q82 140 90 145 Q98 150 106 145" stroke="#a5d6a7" stroke-width="1.5" fill="none"/>
+          <path d="M72 152 Q80 148 88 152 Q96 156 104 152" stroke="#81c784" stroke-width="1.5" fill="none"/>
+          <path d="M74 159 Q82 155 90 159 Q98 163 104 159" stroke="#66bb6a" stroke-width="1.5" fill="none"/>
+          
+          <!-- Kidneys -->
+          <ellipse cx="68" cy="138" rx="7" ry="10" fill="#ce93d8" opacity="0.8" stroke="#7b1fa2" stroke-width="0.8"/>
+          <ellipse cx="112" cy="138" rx="7" ry="10" fill="#ce93d8" opacity="0.8" stroke="#7b1fa2" stroke-width="0.8"/>
+          
+          <!-- Arms -->
+          <path d="M52 70 L38 110 L30 150 L26 170" stroke="#d4a574" stroke-width="6" stroke-linecap="round" fill="none"/>
+          <path d="M128 70 L142 110 L150 150 L154 170" stroke="#d4a574" stroke-width="6" stroke-linecap="round" fill="none"/>
+          <!-- Hands -->
+          <circle cx="26" cy="172" r="6" fill="#fdd9b5" stroke="#d4a574" stroke-width="1"/>
+          <circle cx="154" cy="172" r="6" fill="#fdd9b5" stroke="#d4a574" stroke-width="1"/>
+          
+          <!-- Legs -->
+          <path d="M78 175 L72 240 L68 300" stroke="#d4a574" stroke-width="7" stroke-linecap="round" fill="none"/>
+          <path d="M102 175 L108 240 L112 300" stroke="#d4a574" stroke-width="7" stroke-linecap="round" fill="none"/>
+          <!-- Feet -->
+          <ellipse cx="64" cy="306" rx="10" ry="5" fill="#fdd9b5" stroke="#d4a574" stroke-width="1"/>
+          <ellipse cx="116" cy="306" rx="10" ry="5" fill="#fdd9b5" stroke="#d4a574" stroke-width="1"/>
+        </svg>
+        
+        <!-- Organ Labels (clickable → go to chapter) -->
+        <span class="organ-label" style="top:8px;right:-10px" onclick="openChapterObj(2)">🧠 मस्तिष्क</span>
+        <div class="organ-dot" style="top:20px;left:82px;background:#e91e63"></div>
+        
+        <span class="organ-label" style="top:75px;right:-14px" onclick="openChapterObj(1)">🫁 फेफड़े</span>
+        <div class="organ-dot" style="top:82px;left:102px;background:#1976d2"></div>
+        
+        <span class="organ-label" style="top:88px;left:-12px" onclick="openChapterObj(1)">🫀 हृदय</span>
+        <div class="organ-dot" style="top:88px;left:82px;background:#ef5350"></div>
+        
+        <span class="organ-label" style="top:120px;right:-14px" onclick="openChapterObj(1)">🟡 आमाशय</span>
+        <div class="organ-dot" style="top:125px;left:90px;background:#f9a825"></div>
+
+        <span class="organ-label" style="top:132px;left:-12px" onclick="openChapterObj(1)">🟣 वृक्क</span>
+        <div class="organ-dot" style="top:135px;left:62px;background:#7b1fa2"></div>
+        
+        <span class="organ-label" style="top:150px;right:-14px" onclick="openChapterObj(1)">🟢 आँत</span>
+        <div class="organ-dot" style="top:152px;left:84px;background:#66bb6a"></div>
+      </div>
+      <div class="body3d-hint">👆 किसी भी अंग (Organ) पर क्लिक करें → उसका Chapter खुलेगा</div>
+    </div>
+  </div>
+
+  <div style="margin:16px 0 12px">
+    <div class="section-title">📖 Chapter चुनें</div>
+    <div class="chapter-grid" id="chapterGrid"></div>
+  </div>
+
+  <div class="info-note">
+    <span class="icon">💡</span>
+    <span>किसी भी Chapter पर क्लिक करें — 20+ Objective Questions तुरंत मिलेंगे! Bihar Board वार्षिक परीक्षा Pattern में!</span>
+  </div>
+</div>
+
+<!-- ================= OBJECTIVES ================= -->
+<div id="objectives" class="page">
+  <div id="objChapterList">
+    <div class="section-title">📚 Chapter — Objective Questions</div>
+    <div class="chapter-grid" id="objChapterGrid"></div>
+  </div>
+
+  <div id="objQAPage" style="display:none">
+    <button class="back-btn" onclick="showObjChapters()">← वापस जाएं</button>
+    <div class="section-title" id="objChapterTitle"></div>
+    <input class="search-bar" type="text" placeholder="🔍 Questions में खोजें..." oninput="filterQA(this.value)" id="qaSearch">
+    <div id="qaList"></div>
+  </div>
+</div>
+
+<!-- ================= TEST ================= -->
+<div id="test" class="page">
+  <div id="testSetup">
+    <div class="section-title">📝 Test दें — वार्षिक परीक्षा Pattern</div>
+
+    <div class="test-setup">
+      <h2>⚙️ Test Settings</h2>
+
+      <div class="form-row">
+        <label>Chapter चुनें:</label>
+        <select id="testChapter">
+          <option value="all">सभी Chapter (All Chapters)</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label>कितने Questions:</label>
+        <input type="number" id="testQCount" value="20" min="5" max="100">
+      </div>
+      <div class="form-row">
+        <label>Time Limit:</label>
+        <select id="testTime">
+          <option value="0">No Timer ⏱️ बिना समय</option>
+          <option value="600">10 मिनट</option>
+          <option value="900" selected>15 मिनट</option>
+          <option value="1200">20 मिनट</option>
+          <option value="1800">30 मिनट</option>
+        </select>
+      </div>
+      <button class="start-btn" id="startBtn" onclick="startTest()">🚀 Test शुरू करें</button>
+    </div>
+  </div>
+
+  <div id="quizArea" style="display:none">
+    <div class="quiz-header">
+      <span class="qcount" id="qCount">Q 1 / 20</span>
+      <span class="timer" id="timerDisplay"></span>
+    </div>
+    <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+    <div class="quiz-card">
+      <div class="qno" id="qNo"></div>
+      <div class="qtext" id="qText"></div>
+      <div class="options" id="optionsDiv"></div>
+    </div>
+    <button class="next-btn" id="nextBtn" onclick="nextQuestion()">अगला सवाल →</button>
+  </div>
+
+  <div id="resultArea" style="display:none">
+    <div class="result-card">
+      <div class="score-circle">
+        <div class="score-num" id="scoreNum">0</div>
+        <div class="score-lbl">Score</div>
+      </div>
+      <h2 id="resultMsg">शाबाश!</h2>
+      <div class="result-stats">
+        <div class="stat-box"><div class="sv" id="statCorrect">0</div><div class="sl">✅ सही</div></div>
+        <div class="stat-box wrong"><div class="sv" id="statWrong">0</div><div class="sl">❌ गलत</div></div>
+        <div class="stat-box"><div class="sv" id="statTotal">0</div><div class="sl">📋 कुल</div></div>
+      </div>
+      <div>
+        <button class="retry-btn" onclick="retryTest()">🔁 फिर से</button>
+        <button class="retry-btn outline" onclick="showSetup()">⚙️ New Test</button>
+      </div>
+      <div class="review-list" id="reviewList"></div>
+    </div>
+  </div>
+</div>
+
+</main>
+
+<footer>
+  <p>🌿 Bihar Board Biology Class 10 — वार्षिक परीक्षा Preparation Portal &copy; 2026</p>
+</footer>
+</div><!-- /app-shell -->
+
+<script>
+// ─────────────────────────────────────────────────────────
+//  HARDCODED QUESTIONS — Bihar Board NCERT Class 10 Biology
+// ─────────────────────────────────────────────────────────
+const ALL_QUESTIONS = {
+  1: [
+{"q":"पौधों में जल का परिवहन किसके द्वारा होता है?","opts":["फ्लोएम (Phloem)","जाइलम (Xylem)","कैम्बियम (Cambium)","एपिडर्मिस (Epidermis)"],"ans":1},
+  {"q":"मनुष्य में श्वसन का प्रमुख अंग कौन सा है?","opts":["वृक्क (Kidney)","यकृत (Liver)","फेफड़ा (Lungs)","हृदय (Heart)"],"ans":2},
+  {"q":"प्रकाश संश्लेषण (Photosynthesis) की क्रिया पौधे के किस भाग में होती है?","opts":["जड़ (Root)","तना (Stem)","पत्ती (Leaf)","फूल (Flower)"],"ans":2},
+  {"q":"स्वपोषी पोषण (Autotrophic nutrition) में ऊर्जा का स्रोत क्या है?","opts":["मिट्टी","जल","सूर्य का प्रकाश","हवा"],"ans":2},
+  {"q":"मनुष्य के पाचन तंत्र में भोजन का अवशोषण (Absorption) किस अंग में होता है?","opts":["आमाशय (Stomach)","ग्रहणी (Duodenum)","छोटी आँत (Small Intestine)","बड़ी आँत (Large Intestine)"],"ans":2},
+  {"q":"वृक्क (Kidney) की संरचनात्मक एवं क्रियात्मक इकाई क्या कहलाती है?","opts":["न्यूरॉन (Neuron)","नेफ्रॉन (Nephron)","ग्लोमेरुलस (Glomerulus)","बोमैन सम्पुट (Bowman's Capsule)"],"ans":1},
+  {"q":"हृदय (Heart) में कितने कक्ष (Chambers) होते हैं?","opts":["2","3","4","5"],"ans":2},
+  {"q":"अवायवीय श्वसन (Anaerobic respiration) में क्या बनता है?","opts":["CO₂ और H₂O","एल्कोहल और CO₂","ऑक्सीजन और ग्लूकोज","लैक्टिक अम्ल या एल्कोहल और CO₂"],"ans":3},
+  {"q":"पित्तरस (Bile juice) किस अंग द्वारा स्रावित होता है?","opts":["अग्न्याशय (Pancreas)","यकृत (Liver)","आमाशय (Stomach)","लार ग्रंथि (Salivary gland)"],"ans":1},
+  {"q":"रक्त में ऑक्सीजन का परिवहन किसके द्वारा होता है?","opts":["श्वेत रक्त कणिकाएँ (WBC)","प्लाज्मा (Plasma)","हीमोग्लोबिन (Haemoglobin)","बिम्बाणु (Platelets)"],"ans":2},
+  {"q":"पौधों में खाद्य पदार्थों का परिवहन किसके द्वारा होता है?","opts":["जाइलम (Xylem)","फ्लोएम (Phloem)","कैम्बियम (Cambium)","मज्जा (Pith)"],"ans":1},
+  {"q":"प्रकाश संश्लेषण में कौन-सी गैस मुक्त होती है?","opts":["कार्बन डाइऑक्साइड (CO₂)","नाइट्रोजन (N₂)","ऑक्सीजन (O₂)","हाइड्रोजन (H₂)"],"ans":2},
+  {"q":"लार (Saliva) में कौन-सा एंजाइम पाया जाता है?","opts":["पेप्सिन (Pepsin)","ट्रिप्सिन (Trypsin)","एमाइलेज (Amylase)","लाइपेज (Lipase)"],"ans":2},
+  {"q":"किण्वन (Fermentation) किसका उदाहरण है?","opts":["वायवीय श्वसन (Aerobic respiration)","अवायवीय श्वसन (Anaerobic respiration)","प्रकाश संश्लेषण (Photosynthesis)","उत्सर्जन (Excretion)"],"ans":1},
+  {"q":"मनुष्य में उत्सर्जन (Excretion) का प्रमुख अंग कौन है?","opts":["यकृत (Liver)","फेफड़ा (Lungs)","वृक्क (Kidney)","त्वचा (Skin)"],"ans":2},
+  {"q":"रुधिर (Blood) का कौन-सा घटक शरीर की रक्षा करता है?","opts":["लाल रक्त कणिकाएँ (RBC)","श्वेत रक्त कणिकाएँ (WBC)","बिम्बाणु (Platelets)","प्लाज्मा (Plasma)"],"ans":1},
+  {"q":"आमाशय (Stomach) में कौन-सा अम्ल पाया जाता है?","opts":["सल्फ्यूरिक अम्ल (H₂SO₄)","हाइड्रोक्लोरिक अम्ल (HCl)","नाइट्रिक अम्ल (HNO₃)","एसिटिक अम्ल (CH₃COOH)"],"ans":1},
+  {"q":"वाष्पोत्सर्जन (Transpiration) किसके द्वारा होता है?","opts":["जड़ (Root)","तना (Stem)","रंध्र (Stomata)","पुष्प (Flower)"],"ans":2},
+  {"q":"रक्त का थक्का (Blood clot) बनाने में कौन सहायक है?","opts":["RBC","WBC","बिम्बाणु (Platelets)","प्लाज्मा (Plasma)"],"ans":2},
+  {"q":"ग्लूकोज (Glucose) के एक अणु के पूर्ण ऑक्सीकरण से कितने ATP बनते हैं?","opts":["2 ATP","18 ATP","36 ATP","38 ATP"],"ans":3},
+  {"q":"प्रकाश संश्लेषण (Photosynthesis) का समीकरण क्या है?","opts":["6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂","C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O","6CO₂ + 12H₂O → C₆H₁₂O₆ + 6O₂ + 6H₂O","CO₂ + H₂O → CH₂O + O₂"],"ans":2},
+  {"q":"हरित लवक (Chloroplast) में कौन-सा वर्णक (Pigment) पाया जाता है?","opts":["हीमोग्लोबिन (Haemoglobin)","मेलेनिन (Melanin)","क्लोरोफिल (Chlorophyll)","कैरोटीन (Carotene)"],"ans":2},
+  {"q":"पेप्सिन (Pepsin) एंजाइम किस अंग में कार्य करता है?","opts":["मुख (Mouth)","आमाशय (Stomach)","छोटी आँत (Small Intestine)","बड़ी आँत (Large Intestine)"],"ans":1},
+  {"q":"ट्रिप्सिन (Trypsin) एंजाइम कहाँ स्रावित होता है?","opts":["आमाशय (Stomach)","यकृत (Liver)","अग्न्याशय (Pancreas)","लार ग्रंथि (Salivary gland)"],"ans":2},
+  {"q":"पित्तरस (Bile juice) का क्या कार्य है?","opts":["प्रोटीन का पाचन","वसा का इमल्सीकरण (Emulsification of fats)","स्टार्च का पाचन","विटामिन का अवशोषण"],"ans":1},
+  {"q":"छोटी आँत (Small Intestine) के आंतरिक भित्ति पर पाए जाने वाले उँगली जैसे प्रवर्धों को क्या कहते हैं?","opts":["नेफ्रॉन (Nephron)","विली (Villi)","एल्वियोली (Alveoli)","ब्रोंकाई (Bronchi)"],"ans":1},
+  {"q":"विली (Villi) का क्या कार्य है?","opts":["भोजन का पाचन","भोजन का अवशोषण (Absorption)","भोजन का स्राव","भोजन का उत्सर्जन"],"ans":1},
+  {"q":"मनुष्य के पाचन तंत्र की सबसे लंबी नली कौन-सी है?","opts":["आमाशय (Stomach)","ग्रहणी (Duodenum)","छोटी आँत (Small Intestine)","बड़ी आँत (Large Intestine)"],"ans":2},
+  {"q":"श्वसन (Respiration) में ग्लूकोज का विखंडन कहाँ होता है?","opts":["कोशिका द्रव्य (Cytoplasm)","माइटोकॉन्ड्रिया (Mitochondria)","केन्द्रक (Nucleus)","कोशिका द्रव्य और माइटोकॉन्ड्रिया दोनों"],"ans":3},
+  {"q":"ग्लाइकोलिसिस (Glycolysis) कहाँ होता है?","opts":["माइटोकॉन्ड्रिया (Mitochondria)","कोशिका द्रव्य (Cytoplasm)","केन्द्रक (Nucleus)","हरित लवक (Chloroplast)"],"ans":1},
+  {"q":"माइटोकॉन्ड्रिया (Mitochondria) को क्या कहा जाता है?","opts":["कोशिका का मस्तिष्क","कोशिका का बिजलीघर (Powerhouse of cell)","कोशिका का कारखाना","कोशिका का भंडार"],"ans":1},
+  {"q":"वायवीय श्वसन (Aerobic respiration) के लिए कौन-सी गैस आवश्यक है?","opts":["कार्बन डाइऑक्साइड (CO₂)","नाइट्रोजन (N₂)","ऑक्सीजन (O₂)","हाइड्रोजन (H₂)"],"ans":2},
+  {"q":"यीस्ट (Yeast) में अवायवीय श्वसन से क्या उत्पाद बनता है?","opts":["लैक्टिक अम्ल (Lactic acid)","एथेनॉल और CO₂ (Ethanol and CO₂)","जल और CO₂","पाइरुवेट (Pyruvate)"],"ans":1},
+  {"q":"मनुष्य की पेशियों में अवायवीय श्वसन से क्या बनता है?","opts":["एथेनॉल (Ethanol)","लैक्टिक अम्ल (Lactic acid)","एसिटिक अम्ल (Acetic acid)","ऑक्सैलिक अम्ल (Oxalic acid)"],"ans":1},
+  {"q":"श्वसन की क्रिया में ग्लूकोज सबसे पहले किसमें टूटता है?","opts":["एथेनॉल (Ethanol)","लैक्टिक अम्ल (Lactic acid)","पाइरुवेट (Pyruvate)","CO₂ और H₂O"],"ans":2},
+  {"q":"फेफड़ों (Lungs) में गैसों का विनिमय किस संरचना में होता है?","opts":["ब्रोंकस (Bronchus)","ब्रोंकियोल (Bronchiole)","एल्वियोली (Alveoli)","ट्रेकिया (Trachea)"],"ans":2},
+  {"q":"श्वासनली (Trachea) में भोजन जाने से कौन रोकता है?","opts":["जिह्वा (Tongue)","एपिग्लॉटिस (Epiglottis)","घांटी (Larynx)","कंठ (Pharynx)"],"ans":1},
+  {"q":"डायाफ्राम (Diaphragm) का श्वसन में क्या कार्य है?","opts":["भोजन पचाना","फेफड़ों को फैलाने और सिकोड़ने में सहायता","रक्त पंप करना","ऑक्सीजन बनाना"],"ans":1},
+  {"q":"रक्त का pH मान कितना होता है?","opts":["6.4","7.0","7.4","8.4"],"ans":2},
+  {"q":"रक्त (Blood) में कितने प्रतिशत प्लाज्मा (Plasma) होता है?","opts":["45%","55%","65%","75%"],"ans":1},
+  {"q":"धमनी (Artery) और शिरा (Vein) में मुख्य अंतर क्या है?","opts":["धमनी में अशुद्ध रक्त, शिरा में शुद्ध रक्त","धमनी में शुद्ध रक्त बहता है (फुफ्फुस धमनी को छोड़कर)","दोनों में शुद्ध रक्त बहता है","कोई अंतर नहीं"],"ans":1},
+  {"q":"फुफ्फुस धमनी (Pulmonary artery) में कैसा रक्त बहता है?","opts":["शुद्ध रक्त (Oxygenated)","अशुद्ध रक्त (Deoxygenated)","मिश्रित रक्त","रक्त नहीं बहता"],"ans":1},
+  {"q":"फुफ्फुस शिरा (Pulmonary vein) में कैसा रक्त बहता है?","opts":["अशुद्ध रक्त","शुद्ध रक्त (Oxygenated)","मिश्रित रक्त","प्लाज्मा"],"ans":1},
+  {"q":"हृदय का कौन-सा कक्ष शरीर में रक्त भेजता है?","opts":["दायाँ अलिंद (Right atrium)","दायाँ निलय (Right ventricle)","बायाँ अलिंद (Left atrium)","बायाँ निलय (Left ventricle)"],"ans":3},
+  {"q":"केशिकाएँ (Capillaries) का क्या कार्य है?","opts":["रक्त को हृदय तक पहुँचाना","ऊतकों और रक्त के बीच पदार्थों का आदान-प्रदान","रक्त को शुद्ध करना","रक्तचाप नियंत्रित करना"],"ans":1},
+  {"q":"दोहरा परिसंचरण (Double circulation) किसमें पाया जाता है?","opts":["मछली (Fish)","मेंढक (Frog)","सरीसृप (Reptile)","मनुष्य (Human)"],"ans":3},
+  {"q":"रक्त समूह (Blood group) की खोज किसने की?","opts":["विलियम हार्वे (William Harvey)","कार्ल लैंडस्टीनर (Karl Landsteiner)","रॉबर्ट कोच (Robert Koch)","लुई पाश्चर (Louis Pasteur)"],"ans":1},
+  {"q":"सार्वत्रिक दाता (Universal donor) रक्त समूह कौन-सा है?","opts":["A","B","AB","O"],"ans":3},
+  {"q":"सार्वत्रिक ग्राही (Universal recipient) रक्त समूह कौन-सा है?","opts":["A","B","AB","O"],"ans":2},
+  {"q":"लसीका (Lymph) का रंग कैसा होता है?","opts":["लाल","नीला","रंगहीन या हल्का पीला","हरा"],"ans":2},
+  {"q":"लसीका (Lymph) में क्या नहीं पाया जाता?","opts":["WBC","प्लाज्मा","प्रोटीन","RBC (लाल रक्त कणिकाएँ)"],"ans":3},
+  {"q":"नेफ्रॉन (Nephron) में रक्त का शुद्धिकरण किस प्रक्रिया द्वारा होता है?","opts":["अवशोषण (Absorption)","छानन (Filtration)","स्राव (Secretion)","छानन, पुनर्अवशोषण और स्राव तीनों"],"ans":3},
+  {"q":"बोमैन सम्पुट (Bowman's capsule) में क्या होता है?","opts":["रक्त का अल्ट्राफिल्ट्रेशन (Ultrafiltration)","ग्लूकोज का अवशोषण","प्रोटीन का पाचन","हॉर्मोन का स्राव"],"ans":0},
+  {"q":"ग्लोमेरुलस (Glomerulus) क्या है?","opts":["एक एंजाइम","केशिकाओं का गुच्छा (Bunch of capillaries)","एक ग्रंथि","एक हॉर्मोन"],"ans":1},
+  {"q":"मूत्र (Urine) में सामान्यतः क्या पाया जाता है?","opts":["ग्लूकोज और प्रोटीन","यूरिया, जल और लवण","RBC और WBC","विटामिन और खनिज"],"ans":1},
+  {"q":"डायलिसिस (Dialysis) कब किया जाता है?","opts":["हृदय फेल होने पर","वृक्क फेल होने पर (Kidney failure)","यकृत फेल होने पर","फेफड़ा फेल होने पर"],"ans":1},
+  {"q":"मनुष्य में वृक्क (Kidney) की संख्या कितनी होती है?","opts":["1","2","3","4"],"ans":1},
+  {"q":"मूत्र का पीला रंग किसके कारण होता है?","opts":["हीमोग्लोबिन (Haemoglobin)","यूरोक्रोम (Urochrome)","बिलीरुबिन (Bilirubin)","मेलेनिन (Melanin)"],"ans":1},
+  {"q":"पौधों में रंध्र (Stomata) का क्या कार्य है?","opts":["केवल प्रकाश संश्लेषण","गैसों का विनिमय और वाष्पोत्सर्जन दोनों","केवल जल का अवशोषण","भोजन का परिवहन"],"ans":1},
+  {"q":"रंध्र (Stomata) के खुलने और बंद होने को कौन नियंत्रित करता है?","opts":["एपिडर्मल कोशिकाएँ","रक्षक कोशिकाएँ (Guard cells)","मीसोफिल कोशिकाएँ","जाइलम कोशिकाएँ"],"ans":1},
+  {"q":"जाइलम (Xylem) किस दिशा में जल का परिवहन करता है?","opts":["नीचे से ऊपर (Root to leaf)","ऊपर से नीचे (Leaf to root)","दोनों दिशाओं में","क्षैतिज दिशा में"],"ans":0},
+  {"q":"फ्लोएम (Phloem) किस दिशा में खाद्य पदार्थों का परिवहन करता है?","opts":["केवल ऊपर","केवल नीचे","दोनों दिशाओं में (Bidirectional)","केवल जड़ की ओर"],"ans":2},
+  {"q":"जाइलम (Xylem) के घटक कौन-से हैं?","opts":["छलनी नलिकाएँ और सह कोशिकाएँ","वाहिकाएँ, वाहिनिकाएँ, जाइलम तंतु, जाइलम मृदूतक","केवल वाहिकाएँ","केवल छलनी नलिकाएँ"],"ans":1},
+  {"q":"फ्लोएम (Phloem) में परिवहन का मुख्य पदार्थ क्या है?","opts":["जल और खनिज","सुक्रोज (Sucrose)","ऑक्सीजन","कार्बन डाइऑक्साइड"],"ans":1},
+  {"q":"मूल दाब (Root pressure) किसमें सहायक है?","opts":["भोजन के परिवहन में","जल के ऊपर चढ़ने में","गैसों के विनिमय में","उत्सर्जन में"],"ans":1},
+  {"q":"वाष्पोत्सर्जन (Transpiration) से पौधों को क्या लाभ होता है?","opts":["भोजन बनता है","पौधों का तापमान नियंत्रित होता है और जल ऊपर खिंचता है","बीज बनते हैं","फूल खिलते हैं"],"ans":1},
+  {"q":"एमाइलेज (Amylase) एंजाइम किस पदार्थ का पाचन करता है?","opts":["प्रोटीन (Protein)","वसा (Fat)","स्टार्च (Starch)","सेल्युलोज (Cellulose)"],"ans":2},
+  {"q":"पेप्सिन (Pepsin) एंजाइम किस पदार्थ का पाचन करता है?","opts":["स्टार्च (Starch)","प्रोटीन (Protein)","वसा (Fat)","शर्करा (Sugar)"],"ans":1},
+  {"q":"लाइपेज (Lipase) एंजाइम किस पदार्थ का पाचन करता है?","opts":["प्रोटीन (Protein)","स्टार्च (Starch)","वसा (Fat)","न्यूक्लिक अम्ल"],"ans":2},
+  {"q":"अग्न्याशय (Pancreas) कौन-से रस का स्राव करता है?","opts":["पित्तरस (Bile juice)","अग्न्याशयी रस (Pancreatic juice)","लार रस (Saliva)","आमाशयी रस (Gastric juice)"],"ans":1},
+  {"q":"अग्न्याशयी रस (Pancreatic juice) में कौन-से एंजाइम होते हैं?","opts":["केवल एमाइलेज","केवल ट्रिप्सिन","ट्रिप्सिन, लाइपेज और एमाइलेज तीनों","केवल लाइपेज"],"ans":2},
+  {"q":"बड़ी आँत (Large Intestine) का मुख्य कार्य क्या है?","opts":["भोजन का पाचन","प्रोटीन का अवशोषण","जल और खनिज लवणों का अवशोषण","एंजाइम का स्राव"],"ans":2},
+  {"q":"मलाशय (Rectum) का कार्य क्या है?","opts":["भोजन का पाचन","अपचित भोजन (Faeces) का संग्रहण और निष्कासन","जल का अवशोषण","एंजाइम का स्राव"],"ans":1},
+  {"q":"परपोषी पोषण (Heterotrophic nutrition) के कितने प्रकार होते हैं?","opts":["2","3","4","5"],"ans":1},
+  {"q":"मृतजीवी पोषण (Saprophytic nutrition) का उदाहरण कौन-सा है?","opts":["हरे पौधे","मशरूम (Mushroom)","अमीबा (Amoeba)","मनुष्य"],"ans":1},
+  {"q":"परजीवी पोषण (Parasitic nutrition) का उदाहरण कौन-सा है?","opts":["हरे पौधे","मशरूम","अमरबेल (Cuscuta)","खमीर (Yeast)"],"ans":2},
+  {"q":"कीटभक्षी पौधे (Insectivorous plants) क्यों कीड़े खाते हैं?","opts":["ग्लूकोज प्राप्त करने के लिए","नाइट्रोजन (Nitrogen) प्राप्त करने के लिए","जल प्राप्त करने के लिए","CO₂ प्राप्त करने के लिए"],"ans":1},
+  {"q":"ड्रॉसेरा (Drosera) किस प्रकार का पौधा है?","opts":["परजीवी पौधा","मृतजीवी पौधा","कीटभक्षी पौधा (Insectivorous plant)","स्वपोषी पौधा"],"ans":2},
+  {"q":"प्रकाश संश्लेषण (Photosynthesis) में कौन-सी गैस का उपयोग होता है?","opts":["ऑक्सीजन (O₂)","कार्बन डाइऑक्साइड (CO₂)","नाइट्रोजन (N₂)","हाइड्रोजन (H₂)"],"ans":1},
+  {"q":"प्रकाश संश्लेषण (Photosynthesis) की प्रकाश अभिक्रिया (Light reaction) कहाँ होती है?","opts":["स्ट्रोमा (Stroma)","ग्रेना (Grana) / थाइलेकॉइड (Thylakoid)","कोशिका भित्ति","माइटोकॉन्ड्रिया"],"ans":1},
+  {"q":"प्रकाश संश्लेषण (Photosynthesis) की अंधेरी अभिक्रिया (Dark reaction) कहाँ होती है?","opts":["ग्रेना (Grana)","थाइलेकॉइड (Thylakoid)","स्ट्रोमा (Stroma)","कोशिका द्रव्य (Cytoplasm)"],"ans":2},
+  {"q":"प्रकाश संश्लेषण (Photosynthesis) के लिए आवश्यक कच्चे पदार्थ कौन-से हैं?","opts":["ग्लूकोज और ऑक्सीजन","CO₂, जल, सूर्य का प्रकाश और क्लोरोफिल","केवल CO₂","केवल जल और प्रकाश"],"ans":1},
+  {"q":"स्टार्च परीक्षण (Starch test) के लिए कौन-सा रसायन प्रयोग किया जाता है?","opts":["लिटमस (Litmus)","आयोडीन (Iodine)","फिनॉल्फ्थेलीन","मिथाइल ऑरेंज"],"ans":1},
+  {"q":"पत्ती में स्टार्च (Starch) की उपस्थिति आयोडीन से किस रंग में बदलती है?","opts":["लाल","नीला-काला (Blue-black)","पीला","हरा"],"ans":1},
+  {"q":"ATP का पूरा नाम क्या है?","opts":["Adenosine Triphosphate","Adenosine Diphosphate","Amino Triphosphate","Adenine Triphosphate"],"ans":0},
+  {"q":"ATP को ऊर्जा की मुद्रा (Energy currency) क्यों कहा जाता है?","opts":["क्योंकि यह भोजन बनाता है","क्योंकि यह कोशिका की सभी ऊर्जा आवश्यकताओं को पूरा करता है","क्योंकि यह प्रकाश संश्लेषण में बनता है","क्योंकि यह CO₂ बनाता है"],"ans":1},
+  {"q":"ग्लाइकोलिसिस (Glycolysis) में एक ग्लूकोज अणु से कितने ATP बनते हैं?","opts":["2 ATP","4 ATP","36 ATP","38 ATP"],"ans":0},
+  {"q":"क्रेब्स चक्र (Krebs cycle) कहाँ होता है?","opts":["कोशिका द्रव्य (Cytoplasm)","माइटोकॉन्ड्रिया के मैट्रिक्स (Matrix) में","केन्द्रक (Nucleus)","राइबोसोम (Ribosome)"],"ans":1},
+  {"q":"श्वसन पथ (Respiratory passage) का सही क्रम क्या है?","opts":["नासिका → श्वासनली → ग्रसनी → फेफड़े","नासिका → ग्रसनी → कंठ → श्वासनली → श्वसनी → फेफड़े","नासिका → कंठ → ग्रसनी → श्वासनली → फेफड़े","श्वासनली → नासिका → ग्रसनी → फेफड़े"],"ans":1},
+  {"q":"हीमोग्लोबिन (Haemoglobin) में कौन-सी धातु पाई जाती है?","opts":["तांबा (Copper)","जस्ता (Zinc)","लोहा (Iron)","कैल्शियम (Calcium)"],"ans":2},
+  {"q":"RBC (लाल रक्त कणिकाएँ) का जीवनकाल कितना होता है?","opts":["30 दिन","60 दिन","120 दिन","365 दिन"],"ans":2},
+  {"q":"WBC (श्वेत रक्त कणिकाएँ) का मुख्य कार्य क्या है?","opts":["ऑक्सीजन परिवहन","रोगाणुओं से रक्षा (Defence against germs)","रक्त का थक्का बनाना","हॉर्मोन परिवहन"],"ans":1},
+  {"q":"रक्तदाब (Blood pressure) को किससे मापते हैं?","opts":["थर्मामीटर (Thermometer)","स्फिग्मोमैनोमीटर (Sphygmomanometer)","बैरोमीटर (Barometer)","स्टेथोस्कोप (Stethoscope)"],"ans":1},
+  {"q":"सामान्य रक्तदाब (Normal blood pressure) कितना होता है?","opts":["80/120 mmHg","120/80 mmHg","140/90 mmHg","100/60 mmHg"],"ans":1},
+  {"q":"उच्च रक्तदाब (High blood pressure / Hypertension) से क्या खतरा होता है?","opts":["अस्थमा","धमनी फटने या हृदय आघात (Heart attack) का खतरा","मधुमेह","गठिया"],"ans":1},
+  {"q":"हृदय के बाएँ और दाएँ भाग को अलग करने वाली दीवार को क्या कहते हैं?","opts":["वाल्व (Valve)","सेप्टम (Septum)","पेरीकार्डियम (Pericardium)","एंडोकार्डियम (Endocardium)"],"ans":1},
+  {"q":"हृदय में वाल्व (Valve) का क्या कार्य है?","opts":["रक्त को शुद्ध करना","रक्त को एक ही दिशा में बहने देना (Prevent backflow)","ऑक्सीजन जोड़ना","CO₂ निकालना"],"ans":1},
+  {"q":"मछलियों (Fish) के हृदय में कितने कक्ष होते हैं?","opts":["2","3","4","1"],"ans":0},
+  {"q":"उभयचर (Amphibians) जैसे मेंढक के हृदय में कितने कक्ष होते हैं?","opts":["2","3","4","1"],"ans":1},
+  {"q":"स्तनधारियों (Mammals) में दोहरे परिसंचरण का क्या लाभ है?","opts":["ऑक्सीजन युक्त और विऑक्सीजनित रक्त मिश्रित नहीं होता","रक्त धीमे बहता है","एक ही बार हृदय से गुजरता है","कोई लाभ नहीं"],"ans":0},
+  {"q":"मूत्र वाहिनी (Ureter) का कार्य क्या है?","opts":["मूत्र बनाना","मूत्र को वृक्क से मूत्राशय तक ले जाना","मूत्र का संग्रहण","रक्त शुद्ध करना"],"ans":1},
+  {"q":"मूत्राशय (Urinary bladder) का कार्य क्या है?","opts":["मूत्र बनाना","मूत्र का अस्थायी संग्रहण (Temporary storage)","रक्त छानना","हॉर्मोन बनाना"],"ans":1},
+  {"q":"मनुष्य प्रतिदिन लगभग कितना मूत्र उत्सर्जित करता है?","opts":["0.5 लीटर","1-1.5 लीटर","3 लीटर","5 लीटर"],"ans":1},
+  {"q":"पौधों में उत्सर्जी पदार्थ कहाँ संग्रहित होते हैं?","opts":["केवल जड़ में","कोशिकीय रिक्तिका (Cell vacuole), पत्तियों, छाल में","केवल तने में","केवल फूलों में"],"ans":1},
+  {"q":"पौधे अपने उत्सर्जी पदार्थों को कैसे निकालते हैं?","opts":["मूत्र द्वारा","पत्तियों के गिरने, रेजिन, गोंद, टैनिन के रूप में","पसीने द्वारा","श्वसन द्वारा"],"ans":1},
+  {"q":"प्रकाश संश्लेषण में जल के अणु का विखंडन (Photolysis) किसके द्वारा होता है?","opts":["CO₂ द्वारा","प्रकाश (Light) द्वारा","क्लोरोफिल द्वारा","ऑक्सीजन द्वारा"],"ans":1},
+  {"q":"प्रकाश संश्लेषण (Photosynthesis) में O₂ कहाँ से मुक्त होती है?","opts":["CO₂ से","जल (H₂O) के विखंडन से","ग्लूकोज से","क्लोरोफिल से"],"ans":1},
+  {"q":"पत्तियों का हरा रंग किसके कारण होता है?","opts":["ज़ैंथोफिल (Xanthophyll)","कैरोटीन (Carotene)","क्लोरोफिल (Chlorophyll)","एन्थोसाइनिन (Anthocyanin)"],"ans":2},
+  {"q":"अमीबा (Amoeba) अपना भोजन किसके द्वारा ग्रहण करता है?","opts":["मुख द्वारा","कूटपाद (Pseudopodia) द्वारा","सीलिया (Cilia) द्वारा","फ्लैजेला (Flagella) द्वारा"],"ans":1},
+  {"q":"पैरामीशियम (Paramecium) अपना भोजन किसके द्वारा ग्रहण करता है?","opts":["कूटपाद (Pseudopodia)","सीलिया (Cilia)","टेंटेकल्स (Tentacles)","सीधे अवशोषण द्वारा"],"ans":1},
+  {"q":"दंत सूत्र (Dental formula) का क्या अर्थ है?","opts":["दाँतों की संख्या और प्रकार का सूत्र","दाँतों के रोग का सूत्र","जबड़े की माप","मुख की संरचना"],"ans":0},
+  {"q":"मनुष्य में स्थायी दाँतों (Permanent teeth) की कुल संख्या कितनी होती है?","opts":["20","28","32","36"],"ans":2},
+  {"q":"अन्नप्रणाली (Oesophagus) में भोजन किस गति से आगे बढ़ता है?","opts":["गुरुत्वाकर्षण से","क्रमाकुंचन (Peristalsis) द्वारा","रक्तचाप से","श्वसन से"],"ans":1},
+  {"q":"जठर ग्रंथियों (Gastric glands) द्वारा कौन-से पदार्थ स्रावित होते हैं?","opts":["एमाइलेज और लाइपेज","HCl, पेप्सिन और म्यूकस (Mucus)","ट्रिप्सिन और बाइल","केवल HCl"],"ans":1},
+  {"q":"म्यूकस (Mucus) का आमाशय में क्या कार्य है?","opts":["भोजन पचाना","आमाशय की भित्ति को HCl अम्ल से बचाना","प्रोटीन तोड़ना","वसा पचाना"],"ans":1},
+  {"q":"ग्रहणी (Duodenum) कहाँ स्थित है?","opts":["आमाशय के ऊपर","छोटी आँत का प्रारंभिक भाग","बड़ी आँत में","यकृत में"],"ans":1},
+  {"q":"यकृत (Liver) मानव शरीर की सबसे बड़ी _________ है।","opts":["हड्डी","पेशी","ग्रंथि (Gland)","धमनी"],"ans":2},
+  {"q":"पित्ताशय (Gall bladder) में क्या संग्रहित होता है?","opts":["इंसुलिन","पित्तरस (Bile juice)","अग्न्याशयी रस","आमाशयी रस"],"ans":1},
+  {"q":"मनुष्य में छोटी आँत (Small intestine) की लंबाई लगभग कितनी होती है?","opts":["1 मीटर","3 मीटर","6 मीटर","10 मीटर"],"ans":2},
+  {"q":"श्वसन (Respiration) एक _______ अभिक्रिया है।","opts":["ऊष्माशोषी (Endothermic)","ऊष्माक्षेपी (Exothermic)","उदासीन","कोई नहीं"],"ans":1},
+  {"q":"प्रकाश संश्लेषण (Photosynthesis) एक _______ अभिक्रिया है।","opts":["ऊष्माक्षेपी (Exothermic)","ऊष्माशोषी (Endothermic)","उदासीन","अपचयन"],"ans":1},
+  {"q":"रक्त (Blood) किस प्रकार का ऊतक (Tissue) है?","opts":["एपिथीलियल ऊतक","पेशी ऊतक","तरल संयोजी ऊतक (Fluid connective tissue)","तंत्रिका ऊतक"],"ans":2},
+  {"q":"हीमोग्लोबिन (Haemoglobin) ऑक्सीजन से मिलकर क्या बनाता है?","opts":["कार्बोक्सीहीमोग्लोबिन","ऑक्सीहीमोग्लोबिन (Oxyhaemoglobin)","मेथीमोग्लोबिन","डीऑक्सीहीमोग्लोबिन"],"ans":1},
+  {"q":"CO (कार्बन मोनोऑक्साइड) हीमोग्लोबिन से मिलकर क्या बनाती है?","opts":["ऑक्सीहीमोग्लोबिन","कार्बोक्सीहीमोग्लोबिन (Carboxyhaemoglobin)","मेथीमोग्लोबिन","कोई नहीं"],"ans":1},
+  {"q":"CO विषैली क्यों है?","opts":["यह ऑक्सीजन बनाती है","यह हीमोग्लोबिन से स्थायी रूप से जुड़कर ऑक्सीजन परिवहन रोक देती है","यह CO₂ में बदल जाती है","यह रक्त को गाढ़ा करती है"],"ans":1}
+  ],
+  2: [
+// === तंत्रिका तंत्र (Nervous System) — 8 प्रश्न ===
+  {"q":"मनुष्य के शरीर में नियंत्रण और समन्वय का कार्य मुख्य रूप से कौन-सी प्रणाली करती है?","opts":["पाचन तंत्र (Digestive system)","तंत्रिका तंत्र (Nervous system)","श्वसन तंत्र (Respiratory system)","उत्सर्जन तंत्र (Excretory system)"],"ans":1},
+  {"q":"तंत्रिका तंत्र (Nervous system) की संरचनात्मक और क्रियात्मक इकाई क्या है?","opts":["नेफ्रॉन (Nephron)","न्यूरॉन (Neuron)","एल्वियोलस (Alveolus)","सार्कोमियर (Sarcomere)"],"ans":1},
+  {"q":"केन्द्रीय तंत्रिका तंत्र (Central Nervous System) में सम्मिलित हैं:","opts":["मस्तिष्क और मेरुरज्जु (Brain & Spinal cord)","मस्तिष्क और तंत्रिकाएँ (Brain & Nerves)","मेरुरज्जु और तंत्रिकाएँ (Spinal cord & Nerves)","केवल मस्तिष्क (Only Brain)"],"ans":0},
+  {"q":"परिधीय तंत्रिका तंत्र (Peripheral Nervous System) में क्या आता है?","opts":["मस्तिष्क (Brain)","मेरुरज्जु (Spinal cord)","कपालीय एवं मेरु तंत्रिकाएँ (Cranial & Spinal nerves)","केवल स्वायत्त तंत्रिकाएँ (Only Autonomic nerves)"],"ans":2},
+  {"q":"स्वायत्त तंत्रिका तंत्र (Autonomic Nervous System) किन क्रियाओं को नियंत्रित करता है?","opts":["ऐच्छिक क्रियाएँ (Voluntary actions)","अनैच्छिक क्रियाएँ (Involuntary actions)","प्रतिवर्ती क्रियाएँ (Reflex actions)","केवल गति (Only movement)"],"ans":1},
+  {"q":"कपालीय तंत्रिकाओं (Cranial nerves) की संख्या कितनी होती है?","opts":["10 जोड़ी","12 जोड़ी","21 जोड़ी","31 जोड़ी"],"ans":1},
+  {"q":"मेरु तंत्रिकाओं (Spinal nerves) की कुल संख्या मनुष्य में कितनी होती है?","opts":["12 जोड़ी","21 जोड़ी","31 जोड़ी","42 जोड़ी"],"ans":2},
+  {"q":"तंत्रिका तंत्र में सूचनाएँ किस रूप में संचारित होती हैं?","opts":["रासायनिक संकेत (Chemical signals) के रूप में","विद्युत आवेग (Electrical impulses) के रूप में","ध्वनि तरंगों के रूप में","प्रकाश तरंगों के रूप में"],"ans":1},
+
+  // === न्यूरॉन (Neuron) — 10 प्रश्न ===
+  {"q":"न्यूरॉन (Neuron) का कौन-सा भाग सूचना ग्रहण करता है?","opts":["एक्सॉन (Axon)","डेंड्राइट (Dendrite)","कोशिका काय (Cell body)","सिनैप्स (Synapse)"],"ans":1},
+  {"q":"न्यूरॉन (Neuron) में तंत्रिका आवेग (Nerve impulse) का सही क्रम क्या है?","opts":["एक्सॉन → कोशिका काय → डेंड्राइट","डेंड्राइट → कोशिका काय → एक्सॉन","कोशिका काय → डेंड्राइट → एक्सॉन","सिनैप्स → एक्सॉन → डेंड्राइट"],"ans":1},
+  {"q":"एक्सॉन (Axon) का मुख्य कार्य क्या है?","opts":["सूचना ग्रहण करना","तंत्रिका आवेग को कोशिका काय से दूर ले जाना","भोजन का संचय करना","कोशिका विभाजन करना"],"ans":1},
+  {"q":"माइलिन आवरण (Myelin sheath) का कार्य है:","opts":["तंत्रिका आवेग की गति कम करना","तंत्रिका आवेग की गति बढ़ाना और विद्युत रोधन प्रदान करना","कोशिका को पोषण देना","कोशिका विभाजन में सहायता करना"],"ans":1},
+  {"q":"माइलिन आवरण (Myelin sheath) किन कोशिकाओं द्वारा बनता है?","opts":["न्यूरॉन (Neuron)","श्वान कोशिकाएँ (Schwann cells)","लाल रक्त कोशिकाएँ (RBC)","उपकला कोशिकाएँ (Epithelial cells)"],"ans":1},
+  {"q":"दो न्यूरॉन्स (Neurons) के बीच के संधि स्थल को क्या कहते हैं?","opts":["डेंड्राइट (Dendrite)","सिनैप्स (Synapse)","एक्सॉन (Axon)","रैनवियर का नोड (Node of Ranvier)"],"ans":1},
+  {"q":"सिनैप्स (Synapse) में सूचना का संचरण किसके द्वारा होता है?","opts":["विद्युत आवेग (Electrical impulse)","न्यूरोट्रांसमीटर (Neurotransmitter)","हॉर्मोन (Hormone)","एंजाइम (Enzyme)"],"ans":1},
+  {"q":"सिनैप्टिक दरार (Synaptic cleft) में मुक्त होने वाला प्रमुख न्यूरोट्रांसमीटर कौन-सा है?","opts":["एड्रिनलिन (Adrenaline)","इंसुलिन (Insulin)","एसिटिलकोलीन (Acetylcholine)","थायरॉक्सिन (Thyroxine)"],"ans":2},
+  {"q":"संवेदी न्यूरॉन (Sensory neuron) का कार्य है:","opts":["ग्राही अंगों से मस्तिष्क/मेरुरज्जु तक सूचना ले जाना","मस्तिष्क से पेशियों तक सूचना ले जाना","दो न्यूरॉन्स को जोड़ना","हॉर्मोन का स्रवण करना"],"ans":0},
+  {"q":"प्रेरक न्यूरॉन (Motor neuron) सूचना कहाँ ले जाता है?","opts":["ग्राही अंगों से मस्तिष्क तक","मस्तिष्क/मेरुरज्जु से प्रभावक अंगों (पेशियों/ग्रंथियों) तक","एक संवेदी न्यूरॉन से दूसरे तक","ग्रंथियों से रक्त तक"],"ans":1},
+
+  // === मस्तिष्क (Brain) — 12 प्रश्न ===
+  {"q":"मस्तिष्क (Brain) किस हड्डी के बक्से में सुरक्षित रहता है?","opts":["कशेरुक दंड (Vertebral column)","कपालगुहा/क्रेनियम (Cranium)","पसली पिंजर (Rib cage)","श्रोणि (Pelvis)"],"ans":1},
+  {"q":"मस्तिष्क (Brain) की सुरक्षा के लिए कौन-सी झिल्ली पाई जाती है?","opts":["पेरीकार्डियम (Pericardium)","मेनिन्जेज (Meninges)","प्लूरा (Pleura)","पेरीटोनियम (Peritoneum)"],"ans":1},
+  {"q":"प्रमस्तिष्क (Cerebrum) मस्तिष्क का सबसे बड़ा भाग है। इसका मुख्य कार्य क्या है?","opts":["श्वसन नियंत्रण","सोचना, स्मृति, बुद्धि एवं ऐच्छिक क्रियाएँ","शरीर का संतुलन बनाना","हृदय गति का नियंत्रण"],"ans":1},
+  {"q":"प्रमस्तिष्क (Cerebrum) के दोनों गोलार्धों को जोड़ने वाली संरचना को क्या कहते हैं?","opts":["पॉन्स (Pons)","कॉर्पस कैलोसम (Corpus callosum)","मेडुला (Medulla)","थैलेमस (Thalamus)"],"ans":1},
+  {"q":"अनुमस्तिष्क (Cerebellum) का प्रमुख कार्य क्या है?","opts":["सोचना और स्मृति","शरीर का संतुलन और पेशीय समन्वय","श्वसन और हृदय गति नियंत्रण","भूख और प्यास का नियंत्रण"],"ans":1},
+  {"q":"यदि किसी व्यक्ति का अनुमस्तिष्क (Cerebellum) क्षतिग्रस्त हो जाए तो क्या होगा?","opts":["सोचने की क्षमता समाप्त हो जाएगी","शरीर का संतुलन बिगड़ जाएगा","श्वसन रुक जाएगा","दृष्टि चली जाएगी"],"ans":1},
+  {"q":"मेडुला ऑब्लॉन्गेटा (Medulla oblongata) किन क्रियाओं का नियंत्रण करता है?","opts":["ऐच्छिक क्रियाएँ (Voluntary actions)","अनैच्छिक क्रियाएँ जैसे श्वसन, हृदय गति, रक्तदाब","शरीर का संतुलन","स्मृति और बुद्धि"],"ans":1},
+  {"q":"पॉन्स (Pons) मस्तिष्क के किन भागों के बीच संबंध स्थापित करता है?","opts":["प्रमस्तिष्क और मेरुरज्जु","अनुमस्तिष्क (Cerebellum) और मस्तिष्क के अन्य भागों","नेत्र और कान","हृदय और फेफड़े"],"ans":1},
+  {"q":"थैलेमस (Thalamus) का प्रमुख कार्य क्या है?","opts":["संवेदी सूचनाओं को प्रमस्तिष्क तक भेजना (Relay station)","हॉर्मोन का स्रवण","श्वसन नियंत्रण","पाचन नियंत्रण"],"ans":0},
+  {"q":"हाइपोथैलेमस (Hypothalamus) किन क्रियाओं का नियंत्रण करता है?","opts":["ऐच्छिक गतियाँ","भूख, प्यास, नींद, शरीर का तापमान","हड्डियों का निर्माण","रक्त कोशिकाओं का निर्माण"],"ans":1},
+  {"q":"मस्तिष्क (Brain) के चारों ओर पाया जाने वाला द्रव क्या कहलाता है?","opts":["रक्त प्लाज्मा (Blood plasma)","सेरेब्रोस्पाइनल द्रव (Cerebrospinal fluid - CSF)","लसीका (Lymph)","साइनोवियल द्रव (Synovial fluid)"],"ans":1},
+  {"q":"मस्तिष्क का कौन-सा भाग अंतःस्रावी तंत्र (Endocrine system) से सीधे जुड़ा है?","opts":["प्रमस्तिष्क (Cerebrum)","अनुमस्तिष्क (Cerebellum)","हाइपोथैलेमस (Hypothalamus)","मेडुला (Medulla)"],"ans":2},
+
+  // === मेरुरज्जु (Spinal Cord) — 3 प्रश्न ===
+  {"q":"मेरुरज्जु (Spinal cord) किसके भीतर सुरक्षित रहता है?","opts":["कपाल (Cranium)","कशेरुक दंड (Vertebral column)","पसली पिंजर (Rib cage)","श्रोणि (Pelvis)"],"ans":1},
+  {"q":"मेरुरज्जु (Spinal cord) का प्रमुख कार्य क्या है?","opts":["सोचना","प्रतिवर्ती क्रियाएँ (Reflex actions) और मस्तिष्क व शरीर के बीच सूचना का संचारण","भोजन का पाचन","रक्त का शुद्धिकरण"],"ans":1},
+  {"q":"मेरुरज्जु (Spinal cord) मस्तिष्क के किस भाग से जुड़ा होता है?","opts":["प्रमस्तिष्क (Cerebrum)","अनुमस्तिष्क (Cerebellum)","मेडुला ऑब्लॉन्गेटा (Medulla oblongata)","थैलेमस (Thalamus)"],"ans":2},
+
+  // === प्रतिवर्ती क्रिया (Reflex Action) — 9 प्रश्न ===
+  {"q":"प्रतिवर्ती क्रिया (Reflex action) की खोज किसने की?","opts":["चार्ल्स डार्विन (Charles Darwin)","मार्शल हॉल (Marshall Hall)","ग्रेगर मेंडल (Gregor Mendel)","रॉबर्ट हुक (Robert Hooke)"],"ans":1},
+  {"q":"प्रतिवर्ती क्रिया (Reflex action) किसके नियंत्रण में होती है?","opts":["प्रमस्तिष्क (Cerebrum)","अनुमस्तिष्क (Cerebellum)","मेरुरज्जु (Spinal cord)","हाइपोथैलेमस (Hypothalamus)"],"ans":2},
+  {"q":"गर्म वस्तु को छूने पर तुरंत हाथ हटा लेना किस प्रकार की क्रिया है?","opts":["ऐच्छिक क्रिया (Voluntary action)","प्रतिवर्ती क्रिया (Reflex action)","सीखी हुई क्रिया (Learned action)","सोची-समझी क्रिया"],"ans":1},
+  {"q":"प्रतिवर्ती चाप (Reflex arc) का सही क्रम क्या है?","opts":["ग्राही → संवेदी न्यूरॉन → CNS → प्रेरक न्यूरॉन → प्रभावक","प्रभावक → प्रेरक न्यूरॉन → CNS → संवेदी न्यूरॉन → ग्राही","CNS → ग्राही → संवेदी न्यूरॉन → प्रभावक → प्रेरक न्यूरॉन","प्रेरक न्यूरॉन → ग्राही → CNS → संवेदी न्यूरॉन → प्रभावक"],"ans":0},
+  {"q":"प्रतिवर्ती चाप (Reflex arc) में ग्राही (Receptor) का कार्य है:","opts":["प्रतिक्रिया करना","उद्दीपन (Stimulus) को ग्रहण करना","आवेग को मस्तिष्क तक ले जाना","पेशी को संकुचित करना"],"ans":1},
+  {"q":"प्रतिवर्ती चाप (Reflex arc) में प्रभावक (Effector) क्या होता है?","opts":["ग्राही अंग (Receptor)","संवेदी न्यूरॉन (Sensory neuron)","पेशी या ग्रंथि (Muscle or Gland)","मस्तिष्क (Brain)"],"ans":2},
+  {"q":"घुटने का झटका (Knee-jerk reflex) किसका उदाहरण है?","opts":["ऐच्छिक क्रिया","प्रतिवर्ती क्रिया (Reflex action)","सशर्त प्रतिवर्त (Conditioned reflex)","अनुकूली प्रतिक्रिया"],"ans":1},
+  {"q":"आँख की पुतली का तेज प्रकाश में सिकुड़ना किसका उदाहरण है?","opts":["ऐच्छिक क्रिया","प्रतिवर्ती क्रिया (Reflex action)","सोची-समझी क्रिया","सीखी हुई क्रिया"],"ans":1},
+  {"q":"प्रतिवर्ती क्रिया (Reflex action) में मस्तिष्क (Brain) की भूमिका क्या होती है?","opts":["प्रतिवर्ती क्रिया को पूर्णतः नियंत्रित करता है","प्रतिक्रिया के बाद सूचना प्राप्त करता है, नियंत्रण नहीं करता","कोई भूमिका नहीं होती","केवल ऐच्छिक क्रियाओं में सहायता करता है"],"ans":1},
+
+  // === अंतःस्रावी ग्रंथियाँ (Endocrine Glands) — 10 प्रश्न ===
+  {"q":"अंतःस्रावी ग्रंथियाँ (Endocrine glands) अपना स्रवण कहाँ मुक्त करती हैं?","opts":["सीधे रक्त में (Directly into blood)","नलिका में (Into duct)","आहार नाल में","त्वचा की सतह पर"],"ans":0},
+  {"q":"अंतःस्रावी ग्रंथियों (Endocrine glands) को 'नलिकाविहीन ग्रंथियाँ' (Ductless glands) क्यों कहते हैं?","opts":["इनमें नलिका (Duct) नहीं होती","ये बहुत छोटी होती हैं","ये केवल हॉर्मोन बनाती हैं","ये मस्तिष्क में होती हैं"],"ans":0},
+  {"q":"पिट्यूटरी ग्रंथि (Pituitary gland) को 'मास्टर ग्रंथि' (Master gland) क्यों कहते हैं?","opts":["यह सबसे बड़ी ग्रंथि है","यह अन्य अंतःस्रावी ग्रंथियों को नियंत्रित करती है","यह सबसे अधिक हॉर्मोन बनाती है","यह मस्तिष्क में स्थित है"],"ans":1},
+  {"q":"पिट्यूटरी ग्रंथि (Pituitary gland) शरीर में कहाँ स्थित होती है?","opts":["गर्दन में","मस्तिष्क के आधार पर (Base of brain)","पेट में","छाती में"],"ans":1},
+  {"q":"थायरॉइड ग्रंथि (Thyroid gland) शरीर में कहाँ स्थित होती है?","opts":["मस्तिष्क में","गर्दन में श्वासनली (Trachea) के पास","पेट में","वृक्क (Kidney) के ऊपर"],"ans":1},
+  {"q":"थायरॉइड ग्रंथि (Thyroid gland) को सामान्य रूप से कार्य करने के लिए किसकी आवश्यकता होती है?","opts":["कैल्शियम (Calcium)","आयोडीन (Iodine)","लोहा (Iron)","जस्ता (Zinc)"],"ans":1},
+  {"q":"अग्न्याशय (Pancreas) किस प्रकार की ग्रंथि है?","opts":["केवल अंतःस्रावी (Only Endocrine)","केवल बहिःस्रावी (Only Exocrine)","मिश्रित ग्रंथि (Mixed gland) - अंतःस्रावी और बहिःस्रावी दोनों","नलिकाविहीन (Ductless)"],"ans":2},
+  {"q":"एड्रिनल ग्रंथि (Adrenal gland) शरीर में कहाँ स्थित होती है?","opts":["मस्तिष्क में","गर्दन में","वृक्क (Kidney) के ऊपर","यकृत (Liver) के पास"],"ans":2},
+  {"q":"नर में जनन ग्रंथि (Male gonad) कौन-सी है?","opts":["अंडाशय (Ovary)","वृषण (Testis)","अग्न्याशय (Pancreas)","थायरॉइड (Thyroid)"],"ans":1},
+  {"q":"शरीर की सबसे बड़ी अंतःस्रावी ग्रंथि (Largest endocrine gland) कौन-सी है?","opts":["पिट्यूटरी (Pituitary)","एड्रिनल (Adrenal)","थायरॉइड (Thyroid)","अग्न्याशय (Pancreas)"],"ans":2},
+
+  // === हॉर्मोन (Hormones) — 18 प्रश्न ===
+  {"q":"इंसुलिन (Insulin) हॉर्मोन किस ग्रंथि से स्रवित होता है?","opts":["पिट्यूटरी (Pituitary)","थायरॉइड (Thyroid)","अग्न्याशय (Pancreas)","एड्रिनल (Adrenal)"],"ans":2},
+  {"q":"इंसुलिन (Insulin) का मुख्य कार्य क्या है?","opts":["रक्त में शर्करा (Blood sugar) का स्तर कम करना","रक्त में शर्करा का स्तर बढ़ाना","कैल्शियम का नियंत्रण","प्रोटीन का निर्माण"],"ans":0},
+  {"q":"थायरॉक्सिन (Thyroxine) हॉर्मोन किस ग्रंथि से स्रवित होता है?","opts":["अग्न्याशय (Pancreas)","थायरॉइड ग्रंथि (Thyroid gland)","पिट्यूटरी (Pituitary)","एड्रिनल (Adrenal)"],"ans":1},
+  {"q":"थायरॉक्सिन (Thyroxine) का मुख्य कार्य क्या है?","opts":["रक्त शर्करा नियंत्रण","उपापचय दर (Metabolic rate) का नियंत्रण","शरीर का संतुलन","पाचन में सहायता"],"ans":1},
+  {"q":"एड्रिनलिन (Adrenaline) हॉर्मोन को किस नाम से भी जाना जाता है?","opts":["वृद्धि हॉर्मोन (Growth hormone)","आपातकालीन हॉर्मोन / लड़ो या भागो हॉर्मोन (Emergency/Fight or flight hormone)","मास्टर हॉर्मोन","नींद का हॉर्मोन"],"ans":1},
+  {"q":"एड्रिनलिन (Adrenaline) का शरीर पर क्या प्रभाव पड़ता है?","opts":["हृदय गति बढ़ती है, रक्तदाब बढ़ता है","हृदय गति कम होती है","नींद आती है","भूख बढ़ती है"],"ans":0},
+  {"q":"वृद्धि हॉर्मोन (Growth hormone - GH) किस ग्रंथि से स्रवित होता है?","opts":["थायरॉइड (Thyroid)","पिट्यूटरी ग्रंथि (Pituitary gland)","एड्रिनल (Adrenal)","अग्न्याशय (Pancreas)"],"ans":1},
+  {"q":"वृद्धि हॉर्मोन (Growth hormone) की कमी से बच्चों में क्या होता है?","opts":["मधुमेह (Diabetes)","बौनापन (Dwarfism)","गॉयटर (Goitre)","मोटापा (Obesity)"],"ans":1},
+  {"q":"वृद्धि हॉर्मोन (Growth hormone) की अधिकता से क्या होता है?","opts":["बौनापन (Dwarfism)","महाकायता (Gigantism)","मधुमेह (Diabetes)","गॉयटर (Goitre)"],"ans":1},
+  {"q":"टेस्टोस्टेरॉन (Testosterone) हॉर्मोन कहाँ से स्रवित होता है?","opts":["अंडाशय (Ovary)","वृषण (Testis)","पिट्यूटरी (Pituitary)","थायरॉइड (Thyroid)"],"ans":1},
+  {"q":"टेस्टोस्टेरॉन (Testosterone) का मुख्य कार्य क्या है?","opts":["मादा लैंगिक लक्षणों का विकास","नर में द्वितीयक लैंगिक लक्षणों का विकास (दाढ़ी, गहरी आवाज़)","रक्त शर्करा नियंत्रण","कैल्शियम नियंत्रण"],"ans":1},
+  {"q":"एस्ट्रोजन (Estrogen) हॉर्मोन कहाँ से स्रवित होता है?","opts":["वृषण (Testis)","अंडाशय (Ovary)","एड्रिनल (Adrenal)","थायरॉइड (Thyroid)"],"ans":1},
+  {"q":"एस्ट्रोजन (Estrogen) का मुख्य कार्य क्या है?","opts":["नर लैंगिक लक्षणों का विकास","मादा में द्वितीयक लैंगिक लक्षणों का विकास","पाचन में सहायता","रक्तदाब नियंत्रण"],"ans":1},
+  {"q":"ग्लूकागॉन (Glucagon) हॉर्मोन का कार्य क्या है?","opts":["रक्त शर्करा (Blood sugar) कम करना","रक्त शर्करा बढ़ाना","कैल्शियम बढ़ाना","उपापचय दर कम करना"],"ans":1},
+  {"q":"इंसुलिन (Insulin) अग्न्याशय की किन कोशिकाओं से स्रवित होता है?","opts":["अल्फा कोशिकाएँ (Alpha cells)","बीटा कोशिकाएँ (Beta cells)","डेल्टा कोशिकाएँ (Delta cells)","एसिनर कोशिकाएँ (Acinar cells)"],"ans":1},
+  {"q":"हॉर्मोन (Hormone) शब्द किसने दिया था?","opts":["चार्ल्स डार्विन (Charles Darwin)","अर्नेस्ट स्टार्लिंग (Ernest Starling)","रॉबर्ट हुक (Robert Hooke)","ग्रेगर मेंडल (Gregor Mendel)"],"ans":1},
+  {"q":"पैराथायरॉइड हॉर्मोन (PTH) का कार्य क्या है?","opts":["रक्त में कैल्शियम (Calcium) का स्तर बढ़ाना","रक्त शर्करा कम करना","उपापचय दर बढ़ाना","वृद्धि नियंत्रित करना"],"ans":0},
+  {"q":"प्रोजेस्टेरॉन (Progesterone) हॉर्मोन का प्रमुख कार्य क्या है?","opts":["शुक्राणु निर्माण","गर्भाशय को गर्भधारण के लिए तैयार करना","रक्त शर्करा नियंत्रण","हड्डियों का निर्माण"],"ans":1},
+
+  // === पादप हॉर्मोन (Plant Hormones) — 13 प्रश्न ===
+  {"q":"ऑक्सिन (Auxin) हॉर्मोन का प्रमुख कार्य क्या है?","opts":["पत्ती का गिरना","तने और कोशिकाओं का दीर्घन (Elongation)","फल का पकना","बीज का अंकुरण रोकना"],"ans":1},
+  {"q":"ऑक्सिन (Auxin) पौधे के किस भाग में मुख्य रूप से संश्लेषित (Synthesized) होता है?","opts":["जड़ के अग्रभाग में","तने के शीर्ष (Shoot tip) में","पत्तियों में","फलों में"],"ans":1},
+  {"q":"जिबरेलिन (Gibberellin) हॉर्मोन का प्रमुख कार्य क्या है?","opts":["कोशिका विभाजन","तने का दीर्घन (Stem elongation) और बीज अंकुरण","पत्ती का गिरना","फल का पकना"],"ans":1},
+  {"q":"बौने पौधों (Dwarf plants) में सामान्य वृद्धि किस हॉर्मोन के उपयोग से की जा सकती है?","opts":["ऑक्सिन (Auxin)","जिबरेलिन (Gibberellin)","एब्सिसिक अम्ल (Abscisic acid)","एथिलीन (Ethylene)"],"ans":1},
+  {"q":"साइटोकाइनिन (Cytokinin) हॉर्मोन का प्रमुख कार्य क्या है?","opts":["कोशिका विभाजन (Cell division) को बढ़ावा देना","कोशिका दीर्घन","फल पकाना","वृद्धि रोकना"],"ans":0},
+  {"q":"साइटोकाइनिन (Cytokinin) पौधे के किस भाग में मुख्य रूप से बनता है?","opts":["तने के शीर्ष में","जड़ के शीर्ष (Root tip) में","पत्तियों में","फूलों में"],"ans":1},
+  {"q":"एब्सिसिक अम्ल (Abscisic acid - ABA) को किस नाम से भी जाना जाता है?","opts":["वृद्धि हॉर्मोन (Growth hormone)","तनाव हॉर्मोन / वृद्धि संदमक (Stress hormone / Growth inhibitor)","पकने का हॉर्मोन","विभाजन हॉर्मोन"],"ans":1},
+  {"q":"एब्सिसिक अम्ल (Abscisic acid) का मुख्य कार्य क्या है?","opts":["वृद्धि बढ़ाना","पत्तियों का गिरना (Abscission), रंध्रों का बंद होना, वृद्धि को रोकना","फल पकाना","कोशिका विभाजन"],"ans":1},
+  {"q":"एथिलीन (Ethylene) हॉर्मोन का प्रमुख कार्य क्या है?","opts":["तने का दीर्घन","फलों को पकाना (Fruit ripening)","कोशिका विभाजन","जड़ का विकास"],"ans":1},
+  {"q":"एथिलीन (Ethylene) किस अवस्था में पाया जाता है?","opts":["ठोस (Solid)","द्रव (Liquid)","गैस (Gas)","प्लाज्मा"],"ans":2},
+  {"q":"पौधों में प्रकाश की दिशा में गति को नियंत्रित करने वाला हॉर्मोन कौन-सा है?","opts":["जिबरेलिन (Gibberellin)","ऑक्सिन (Auxin)","एथिलीन (Ethylene)","साइटोकाइनिन (Cytokinin)"],"ans":1},
+  {"q":"ऑक्सिन (Auxin) का शीर्ष प्रभुत्व (Apical dominance) से क्या संबंध है?","opts":["ऑक्सिन पार्श्व कलिकाओं (Lateral buds) की वृद्धि को रोकता है","ऑक्सिन पार्श्व कलिकाओं की वृद्धि बढ़ाता है","कोई संबंध नहीं","ऑक्सिन जड़ों की वृद्धि रोकता है"],"ans":0},
+  {"q":"कृत्रिम ऑक्सिन (Synthetic auxin) का कृषि में क्या उपयोग है?","opts":["खरपतवार नाशक (Weedicide) के रूप में","उर्वरक (Fertilizer) के रूप में","कीटनाशक (Insecticide) के रूप में","रंग के रूप में"],"ans":0},
+
+  // === अनुवर्तन (Tropism) — 12 प्रश्न ===
+  {"q":"पौधों में उद्दीपन (Stimulus) की दिशा में होने वाली गति को क्या कहते हैं?","opts":["अनुचलन (Taxis)","अनुवर्तन (Tropism)","अनुकुंचन (Nastic movement)","परिसंचरण (Circulation)"],"ans":1},
+  {"q":"प्रकाशानुवर्तन (Phototropism) किसे कहते हैं?","opts":["जल की ओर गति","गुरुत्व की ओर गति","प्रकाश की दिशा में पौधों की गति","रासायनिक पदार्थ की ओर गति"],"ans":2},
+  {"q":"पौधे का तना प्रकाश की दिशा में मुड़ता है, यह कैसा अनुवर्तन है?","opts":["धनात्मक प्रकाशानुवर्तन (Positive phototropism)","ऋणात्मक प्रकाशानुवर्तन (Negative phototropism)","गुरुत्वानुवर्तन (Geotropism)","जलानुवर्तन (Hydrotropism)"],"ans":0},
+  {"q":"पौधे की जड़ प्रकाश से दूर बढ़ती है, यह कैसा अनुवर्तन है?","opts":["धनात्मक प्रकाशानुवर्तन","ऋणात्मक प्रकाशानुवर्तन (Negative phototropism)","धनात्मक गुरुत्वानुवर्तन","जलानुवर्तन"],"ans":1},
+  {"q":"गुरुत्वानुवर्तन (Geotropism) किसे कहते हैं?","opts":["प्रकाश के प्रति अनुक्रिया","गुरुत्वाकर्षण (Gravity) के प्रति पौधों की अनुक्रिया","जल के प्रति अनुक्रिया","स्पर्श के प्रति अनुक्रिया"],"ans":1},
+  {"q":"पौधे की जड़ गुरुत्व की दिशा में बढ़ती है, यह कैसा अनुवर्तन है?","opts":["ऋणात्मक गुरुत्वानुवर्तन","धनात्मक गुरुत्वानुवर्तन (Positive geotropism)","प्रकाशानुवर्तन","जलानुवर्तन"],"ans":1},
+  {"q":"तना गुरुत्व के विपरीत दिशा में बढ़ता है, यह कैसा अनुवर्तन है?","opts":["धनात्मक गुरुत्वानुवर्तन","ऋणात्मक गुरुत्वानुवर्तन (Negative geotropism)","धनात्मक प्रकाशानुवर्तन","जलानुवर्तन"],"ans":1},
+  {"q":"जलानुवर्तन (Hydrotropism) किसे कहते हैं?","opts":["प्रकाश की ओर गति","जल (Water) की दिशा में पौधों की गति","गुरुत्व की ओर गति","रसायन की ओर गति"],"ans":1},
+  {"q":"रसायनानुवर्तन (Chemotropism) का सबसे अच्छा उदाहरण क्या है?","opts":["तने का प्रकाश की ओर मुड़ना","जड़ का जल की ओर जाना","परागनलिका (Pollen tube) का बीजांड (Ovule) की ओर बढ़ना","पत्ती का मुरझाना"],"ans":2},
+  {"q":"स्पर्शानुवर्तन (Thigmotropism) का उदाहरण क्या है?","opts":["सूर्यमुखी का सूर्य की ओर मुड़ना","लता (Tendril) का सहारे से लिपटना","जड़ का नीचे जाना","फल का पकना"],"ans":1},
+  {"q":"छुई-मुई (Mimosa pudica / Touch-me-not) पौधे की पत्तियों का स्पर्श करने पर मुरझाना किस प्रकार की गति है?","opts":["अनुवर्तन गति (Tropic movement)","अनुकुंचन गति (Nastic movement)","वृद्धि गति","परिसंचरण गति"],"ans":1},
+  {"q":"अनुकुंचन गति (Nastic movement) अनुवर्तन गति (Tropic movement) से किस प्रकार भिन्न है?","opts":["यह उद्दीपन की दिशा पर निर्भर नहीं करती","यह हमेशा उद्दीपन की दिशा में होती है","यह केवल जड़ों में होती है","यह केवल प्रकाश से संबंधित है"],"ans":0},
+
+  // === रोग (Diseases) — 10 प्रश्न ===
+  {"q":"इंसुलिन (Insulin) की कमी से कौन-सा रोग होता है?","opts":["गॉयटर (Goitre)","मधुमेह (Diabetes mellitus)","बौनापन (Dwarfism)","एक्रोमेगाली (Acromegaly)"],"ans":1},
+  {"q":"मधुमेह (Diabetes mellitus) में रक्त में किसका स्तर बढ़ जाता है?","opts":["प्रोटीन (Protein)","शर्करा / ग्लूकोज (Sugar/Glucose)","वसा (Fat)","कैल्शियम (Calcium)"],"ans":1},
+  {"q":"टाइप-1 मधुमेह (Type-1 Diabetes) में क्या होता है?","opts":["अग्न्याशय (Pancreas) इंसुलिन बनाना बंद कर देता है","शरीर इंसुलिन का उपयोग नहीं कर पाता","थायरॉक्सिन की कमी होती है","वृद्धि हॉर्मोन की अधिकता होती है"],"ans":0},
+  {"q":"गॉयटर (Goitre) रोग किसकी कमी से होता है?","opts":["इंसुलिन (Insulin)","आयोडीन (Iodine)","कैल्शियम (Calcium)","लोहा (Iron)"],"ans":1},
+  {"q":"गॉयटर (Goitre) रोग में शरीर का कौन-सा अंग प्रभावित होता है?","opts":["अग्न्याशय (Pancreas)","थायरॉइड ग्रंथि (Thyroid gland) - गर्दन में सूजन","पिट्यूटरी ग्रंथि (Pituitary)","एड्रिनल ग्रंथि (Adrenal)"],"ans":1},
+  {"q":"बौनापन (Dwarfism) किस हॉर्मोन की कमी से होता है?","opts":["थायरॉक्सिन (Thyroxine)","इंसुलिन (Insulin)","वृद्धि हॉर्मोन (Growth hormone)","एड्रिनलिन (Adrenaline)"],"ans":2},
+  {"q":"थायरॉक्सिन (Thyroxine) की अधिकता से कौन-सा रोग होता है?","opts":["मिक्सेडीमा (Myxoedema)","ग्रेव्स रोग (Graves' disease / Exophthalmic goitre)","बौनापन (Dwarfism)","मधुमेह (Diabetes)"],"ans":1},
+  {"q":"थायरॉक्सिन (Thyroxine) की कमी से वयस्कों में कौन-सा रोग होता है?","opts":["ग्रेव्स रोग (Graves' disease)","मिक्सेडीमा (Myxoedema)","क्रेटिनिज्म (Cretinism)","गॉयटर (Goitre)"],"ans":1},
+  {"q":"बच्चों में थायरॉक्सिन (Thyroxine) की कमी से होने वाला रोग कौन-सा है?","opts":["मिक्सेडीमा (Myxoedema)","क्रेटिनिज्म (Cretinism) - शारीरिक एवं मानसिक वृद्धि रुक जाती है","बौनापन (Dwarfism)","मधुमेह (Diabetes)"],"ans":1},
+  {"q":"आयोडीनयुक्त नमक (Iodised salt) का उपयोग किस रोग की रोकथाम के लिए किया जाता है?","opts":["मधुमेह (Diabetes)","गॉयटर (Goitre)","बौनापन (Dwarfism)","एनीमिया (Anaemia)"],"ans":1},
+
+  // === विविध / मिश्रित प्रश्न (Miscellaneous) — 15 प्रश्न ===
+  {"q":"तंत्रिका तंत्र (Nervous system) और अंतःस्रावी तंत्र (Endocrine system) में क्या अंतर है?","opts":["तंत्रिका तंत्र तीव्र और अल्पकालिक; अंतःस्रावी तंत्र धीमा और दीर्घकालिक","दोनों समान गति से कार्य करते हैं","तंत्रिका तंत्र धीमा, अंतःस्रावी तंत्र तीव्र","कोई अंतर नहीं"],"ans":0},
+  {"q":"रासायनिक समन्वय (Chemical coordination) किसके माध्यम से होता है?","opts":["तंत्रिका आवेग (Nerve impulse)","हॉर्मोन (Hormones)","एंजाइम (Enzymes)","विटामिन (Vitamins)"],"ans":1},
+  {"q":"फीडबैक क्रियाविधि (Feedback mechanism) का अर्थ क्या है?","opts":["हॉर्मोन का अनियंत्रित स्रवण","किसी हॉर्मोन के स्तर के आधार पर उसके उत्पादन का नियंत्रण","तंत्रिका आवेग का संचरण","एंजाइम का निर्माण"],"ans":1},
+  {"q":"नकारात्मक फीडबैक (Negative feedback) में क्या होता है?","opts":["हॉर्मोन का स्तर बढ़ने पर और अधिक स्रवण होता है","हॉर्मोन का स्तर बढ़ने पर स्रवण कम हो जाता है","कोई नियंत्रण नहीं होता","हॉर्मोन नष्ट हो जाते हैं"],"ans":1},
+  {"q":"पौधों में समन्वय (Coordination) किसके द्वारा होता है?","opts":["केवल तंत्रिका तंत्र द्वारा","केवल पादप हॉर्मोन (Plant hormones) द्वारा","तंत्रिका तंत्र और हॉर्मोन दोनों द्वारा","एंजाइमों द्वारा"],"ans":1},
+  {"q":"पौधों में तंत्रिका तंत्र (Nervous system) पाया जाता है या नहीं?","opts":["हाँ, सभी पौधों में","हाँ, केवल बड़े पौधों में","नहीं, पौधों में तंत्रिका तंत्र नहीं पाया जाता","केवल जलीय पौधों में"],"ans":2},
+  {"q":"ऐच्छिक क्रिया (Voluntary action) किसके नियंत्रण में होती है?","opts":["मेरुरज्जु (Spinal cord)","प्रमस्तिष्क (Cerebrum)","अनुमस्तिष्क (Cerebellum)","मेडुला (Medulla)"],"ans":1},
+  {"q":"अनैच्छिक क्रिया (Involuntary action) और प्रतिवर्ती क्रिया (Reflex action) में क्या अंतर है?","opts":["दोनों एक ही हैं","अनैच्छिक क्रिया मस्तिष्क के मेडुला द्वारा, प्रतिवर्ती क्रिया मेरुरज्जु द्वारा नियंत्रित होती है","दोनों मेरुरज्जु द्वारा नियंत्रित","दोनों प्रमस्तिष्क द्वारा नियंत्रित"],"ans":1},
+  {"q":"मस्तिष्क (Brain) का कौन-सा भाग दृष्टि (Vision) से संबंधित है?","opts":["ललाट पालि (Frontal lobe)","पश्चकपाल पालि (Occipital lobe)","पार्श्विक पालि (Parietal lobe)","शंख पालि (Temporal lobe)"],"ans":1},
+  {"q":"मनुष्य में सबसे विकसित मस्तिष्क का भाग कौन-सा है?","opts":["अनुमस्तिष्क (Cerebellum)","मेडुला (Medulla)","प्रमस्तिष्क (Cerebrum)","पॉन्स (Pons)"],"ans":2},
+  {"q":"यदि मेडुला ऑब्लॉन्गेटा (Medulla oblongata) क्षतिग्रस्त हो जाए तो क्या होगा?","opts":["सोचने की क्षमता समाप्त","संतुलन बिगड़ेगा","श्वसन और हृदय गति जैसी अनैच्छिक क्रियाएँ रुक सकती हैं - जानलेवा","दृष्टि चली जाएगी"],"ans":2},
+  {"q":"एड्रिनल ग्रंथि (Adrenal gland) के दो भाग कौन-से हैं?","opts":["अग्र और पश्च (Anterior & Posterior)","कॉर्टेक्स और मेडुला (Cortex & Medulla)","अल्फा और बीटा","बाहरी और आंतरिक"],"ans":1},
+  {"q":"पिट्यूटरी ग्रंथि (Pituitary gland) किसके नियंत्रण में कार्य करती है?","opts":["थायरॉइड (Thyroid)","हाइपोथैलेमस (Hypothalamus)","मेडुला (Medulla)","अनुमस्तिष्क (Cerebellum)"],"ans":1},
+  {"q":"ऑक्सिन (Auxin) प्रकाश के विपरीत दिशा में अधिक संचित होता है, इससे क्या होता है?","opts":["छायावाले भाग में अधिक वृद्धि होती है, तना प्रकाश की ओर मुड़ता है","प्रकाश वाले भाग में अधिक वृद्धि होती है","दोनों ओर समान वृद्धि","कोई प्रभाव नहीं"],"ans":0},
+  {"q":"बीजरहित फल (Seedless fruit) बनाने के लिए किस हॉर्मोन का उपयोग किया जाता है?","opts":["एथिलीन (Ethylene)","ऑक्सिन (Auxin)","एब्सिसिक अम्ल (Abscisic acid)","साइटोकाइनिन (Cytokinin)"],"ans":1}
+  ],
+  3: [
+// ===== अलैंगिक जनन (Asexual Reproduction) — Q1–Q25 =====
+  {"q":"अमीबा (Amoeba) में अलैंगिक जनन किस विधि द्वारा होता है?","opts":["मुकुलन (Budding)","द्विविखंडन (Binary fission)","बीजाणुजनन (Spore formation)","पुनर्जनन (Regeneration)"],"ans":1},
+  {"q":"प्लाज्मोडियम (Plasmodium) में किस प्रकार का अलैंगिक जनन होता है?","opts":["द्विविखंडन (Binary fission)","मुकुलन (Budding)","बहुविखंडन (Multiple fission)","कायिक प्रवर्धन (Vegetative propagation)"],"ans":2},
+  {"q":"हाइड्रा (Hydra) में अलैंगिक जनन किस विधि से होता है?","opts":["द्विविखंडन (Binary fission)","बीजाणुजनन (Spore formation)","मुकुलन (Budding)","विखंडन (Fragmentation)"],"ans":2},
+  {"q":"यीस्ट (Yeast) में जनन की मुख्य विधि क्या है?","opts":["बीजाणुजनन (Spore formation)","मुकुलन (Budding)","द्विविखंडन (Binary fission)","पुनर्जनन (Regeneration)"],"ans":1},
+  {"q":"राइज़ोपस (Rhizopus) में अलैंगिक जनन किस विधि द्वारा होता है?","opts":["मुकुलन (Budding)","कायिक प्रवर्धन (Vegetative propagation)","बीजाणुजनन (Spore formation)","द्विविखंडन (Binary fission)"],"ans":2},
+  {"q":"प्लेनेरिया (Planaria) में कौन-सी जनन विधि पाई जाती है?","opts":["मुकुलन (Budding)","पुनर्जनन (Regeneration)","बहुविखंडन (Multiple fission)","बीजाणुजनन (Spore formation)"],"ans":1},
+  {"q":"लेस्मानिया (Leishmania) में द्विविखंडन (Binary fission) किस प्रकार होता है?","opts":["किसी भी तल में","अनुदैर्ध्य तल में (Longitudinal plane)","अनुप्रस्थ तल में (Transverse plane)","विकर्ण तल में"],"ans":1},
+  {"q":"गुलाब (Rose) के पौधे का कायिक प्रवर्धन (Vegetative propagation) किस विधि द्वारा किया जाता है?","opts":["बीज द्वारा","कलम (Cutting)","बीजाणु द्वारा","पत्ती द्वारा"],"ans":1},
+  {"q":"दाब लगाना (Layering) किसका उदाहरण है?","opts":["लैंगिक जनन (Sexual reproduction)","कायिक प्रवर्धन (Vegetative propagation)","बीजाणुजनन (Spore formation)","पुनर्जनन (Regeneration)"],"ans":1},
+  {"q":"कलिकायन (Grafting) में किन दो भागों को जोड़ा जाता है?","opts":["तना और जड़","वंश (Scion) और मूलवृन्त (Stock)","पत्ती और फूल","बीज और फल"],"ans":1},
+  {"q":"ब्रायोफिलम (Bryophyllum) में कायिक प्रवर्धन किसके द्वारा होता है?","opts":["तने द्वारा","जड़ द्वारा","पत्ती की कोर (Leaf margin) द्वारा","बीज द्वारा"],"ans":2},
+  {"q":"आलू (Potato) में कायिक प्रवर्धन किसके द्वारा होता है?","opts":["जड़ द्वारा","तने के कंद (Tuber) की आँखों द्वारा","पत्ती द्वारा","बीज द्वारा"],"ans":1},
+  {"q":"अलैंगिक जनन (Asexual reproduction) में कितने जनकों (Parents) की आवश्यकता होती है?","opts":["दो","एक","तीन","चार"],"ans":1},
+  {"q":"स्पाइरोगायरा (Spirogyra) में अलैंगिक जनन किस विधि से होता है?","opts":["मुकुलन (Budding)","विखंडन (Fragmentation)","बीजाणुजनन (Spore formation)","द्विविखंडन (Binary fission)"],"ans":1},
+  {"q":"अलैंगिक जनन (Asexual reproduction) में संतान आनुवंशिक रूप से जनक के __________ होती है।","opts":["भिन्न","समान (Clone)","कुछ भिन्न","अनिश्चित"],"ans":1},
+  {"q":"DNA प्रतिकृति (DNA replication) में विभिन्नताएँ (Variations) उत्पन्न होती हैं, जो __________ का आधार हैं।","opts":["जनन (Reproduction)","विकास/जैव-विकास (Evolution)","पोषण (Nutrition)","श्वसन (Respiration)"],"ans":1},
+  {"q":"मुकुल (Bud) शरीर के किसी भाग से उभार (Outgrowth) के रूप में विकसित होता है — यह किस जीव में देखा जाता है?","opts":["अमीबा (Amoeba)","हाइड्रा (Hydra)","प्लाज्मोडियम (Plasmodium)","प्लेनेरिया (Planaria)"],"ans":1},
+  {"q":"बीजाणुधानी (Sporangium) किसमें पाई जाती है?","opts":["अमीबा (Amoeba)","राइज़ोपस (Rhizopus)","हाइड्रा (Hydra)","यीस्ट (Yeast)"],"ans":1},
+  {"q":"कायिक प्रवर्धन (Vegetative propagation) का एक लाभ क्या है?","opts":["अधिक विभिन्नता उत्पन्न होती है","बीजरहित पौधे उगाए जा सकते हैं","पौधे धीरे बढ़ते हैं","नई जाति बनती है"],"ans":1},
+  {"q":"ऊतक संवर्धन (Tissue culture) में पौधे के किस भाग का उपयोग किया जाता है?","opts":["केवल बीज","केवल जड़","कोई भी ऊतक/कोशिका (Explant)","केवल पत्ती"],"ans":2},
+  {"q":"द्विविखंडन (Binary fission) में जनक कोशिका कितनी संतति कोशिकाओं में विभाजित होती है?","opts":["तीन","चार","दो","अनेक"],"ans":2},
+  {"q":"बहुविखंडन (Multiple fission) में एक कोशिका कितनी संतति कोशिकाओं में विभक्त होती है?","opts":["दो","तीन","चार","अनेक (Many)"],"ans":3},
+  {"q":"पुनर्जनन (Regeneration) और बहुकोशिकीय जीवों में सामान्य जनन विधि क्यों नहीं कहा जा सकता?","opts":["यह बहुत तेज़ होता है","जीव सामान्यतः टुकड़ों में नहीं टूटते","यह लैंगिक है","DNA प्रतिकृति नहीं होती"],"ans":1},
+  {"q":"अदरक (Ginger) में कायिक प्रवर्धन किसके द्वारा होता है?","opts":["बीज द्वारा","प्रकन्द/राइज़ोम (Rhizome) द्वारा","पत्ती द्वारा","बीजाणु द्वारा"],"ans":1},
+  {"q":"गन्ना (Sugarcane) का कायिक प्रवर्धन किस विधि से किया जाता है?","opts":["बीज द्वारा","तने की कलम (Stem cutting)","बीजाणु द्वारा","पुनर्जनन द्वारा"],"ans":1},
+
+  // ===== पुष्प की संरचना एवं लैंगिक जनन (Flower & Sexual Reproduction) — Q26–Q45 =====
+  {"q":"पुष्प (Flower) का कौन-सा भाग नर जनन अंग (Male reproductive organ) है?","opts":["स्त्रीकेसर (Pistil)","दल (Petal)","पुंकेसर (Stamen)","बाह्यदल (Sepal)"],"ans":2},
+  {"q":"पुष्प का मादा जनन अंग (Female reproductive organ) कौन-सा है?","opts":["पुंकेसर (Stamen)","बाह्यदल (Sepal)","दल (Petal)","स्त्रीकेसर (Pistil/Carpel)"],"ans":3},
+  {"q":"पुंकेसर (Stamen) के दो मुख्य भाग कौन-से हैं?","opts":["वर्तिकाग्र एवं वर्तिका (Stigma & Style)","परागकोश एवं तंतु (Anther & Filament)","अंडाशय एवं बीजांड (Ovary & Ovule)","बाह्यदल एवं दल (Sepal & Petal)"],"ans":1},
+  {"q":"स्त्रीकेसर (Pistil) के तीन भाग कौन-से हैं?","opts":["परागकोश, तंतु, परागकण","वर्तिकाग्र, वर्तिका, अंडाशय (Stigma, Style, Ovary)","बाह्यदल, दल, पुंकेसर","बीज, फल, भ्रूण"],"ans":1},
+  {"q":"परागकोश (Anther) में क्या बनता है?","opts":["बीजांड (Ovule)","अंडकोशिका (Egg cell)","परागकण (Pollen grains)","भ्रूणकोश (Embryo sac)"],"ans":2},
+  {"q":"स्वपरागण (Self-pollination) किसे कहते हैं?","opts":["एक पुष्प के परागकणों का दूसरे पौधे के पुष्प पर पहुँचना","एक पुष्प के परागकणों का उसी पुष्प के वर्तिकाग्र पर पहुँचना","हवा द्वारा परागण","कीटों द्वारा परागण"],"ans":1},
+  {"q":"परपरागण (Cross-pollination) में परागकण __________ जाते हैं।","opts":["उसी पुष्प के वर्तिकाग्र पर","उसी पौधे के दूसरे पुष्प या भिन्न पौधे के पुष्प पर","जड़ की ओर","पत्ती पर"],"ans":1},
+  {"q":"परागण (Pollination) के मुख्य माध्यम कौन-से हैं?","opts":["वायु, जल, कीट, पक्षी (Wind, Water, Insects, Birds)","केवल वायु","केवल कीट","केवल जल"],"ans":0},
+  {"q":"निषेचन (Fertilization) किसे कहते हैं?","opts":["परागकण का वर्तिकाग्र पर पहुँचना","नर युग्मक (Male gamete) व अंडकोशिका (Egg cell) का संलयन","बीज का अंकुरण","फल का पकना"],"ans":1},
+  {"q":"निषेचन के बाद अंडाशय (Ovary) किसमें परिवर्तित होता है?","opts":["बीज (Seed)","फल (Fruit)","पत्ती (Leaf)","तना (Stem)"],"ans":1},
+  {"q":"निषेचन के बाद बीजांड (Ovule) किसमें परिवर्तित होता है?","opts":["फल (Fruit)","बीज (Seed)","पुष्प (Flower)","कली (Bud)"],"ans":1},
+  {"q":"द्विलिंगी पुष्प (Bisexual flower) किसे कहते हैं?","opts":["जिसमें केवल पुंकेसर हो","जिसमें केवल स्त्रीकेसर हो","जिसमें पुंकेसर और स्त्रीकेसर दोनों हों","जिसमें कोई जनन अंग न हो"],"ans":2},
+  {"q":"एकलिंगी पुष्प (Unisexual flower) का उदाहरण कौन-सा है?","opts":["सरसों (Mustard)","गुड़हल (Hibiscus)","पपीता (Papaya)","गुलाब (Rose)"],"ans":2},
+  {"q":"परागनली (Pollen tube) किसके माध्यम से अंडाशय तक पहुँचती है?","opts":["बाह्यदल (Sepal)","दल (Petal)","वर्तिका (Style)","तंतु (Filament)"],"ans":2},
+  {"q":"भ्रूणपोष (Endosperm) का कार्य क्या है?","opts":["परागण करना","विकसित होते भ्रूण को पोषण देना","प्रकाश-संश्लेषण करना","जल अवशोषित करना"],"ans":1},
+  {"q":"बीज (Seed) के अंदर क्या पाया जाता है?","opts":["भ्रूण (Embryo)","परागकण (Pollen grains)","वर्तिकाग्र (Stigma)","दल (Petal)"],"ans":0},
+  {"q":"बीज के बीजचोल (Seed coat) का क्या कार्य है?","opts":["प्रकाश-संश्लेषण करना","भ्रूण की सुरक्षा करना","जल का परिवहन करना","पोषण प्रदान करना"],"ans":1},
+  {"q":"अंकुरण (Germination) के लिए बीज को किन परिस्थितियों की आवश्यकता होती है?","opts":["केवल प्रकाश","जल, वायु (O₂) और उचित ताप","केवल मिट्टी","केवल अंधकार"],"ans":1},
+  {"q":"बाह्यदल (Sepal) का मुख्य कार्य क्या है?","opts":["परागण में सहायता","कली अवस्था (Bud stage) में पुष्प की सुरक्षा करना","फल बनाना","बीज बनाना"],"ans":1},
+
+  // ===== मानव जनन तंत्र (Human Reproductive System) — Q46–Q120 (75 questions, >50 on human reproduction) =====
+  {"q":"मनुष्य के वृषण (Testis) का मुख्य कार्य क्या है?","opts":["अंडाणु (Egg) बनाना","शुक्राणु (Sperm) तथा टेस्टोस्टेरॉन (Testosterone) का निर्माण","मूत्र बनाना","रक्त शुद्ध करना"],"ans":1},
+  {"q":"वृषण (Testis) शरीर के बाहर वृषणकोष (Scrotum) में क्यों स्थित होते हैं?","opts":["सुरक्षा के लिए","शुक्राणु निर्माण हेतु शरीर से कम ताप आवश्यक होता है","अधिक स्थान के लिए","हार्मोन स्रावण के लिए"],"ans":1},
+  {"q":"शुक्राणु (Sperm) का आकार कैसा होता है?","opts":["गोल","लंबा, सिर और पूँछ (Tail) युक्त","चपटा","अनियमित"],"ans":1},
+  {"q":"शुक्रवाहिनी (Vas deferens) का क्या कार्य है?","opts":["शुक्राणुओं को वृषण से मूत्रमार्ग तक ले जाना","अंडाणु बनाना","मूत्र ले जाना","हार्मोन बनाना"],"ans":0},
+  {"q":"प्रोस्टेट ग्रंथि (Prostate gland) एवं शुक्राशय (Seminal vesicle) का कार्य क्या है?","opts":["शुक्राणुओं को पोषण व तरल माध्यम (Seminal fluid) प्रदान करना","अंडाणु बनाना","रक्त बनाना","मूत्र शुद्ध करना"],"ans":0},
+  {"q":"वीर्य (Semen) किसका मिश्रण है?","opts":["केवल शुक्राणु","शुक्राणु + ग्रंथियों द्वारा स्रावित तरल (Seminal fluid)","केवल मूत्र","रक्त और शुक्राणु"],"ans":1},
+  {"q":"मादा जनन तंत्र में अंडाशय (Ovary) का कार्य क्या है?","opts":["शुक्राणु बनाना","अंडाणु (Egg/Ovum) एवं एस्ट्रोजन (Estrogen) हार्मोन का निर्माण","मूत्र बनाना","पाचन करना"],"ans":1},
+  {"q":"मानव मादा में अंडाशय (Ovary) की संख्या कितनी होती है?","opts":["एक","दो","तीन","चार"],"ans":1},
+  {"q":"अंडवाहिनी/फैलोपियन नलिका (Fallopian tube) का क्या कार्य है?","opts":["मूत्र ले जाना","अंडाणु को अंडाशय से गर्भाशय तक ले जाना","शुक्राणु बनाना","हार्मोन बनाना"],"ans":1},
+  {"q":"निषेचन (Fertilization) मानव शरीर में कहाँ होता है?","opts":["गर्भाशय (Uterus) में","अंडाशय (Ovary) में","अंडवाहिनी/फैलोपियन नलिका (Fallopian tube) में","योनि (Vagina) में"],"ans":2},
+  {"q":"निषेचित अंडाणु (Zygote) को क्या कहते हैं?","opts":["युग्मनज (Zygote)","भ्रूण (Embryo)","शिशु (Baby)","बीजांड (Ovule)"],"ans":0},
+  {"q":"युग्मनज (Zygote) का प्रारंभिक विकास कहाँ होता है?","opts":["अंडाशय (Ovary) में","फैलोपियन नलिका और फिर गर्भाशय (Uterus) में","योनि (Vagina) में","वृषण (Testis) में"],"ans":1},
+  {"q":"गर्भाशय (Uterus) का मुख्य कार्य क्या है?","opts":["अंडाणु बनाना","भ्रूण (Embryo) के विकास को आश्रय देना","शुक्राणु बनाना","हार्मोन बनाना"],"ans":1},
+  {"q":"भ्रूण (Embryo) गर्भाशय की भित्ति में स्थापित होने की क्रिया क्या कहलाती है?","opts":["निषेचन (Fertilization)","अंतर्रोपण/आरोपण (Implantation)","परागण (Pollination)","अंकुरण (Germination)"],"ans":1},
+  {"q":"अपरा/प्लेसेंटा (Placenta) का क्या कार्य है?","opts":["शुक्राणु बनाना","माँ के रक्त से भ्रूण को पोषण, O₂ प्रदान करना एवं CO₂ व अपशिष्ट हटाना","अंडाणु बनाना","हड्डी बनाना"],"ans":1},
+  {"q":"अपरा (Placenta) किसके बीच संबंध स्थापित करता है?","opts":["पिता और शिशु","माँ के रक्त और भ्रूण के रक्त","दो शिशुओं","अंडाशय और गर्भाशय"],"ans":1},
+  {"q":"मानव में गर्भावधि (Gestation period) लगभग कितने दिनों की होती है?","opts":["180 दिन","270 दिन (लगभग 9 माह)","365 दिन","120 दिन"],"ans":1},
+  {"q":"मासिक धर्म/ऋतुस्राव (Menstruation) चक्र की अवधि सामान्यतः कितने दिनों की होती है?","opts":["14 दिन","28 दिन","7 दिन","40 दिन"],"ans":1},
+  {"q":"मासिक धर्म (Menstruation) में क्या होता है?","opts":["शुक्राणु बनते हैं","गर्भाशय की आंतरिक परत (Endometrium) टूटकर रक्त एवं म्यूकस के साथ बाहर निकलती है","अंडाणु निषेचित होता है","भ्रूण विकसित होता है"],"ans":1},
+  {"q":"मासिक धर्म (Menstruation) किस स्थिति में नहीं होता?","opts":["जब महिला स्वस्थ हो","जब अंडाणु निषेचित हो जाए अर्थात् गर्भधारण (Pregnancy) हो","जब महिला व्यायाम करे","जब भोजन न करे"],"ans":1},
+  {"q":"अंडोत्सर्ग/ओव्यूलेशन (Ovulation) किसे कहते हैं?","opts":["शुक्राणु का निर्माण","अंडाशय से परिपक्व अंडाणु (Ovum) का मोचन/निर्मुक्त होना","गर्भाशय की परत का टूटना","निषेचन"],"ans":1},
+  {"q":"ओव्यूलेशन (Ovulation) मासिक चक्र के लगभग किस दिन होता है?","opts":["1st दिन","7th दिन","14th दिन","28th दिन"],"ans":2},
+  {"q":"किशोरावस्था/यौवनारंभ (Puberty) में लड़कों में कौन-सा हार्मोन प्रमुख भूमिका निभाता है?","opts":["एस्ट्रोजन (Estrogen)","प्रोजेस्टेरॉन (Progesterone)","टेस्टोस्टेरॉन (Testosterone)","इंसुलिन (Insulin)"],"ans":2},
+  {"q":"किशोरावस्था (Puberty) में लड़कियों में कौन-सा हार्मोन प्रमुख होता है?","opts":["टेस्टोस्टेरॉन (Testosterone)","एस्ट्रोजन (Estrogen)","इंसुलिन (Insulin)","थायरॉक्सिन (Thyroxine)"],"ans":1},
+  {"q":"यौवनारंभ (Puberty) के समय लड़कों में होने वाला परिवर्तन कौन-सा है?","opts":["आवाज़ का भारी (Deep) होना, दाढ़ी-मूँछ आना","स्तन ग्रंथियों का विकास","कूल्हों का चौड़ा होना","मासिक धर्म शुरू होना"],"ans":0},
+  {"q":"यौवनारंभ (Puberty) में लड़कियों में कौन-सा परिवर्तन होता है?","opts":["दाढ़ी-मूँछ आना","आवाज़ का भारी होना","स्तन ग्रंथियों का विकास, कूल्हों का चौड़ा होना, मासिक धर्म शुरू होना","मांसपेशियों का अत्यधिक विकास"],"ans":2},
+  {"q":"कंडोम (Condom) किस प्रकार की गर्भनिरोधक विधि है?","opts":["रासायनिक (Chemical)","हार्मोनल (Hormonal)","यांत्रिक अवरोधक (Mechanical barrier)","शल्य (Surgical)"],"ans":2},
+  {"q":"कॉपर-T (Copper-T/IUD) कहाँ स्थापित किया जाता है?","opts":["अंडाशय (Ovary) में","गर्भाशय (Uterus) में","फैलोपियन नलिका में","योनि (Vagina) में"],"ans":1},
+  {"q":"गर्भनिरोधक गोलियाँ (Oral contraceptive pills) किन हार्मोनों पर आधारित होती हैं?","opts":["इंसुलिन और थायरॉक्सिन","एस्ट्रोजन और प्रोजेस्टेरॉन (Estrogen & Progesterone)","टेस्टोस्टेरॉन और एड्रेनालिन","वृद्धि हार्मोन (Growth hormone)"],"ans":1},
+  {"q":"पुरुष नसबंदी (Vasectomy) में क्या किया जाता है?","opts":["वृषण निकाल दिए जाते हैं","शुक्रवाहिनी (Vas deferens) को काटकर बाँध दिया जाता है","प्रोस्टेट ग्रंथि निकाली जाती है","शुक्राशय निकाला जाता है"],"ans":1},
+  {"q":"स्त्री नसबंदी (Tubectomy) में क्या किया जाता है?","opts":["अंडाशय निकाले जाते हैं","अंडवाहिनी (Fallopian tube) को काटकर बाँध दिया जाता है","गर्भाशय निकाला जाता है","हार्मोन इंजेक्शन दिया जाता है"],"ans":1},
+  {"q":"AIDS किस सूक्ष्मजीव से होता है?","opts":["जीवाणु (Bacteria)","कवक (Fungus)","विषाणु/वायरस — HIV (Human Immunodeficiency Virus)","प्रोटोज़ोआ (Protozoa)"],"ans":2},
+  {"q":"AIDS का पूरा नाम क्या है?","opts":["Acquired Immuno Deficiency Syndrome","Auto Immune Disease Syndrome","Acquired Infection and Disease Syndrome","Advanced Immuno Deficit Syndrome"],"ans":0},
+  {"q":"HIV का संक्रमण किस प्रकार फैलता है?","opts":["हवा से","असुरक्षित यौन संबंध, संक्रमित रक्त, संक्रमित सुई, माँ से शिशु","हाथ मिलाने से","भोजन से"],"ans":1},
+  {"q":"गोनोरिया (Gonorrhoea) किस प्रकार का रोग है?","opts":["विषाणुजनित (Viral)","जीवाणुजनित यौन संचारित रोग (Bacterial STD)","कवकजनित (Fungal)","प्रोटोज़ोआ जनित"],"ans":1},
+  {"q":"सिफलिस (Syphilis) किस सूक्ष्मजीव द्वारा होता है?","opts":["विषाणु (Virus)","कवक (Fungus)","जीवाणु — ट्रेपोनेमा पैलिडम (Treponema pallidum)","प्रोटोज़ोआ"],"ans":2},
+  {"q":"यौन संचारित रोगों (STDs) से बचाव का सबसे प्रभावी यांत्रिक उपाय क्या है?","opts":["गर्भनिरोधक गोलियाँ","कंडोम (Condom) का उपयोग","कॉपर-T","नसबंदी"],"ans":1},
+  {"q":"गर्भनिरोधक (Contraception) का उद्देश्य क्या है?","opts":["रोग फैलाना","अनचाहे गर्भ (Unwanted pregnancy) को रोकना","शुक्राणु उत्पादन बढ़ाना","मासिक धर्म रोकना"],"ans":1},
+  {"q":"अंडाणु (Ovum) शुक्राणु (Sperm) से आकार में __________ होता है।","opts":["छोटा","बड़ा","समान","बहुत छोटा"],"ans":1},
+  {"q":"शुक्राणु (Sperm) में गति के लिए कौन-सी संरचना पाई जाती है?","opts":["सिलिया (Cilia)","पूँछ/कशाभिका (Flagellum/Tail)","पैर (Legs)","पंख (Wings)"],"ans":1},
+  {"q":"मानव में लिंग निर्धारण (Sex determination) किसके द्वारा होता है?","opts":["माँ के गुणसूत्रों द्वारा","पिता के लिंग गुणसूत्र (Sex chromosome — X या Y) द्वारा","भोजन द्वारा","वातावरण द्वारा"],"ans":1},
+  {"q":"पुरुष में लिंग गुणसूत्र (Sex chromosomes) की संरचना क्या होती है?","opts":["XX","XY","YY","XO"],"ans":1},
+  {"q":"स्त्री में लिंग गुणसूत्र (Sex chromosomes) की संरचना क्या होती है?","opts":["XY","YY","XX","XO"],"ans":2},
+  {"q":"यदि शुक्राणु में Y गुणसूत्र (Y chromosome) हो और अंडाणु से X गुणसूत्र मिले, तो संतान का लिंग क्या होगा?","opts":["लड़की (Girl)","लड़का (Boy)","अनिश्चित","जुड़वाँ"],"ans":1},
+  {"q":"यदि शुक्राणु में X गुणसूत्र (X chromosome) हो, तो संतान का लिंग क्या होगा?","opts":["लड़का (Boy)","लड़की (Girl)","अनिश्चित","दोनों"],"ans":1},
+  {"q":"मानव में गुणसूत्रों (Chromosomes) की कुल संख्या कितनी होती है?","opts":["23","44","46","48"],"ans":2},
+  {"q":"युग्मक (Gametes) में गुणसूत्रों की संख्या कितनी होती है?","opts":["46","23","12","48"],"ans":1},
+  {"q":"निषेचन के बाद युग्मनज (Zygote) में गुणसूत्रों की संख्या कितनी होती है?","opts":["23","46","92","12"],"ans":1},
+  {"q":"एस्ट्रोजन (Estrogen) हार्मोन कहाँ से स्रावित होता है?","opts":["वृषण (Testis)","अंडाशय (Ovary)","पिट्यूटरी ग्रंथि (Pituitary gland)","थायरॉइड ग्रंथि"],"ans":1},
+  {"q":"टेस्टोस्टेरॉन (Testosterone) हार्मोन कहाँ से स्रावित होता है?","opts":["अंडाशय (Ovary)","वृषण (Testis)","अधिवृक्क ग्रंथि (Adrenal gland)","यकृत (Liver)"],"ans":1},
+  {"q":"प्रोजेस्टेरॉन (Progesterone) हार्मोन का मुख्य कार्य क्या है?","opts":["शुक्राणु बनाना","गर्भाशय की भित्ति को भ्रूण के आरोपण हेतु तैयार करना एवं गर्भावस्था बनाए रखना","पाचन में सहायता","श्वसन में सहायता"],"ans":1},
+  {"q":"गर्भनिरोधक गोलियाँ (Oral pills) अंडोत्सर्ग (Ovulation) को किस प्रकार रोकती हैं?","opts":["अंडाशय निकालकर","हार्मोन स्तर बदलकर अंडाणु के निर्मुक्त होने को रोककर","शुक्राणुओं को मारकर","गर्भाशय हटाकर"],"ans":1},
+  {"q":"कॉपर-T (Copper-T) गर्भधारण कैसे रोकता है?","opts":["अंडाणु उत्पादन रोकता है","शुक्राणुओं की गतिशीलता कम करता है और निषेचित अंडे के आरोपण को रोकता है","हार्मोन बदलता है","शुक्रवाहिनी काटता है"],"ans":1},
+  {"q":"एड्स (AIDS) से ग्रस्त रोगी की प्रतिरक्षा प्रणाली (Immune system) पर क्या प्रभाव पड़ता है?","opts":["मजबूत हो जाती है","कमज़ोर हो जाती है — शरीर संक्रमणों से नहीं लड़ पाता","कोई प्रभाव नहीं","अत्यधिक सक्रिय हो जाती है"],"ans":1},
+  {"q":"HIV मुख्यतः शरीर की किन कोशिकाओं पर आक्रमण करता है?","opts":["लाल रक्त कोशिकाएँ (RBCs)","श्वेत रक्त कोशिकाएँ — T-हेल्पर कोशिकाएँ (T-helper cells/CD4)","तंत्रिका कोशिकाएँ (Neurons)","यकृत कोशिकाएँ"],"ans":1},
+  {"q":"निम्नलिखित में से कौन-सा यौन संचारित रोग (STD) नहीं है?","opts":["AIDS","गोनोरिया (Gonorrhoea)","सिफलिस (Syphilis)","टायफाइड (Typhoid)"],"ans":3},
+  {"q":"जनसंख्या नियंत्रण (Population control) के लिए कौन-सी विधि अपनाई जाती है?","opts":["गर्भनिरोधक विधियाँ (Contraceptive methods)","अधिक भोजन","अधिक व्यायाम","अधिक शिक्षा"],"ans":0},
+  {"q":"भ्रूण (Embryo) का विकास किस अंग में होता है?","opts":["अंडाशय (Ovary)","गर्भाशय (Uterus)","फैलोपियन नलिका (Fallopian tube)","योनि (Vagina)"],"ans":1},
+  {"q":"गर्भाशय की आंतरिक परत (Endometrium) का क्या कार्य है?","opts":["शुक्राणु बनाना","भ्रूण को रक्त आपूर्ति एवं पोषण प्रदान करना","मूत्र बनाना","हार्मोन बनाना"],"ans":1},
+  {"q":"नाभि-रज्जु (Umbilical cord) किसे जोड़ती है?","opts":["माँ और पिता को","भ्रूण/शिशु को अपरा (Placenta) से","दो शिशुओं को","अंडाशय को गर्भाशय से"],"ans":1},
+  {"q":"प्रसव (Delivery/Parturition) के समय गर्भाशय की पेशियाँ क्या करती हैं?","opts":["शिथिल हो जाती हैं","लयबद्ध संकुचन (Rhythmic contractions) करती हैं","कोई परिवर्तन नहीं","फट जाती हैं"],"ans":1},
+  {"q":"ऑक्सीटोसिन (Oxytocin) हार्मोन प्रसव (Parturition) में क्या भूमिका निभाता है?","opts":["अंडाणु बनाता है","गर्भाशय की पेशियों के संकुचन को प्रेरित करता है","शुक्राणु बनाता है","रक्त बनाता है"],"ans":1},
+  {"q":"मासिक चक्र (Menstrual cycle) को नियंत्रित करने वाले मुख्य हार्मोन कौन-से हैं?","opts":["इंसुलिन, ग्लूकागन","FSH, LH, एस्ट्रोजन, प्रोजेस्टेरॉन","थायरॉक्सिन, एड्रेनालिन","वृद्धि हार्मोन, मेलाटोनिन"],"ans":1},
+  {"q":"FSH (Follicle Stimulating Hormone) का क्या कार्य है?","opts":["शुक्राणु नष्ट करना","अंडाशय में पुटिकाओं (Follicles) के विकास को प्रेरित करना","मासिक धर्म रोकना","रक्त बनाना"],"ans":1},
+  {"q":"LH (Luteinizing Hormone) का अंडोत्सर्ग (Ovulation) में क्या योगदान है?","opts":["कोई नहीं","LH की वृद्धि (LH surge) से परिपक्व अंडाणु अंडाशय से मुक्त होता है","शुक्राणु बनाता है","मूत्र बनाता है"],"ans":1},
+  {"q":"यदि निषेचन (Fertilization) नहीं होता, तो कॉर्पस ल्यूटियम (Corpus luteum) का क्या होता है?","opts":["बड़ा हो जाता है","विघटित (Degenerate) हो जाता है और प्रोजेस्टेरॉन का स्तर गिरता है","अंडाणु बनाता है","स्थायी रहता है"],"ans":1},
+  {"q":"रजोदर्शन/मीनार्की (Menarche) किसे कहते हैं?","opts":["अंतिम मासिक चक्र","प्रथम मासिक चक्र का प्रारंभ (First menstruation)","गर्भधारण","प्रसव"],"ans":1},
+  {"q":"रजोनिवृत्ति/मीनोपॉज (Menopause) किसे कहते हैं?","opts":["प्रथम मासिक चक्र","मासिक चक्र का स्थायी रूप से बंद होना (लगभग 45-55 वर्ष)","गर्भधारण","ओव्यूलेशन"],"ans":1},
+  {"q":"मानव में बाह्य निषेचन (External fertilization) होता है या आंतरिक निषेचन (Internal fertilization)?","opts":["बाह्य निषेचन","आंतरिक निषेचन","दोनों","कोई नहीं"],"ans":1},
+  {"q":"शुक्राणुजनन (Spermatogenesis) कहाँ होता है?","opts":["अधिवृषण (Epididymis)","वृषण की शुक्रजनन नलिकाओं (Seminiferous tubules) में","शुक्राशय (Seminal vesicle)","प्रोस्टेट ग्रंथि"],"ans":1},
+  {"q":"अंडजनन (Oogenesis) कहाँ होता है?","opts":["गर्भाशय (Uterus)","अंडाशय (Ovary)","फैलोपियन नलिका","योनि (Vagina)"],"ans":1},
+  {"q":"मनुष्य में एक मासिक चक्र में सामान्यतः कितने अंडाणु (Ovum) मुक्त होते हैं?","opts":["दो","तीन","एक","चार"],"ans":2},
+  {"q":"शुक्राणु (Sperm) का जीवनकाल मादा जनन मार्ग में लगभग कितना होता है?","opts":["1 घंटा","24-72 घंटे","1 सप्ताह","1 माह"],"ans":1},
+  {"q":"अपरा (Placenta) से भ्रूण को कौन-सी गैस प्राप्त होती है?","opts":["CO₂","N₂","O₂ (ऑक्सीजन)","CO"],"ans":2},
+  {"q":"अपरा (Placenta) किस प्रकार का ऊतक (Tissue) है?","opts":["यह माँ और भ्रूण दोनों के ऊतकों से मिलकर बना होता है","केवल माँ का ऊतक","केवल भ्रूण का ऊतक","कृत्रिम ऊतक"],"ans":0},
+  {"q":"गर्भावस्था (Pregnancy) के दौरान कौन-सा हार्मोन गर्भाशय की परत को बनाए रखता है?","opts":["FSH","LH","प्रोजेस्टेरॉन (Progesterone)","एड्रेनालिन"],"ans":2},
+  {"q":"hCG (Human Chorionic Gonadotropin) हार्मोन किससे स्रावित होता है?","opts":["वृषण से","अपरा/ट्रोफोब्लास्ट (Placenta/Trophoblast) से","अंडाशय से","पिट्यूटरी से"],"ans":1},
+  {"q":"गर्भावस्था परीक्षण (Pregnancy test) में किस हार्मोन की उपस्थिति जाँची जाती है?","opts":["एस्ट्रोजन (Estrogen)","प्रोजेस्टेरॉन (Progesterone)","hCG (Human Chorionic Gonadotropin)","टेस्टोस्टेरॉन (Testosterone)"],"ans":2},
+  {"q":"लैंगिक जनन (Sexual reproduction) में विभिन्नताएँ (Variations) अधिक क्यों होती हैं?","opts":["केवल एक जनक होता है","दो जनकों के DNA का संयोजन होता है — अर्धसूत्री विभाजन (Meiosis) एवं निषेचन द्वारा","कोई विभाजन नहीं होता","कोशिका विभाजन नहीं होता"],"ans":1},
+  {"q":"अर्धसूत्री विभाजन (Meiosis) का महत्व जनन में क्या है?","opts":["गुणसूत्र संख्या दोगुनी करना","युग्मकों (Gametes) में गुणसूत्र संख्या आधी (Haploid) करना ताकि निषेचन के बाद सामान्य संख्या बनी रहे","कोशिका को मारना","ऊतक बनाना"],"ans":1},
+  {"q":"निम्नलिखित में से कौन-सी गर्भनिरोधक विधि शल्य (Surgical) विधि है?","opts":["कंडोम","गर्भनिरोधक गोलियाँ","कॉपर-T","नसबंदी (Vasectomy/Tubectomy)"],"ans":3},
+  {"q":"कंडोम (Condom) STDs से सुरक्षा प्रदान करता है क्योंकि —","opts":["यह हार्मोन बदलता है","यह शारीरिक तरलों (Body fluids) के सीधे संपर्क को रोकता है","यह शुक्राणु उत्पादन रोकता है","यह अंडाणु उत्पादन रोकता है"],"ans":1},
+  {"q":"मानव में नर युग्मक (Male gamete) क्या कहलाता है?","opts":["अंडाणु (Ovum)","शुक्राणु (Sperm)","युग्मनज (Zygote)","भ्रूण (Embryo)"],"ans":1},
+  {"q":"मानव में मादा युग्मक (Female gamete) क्या कहलाता है?","opts":["शुक्राणु (Sperm)","युग्मनज (Zygote)","अंडाणु (Ovum/Egg)","भ्रूण (Embryo)"],"ans":2},
+  {"q":"एपिडिडिमिस/अधिवृषण (Epididymis) का कार्य क्या है?","opts":["शुक्राणुओं को संगृहीत एवं परिपक्व करना","अंडाणु बनाना","मूत्र बनाना","हार्मोन बनाना"],"ans":0},
+  {"q":"मूत्रमार्ग (Urethra) पुरुषों में किन दो तंत्रों (Systems) का साझा मार्ग है?","opts":["पाचन एवं श्वसन","उत्सर्जन (Excretory) एवं जनन (Reproductive)","श्वसन एवं परिसंचरण","तंत्रिका एवं अंतःस्रावी"],"ans":1},
+  {"q":"योनि (Vagina) का क्या कार्य है?","opts":["शुक्राणुओं को ग्रहण करना एवं प्रसव मार्ग (Birth canal)","अंडाणु बनाना","मूत्र बनाना","हार्मोन बनाना"],"ans":0},
+  {"q":"ग्रीवा/सर्विक्स (Cervix) क्या है?","opts":["अंडाशय का भाग","गर्भाशय का संकीर्ण निचला भाग जो योनि में खुलता है","फैलोपियन नलिका का भाग","वृषण का भाग"],"ans":1},
+  {"q":"गर्भपात (Abortion/MTP — Medical Termination of Pregnancy) कानूनी रूप से भारत में गर्भावस्था के कितने सप्ताह तक अनुमत है (सामान्य मामलों में)?","opts":["8 सप्ताह","12 सप्ताह","20 सप्ताह","24 सप्ताह"],"ans":2},
+  {"q":"जनन स्वास्थ्य (Reproductive health) किसे कहते हैं?","opts":["केवल रोगों से मुक्ति","जनन तंत्र का संपूर्ण शारीरिक, मानसिक एवं सामाजिक कल्याण","केवल गर्भनिरोधक उपयोग","केवल STD का इलाज"],"ans":1},
+  {"q":"निम्न में से कौन-सा कथन सत्य है?","opts":["लिंग निर्धारण माँ के गुणसूत्रों द्वारा होता है","लिंग निर्धारण पिता के शुक्राणु में उपस्थित X या Y गुणसूत्र द्वारा होता है","लिंग निर्धारण भोजन द्वारा होता है","लिंग निर्धारण ताप द्वारा होता है"],"ans":1},
+  {"q":"शुक्राणु में __________ होता है जो ऊर्जा प्रदान करता है।","opts":["राइबोसोम (Ribosome)","माइटोकॉन्ड्रिया (Mitochondria)","गॉल्जी बॉडी (Golgi body)","लाइसोसोम (Lysosome)"],"ans":1},
+  {"q":"शुक्राणु का अग्रभाग (Acrosome) का क्या कार्य है?","opts":["ऊर्जा देना","अंडाणु की बाहरी परत को भेदने में सहायक एंजाइम (Enzymes) उपलब्ध कराना","गति देना","DNA संग्रहित करना"],"ans":1},
+  {"q":"जुड़वाँ बच्चे (Twins) — एकयुग्मजी जुड़वाँ (Identical twins) कैसे बनते हैं?","opts":["दो अंडाणुओं के निषेचन से","एक निषेचित अंडाणु (Zygote) के दो भागों में विभक्त होने से","दो शुक्राणुओं के एक अंडाणु से मिलने से","कृत्रिम रूप से"],"ans":1},
+  {"q":"भ्रातृ जुड़वाँ (Fraternal twins) कैसे बनते हैं?","opts":["एक ही युग्मनज से","दो अलग-अलग अंडाणुओं के दो अलग-अलग शुक्राणुओं द्वारा निषेचन से","बिना निषेचन के","क्लोनिंग से"],"ans":1},
+  {"q":"लैंगिक परिपक्वता (Sexual maturity) की आयु सामान्यतः लड़कों में कितनी होती है?","opts":["8-9 वर्ष","13-14 वर्ष","18-20 वर्ष","25 वर्ष"],"ans":1},
+  {"q":"लैंगिक परिपक्वता (Sexual maturity) की आयु सामान्यतः लड़कियों में कितनी होती है?","opts":["8-9 वर्ष","10-12 वर्ष","18-20 वर्ष","25 वर्ष"],"ans":1},
+  {"q":"मासिक धर्म (Menstruation) में रक्तस्राव सामान्यतः कितने दिनों तक होता है?","opts":["1-2 दिन","3-5 दिन","10-12 दिन","15 दिन"],"ans":1},
+  {"q":"भ्रूण जब अंगों का विकास पूर्ण कर लेता है तो उसे क्या कहते हैं?","opts":["युग्मनज (Zygote)","भ्रूण (Embryo)","गर्भस्थ शिशु/फीटस (Foetus)","नवजात (Neonate)"],"ans":2},
+  {"q":"प्रसव (Parturition) किसे कहते हैं?","opts":["निषेचन की प्रक्रिया","गर्भाशय से शिशु का बाहर आना (Birth process)","अंडोत्सर्ग","मासिक धर्म"],"ans":1},
+  {"q":"HIV संक्रमण किस माध्यम से नहीं फैलता?","opts":["असुरक्षित यौन संबंध","संक्रमित रक्त आधान (Blood transfusion)","हाथ मिलाने, गले लगाने, साथ खाना खाने से","संक्रमित सुई"],"ans":2},
+  {"q":"गर्भनिरोधक विधियों (Contraceptive methods) को मोटे तौर पर कितनी श्रेणियों में बाँटा जा सकता है?","opts":["एक","दो","तीन — यांत्रिक (Barrier), रासायनिक/हार्मोनल (Chemical/Hormonal), शल्य (Surgical)","पाँच"],"ans":2},
+  {"q":"निम्न में से कौन-सी विधि स्थायी गर्भनिरोधक (Permanent contraception) है?","opts":["कंडोम","गर्भनिरोधक गोलियाँ","कॉपर-T","नसबंदी (Vasectomy/Tubectomy)"],"ans":3},
+  {"q":"जनन में DNA की प्रतिकृति (DNA replication) क्यों आवश्यक है?","opts":["ताकि संतान को जनक की सभी आनुवंशिक सूचनाएँ मिल सकें","ताकि कोशिका मर जाए","ताकि प्रोटीन बनना बंद हो","ताकि हार्मोन न बने"],"ans":0},
+  {"q":"जनन (Reproduction) प्रजाति (Species) की निरंतरता के लिए क्यों आवश्यक है?","opts":["ऊर्जा प्राप्त करने के लिए","प्रजाति को विलुप्त होने से बचाने एवं पीढ़ी-दर-पीढ़ी जीवन को बनाए रखने के लिए","पाचन के लिए","गति के लिए"],"ans":1}
+  ],
+  4: [
+{"q":"आनुवंशिकता (Heredity) के जनक कौन हैं?","opts":["डार्विन (Darwin)","लैमार्क (Lamarck)","मेंडल (Mendel)","वाटसन (Watson)"],"ans":2},
+  {"q":"मेंडल ने अपने प्रयोग किस पौधे पर किए?","opts":["गुलाब (Rose)","मटर (Pea)","गेहूँ (Wheat)","मक्का (Maize)"],"ans":1},
+  {"q":"मेंडल ने मटर का पौधा क्यों चुना?","opts":["यह सुंदर था","इसमें स्पष्ट विपरीत लक्षण, छोटी जीवन अवधि और स्वपरागण होता है","यह सस्ता था","यह बड़ा था"],"ans":1},
+  {"q":"मनुष्य में गुणसूत्रों (Chromosomes) की संख्या कितनी होती है?","opts":["23","44","46","48"],"ans":2},
+  {"q":"जीन (Gene) कहाँ स्थित होते हैं?","opts":["कोशिका झिल्ली पर","गुणसूत्र (Chromosome) पर","राइबोसोम पर","माइटोकॉन्ड्रिया पर"],"ans":1},
+  {"q":"मेंडल ने मटर में कितने विपरीत लक्षणों (Contrasting characters) का अध्ययन किया?","opts":["5 जोड़े","7 जोड़े","3 जोड़े","10 जोड़े"],"ans":1},
+  {"q":"एकसंकर क्रॉस (Monohybrid cross) में F₂ पीढ़ी का फीनोटाइपिक अनुपात क्या होता है?","opts":["1:1","1:2:1","3:1","9:3:3:1"],"ans":2},
+  {"q":"द्विसंकर क्रॉस (Dihybrid cross) में F₂ पीढ़ी का फीनोटाइपिक अनुपात क्या होता है?","opts":["3:1","1:2:1","9:3:3:1","1:1:1:1"],"ans":2},
+  {"q":"मेंडल के प्रभाविता (Dominance) के नियम के अनुसार F₁ पीढ़ी में कौन-सा लक्षण दिखता है?","opts":["अप्रभावी (Recessive)","प्रभावी (Dominant)","दोनों","कोई नहीं"],"ans":1},
+  {"q":"प्रभावी लक्षण (Dominant trait) किसे कहते हैं?","opts":["जो F₁ पीढ़ी में नहीं दिखता","जो F₁ पीढ़ी में व्यक्त होता है (Expressed)","जो कभी नहीं दिखता","जो F₂ में ही दिखता है"],"ans":1},
+  {"q":"अप्रभावी लक्षण (Recessive trait) किसे कहते हैं?","opts":["जो F₁ में दिखता है","जो F₁ में दबा रहता है और F₂ में प्रकट होता है","जो हमेशा दिखता है","जो कभी प्रकट नहीं होता"],"ans":1},
+  {"q":"मटर के पौधे में लम्बा (Tall) होना कैसा लक्षण है?","opts":["अप्रभावी (Recessive)","प्रभावी (Dominant)","मध्यम","अपूर्ण प्रभावी"],"ans":1},
+  {"q":"मटर में बैंगनी रंग का फूल (Purple flower) कैसा लक्षण है?","opts":["अप्रभावी","प्रभावी (Dominant)","सह-प्रभावी","मध्यम"],"ans":1},
+  {"q":"मटर में गोल बीज (Round seed) कैसा लक्षण है?","opts":["अप्रभावी","प्रभावी (Dominant)","सह-प्रभावी","अपूर्ण"],"ans":1},
+  {"q":"मटर में पीले बीज (Yellow seed) कैसा लक्षण है?","opts":["अप्रभावी","प्रभावी (Dominant)","सह-प्रभावी","मध्यम"],"ans":1},
+  {"q":"मेंडल के पृथक्करण (Segregation) के नियम को और किस नाम से जानते हैं?","opts":["प्रभाविता का नियम","स्वतंत्र अपव्यूहन का नियम","युग्मकों की शुद्धता का नियम (Law of purity of gametes)","उत्परिवर्तन का नियम"],"ans":2},
+  {"q":"मेंडल के पृथक्करण (Segregation) के नियम का क्या अर्थ है?","opts":["लक्षण मिल जाते हैं","युग्मक बनते समय जीन के दो कारक अलग-अलग हो जाते हैं","जीन नष्ट हो जाते हैं","सभी लक्षण प्रभावी होते हैं"],"ans":1},
+  {"q":"मेंडल का स्वतंत्र अपव्यूहन (Independent assortment) का नियम किस क्रॉस से संबंधित है?","opts":["एकसंकर (Monohybrid)","द्विसंकर (Dihybrid)","परीक्षण संकरण","बैक क्रॉस"],"ans":1},
+  {"q":"स्वतंत्र अपव्यूहन (Independent assortment) का क्या अर्थ है?","opts":["सभी जीन एक साथ वंशागत होते हैं","विभिन्न लक्षणों के जीन स्वतंत्र रूप से वंशागत होते हैं","जीन कभी अलग नहीं होते","सभी लक्षण समान होते हैं"],"ans":1},
+  {"q":"जीनोटाइप (Genotype) किसे कहते हैं?","opts":["बाहरी दिखावट","जीव की आनुवंशिक संरचना (Genetic makeup)","कोशिका का आकार","गुणसूत्र की संख्या"],"ans":1},
+  {"q":"फीनोटाइप (Phenotype) किसे कहते हैं?","opts":["जीन की संरचना","जीव की बाहरी दिखावट (External appearance)","DNA की लंबाई","गुणसूत्र का प्रकार"],"ans":1},
+  {"q":"TT जीनोटाइप वाला पौधा कैसा होगा?","opts":["बौना (Dwarf)","लंबा (Tall) - समयुग्मजी प्रभावी","मध्यम ऊँचाई","कोई भी"],"ans":1},
+  {"q":"Tt जीनोटाइप वाला पौधा कैसा होगा?","opts":["बौना","लंबा (Tall) - विषमयुग्मजी","मध्यम","कोई भी"],"ans":1},
+  {"q":"tt जीनोटाइप वाला पौधा कैसा होगा?","opts":["लंबा","बौना (Dwarf) - समयुग्मजी अप्रभावी","मध्यम","कोई भी"],"ans":1},
+  {"q":"एकसंकर क्रॉस (Monohybrid cross) में F₂ का जीनोटाइपिक अनुपात क्या होता है?","opts":["3:1","1:2:1 (TT:Tt:tt)","9:3:3:1","1:1"],"ans":1},
+  {"q":"F₁ पीढ़ी में सभी पौधे लंबे (Tall) क्यों होते हैं?","opts":["सभी tt होते हैं","सभी Tt होते हैं — प्रभावी लक्षण व्यक्त होता है","सभी TT होते हैं","कोई कारण नहीं"],"ans":1},
+  {"q":"F₂ पीढ़ी में अप्रभावी लक्षण (बौना पौधा) किस अनुपात में दिखता है?","opts":["1/2","1/3","1/4","3/4"],"ans":2},
+  {"q":"विभिन्नता (Variation) का मुख्य स्रोत क्या है?","opts":["लैंगिक जनन (Sexual reproduction)","अलैंगिक जनन","मुकुलन","विखंडन"],"ans":0},
+  {"q":"लैंगिक जनन (Sexual reproduction) में विभिन्नता क्यों अधिक होती है?","opts":["एक ही जनक होता है","दो जनकों के DNA का संयोजन होता है","कोई विभिन्नता नहीं होती","केवल माता का DNA आता है"],"ans":1},
+  {"q":"अलैंगिक जनन (Asexual reproduction) में संतान जनक के _______ होते हैं।","opts":["बिल्कुल भिन्न","लगभग समान (Clone)","आधे समान","कोई संबंध नहीं"],"ans":1},
+  {"q":"संचित विभिन्नताएँ (Accumulated variations) किसमें सहायक होती हैं?","opts":["जीवों के विनाश में","जैव विकास (Evolution) में","प्रजनन रोकने में","पोषण में"],"ans":1},
+  {"q":"मनुष्य में लिंग निर्धारण (Sex determination) किस गुणसूत्र पर निर्भर करता है?","opts":["XX और XY","XX और YY","XY और YY","AA और BB"],"ans":0},
+  {"q":"स्त्री का लिंग गुणसूत्र (Sex chromosome) क्या होता है?","opts":["XY","XX","YY","XO"],"ans":1},
+  {"q":"पुरुष का लिंग गुणसूत्र (Sex chromosome) क्या होता है?","opts":["XX","YY","XY","XO"],"ans":2},
+  {"q":"शिशु का लिंग निर्धारण किसके गुणसूत्र पर निर्भर करता है?","opts":["माता के","पिता के","दोनों के बराबर","डॉक्टर के"],"ans":1},
+  {"q":"यदि शुक्राणु (Sperm) में X गुणसूत्र है तो संतान कैसी होगी?","opts":["लड़का (Boy)","लड़की (Girl) — XX","कोई भी","निर्धारित नहीं"],"ans":1},
+  {"q":"यदि शुक्राणु (Sperm) में Y गुणसूत्र है तो संतान कैसी होगी?","opts":["लड़की (Girl)","लड़का (Boy) — XY","कोई भी","निर्धारित नहीं"],"ans":1},
+  {"q":"मनुष्य में लड़का या लड़की होने की संभावना (Probability) कितनी होती है?","opts":["लड़के की 75%","लड़की की 75%","दोनों की 50-50%","निश्चित नहीं"],"ans":2},
+  {"q":"मनुष्य में ऑटोसोम (Autosomes) के कितने जोड़े होते हैं?","opts":["23 जोड़े","22 जोड़े","1 जोड़ा","46 जोड़े"],"ans":1},
+  {"q":"लिंग गुणसूत्रों (Sex chromosomes) की संख्या कितनी होती है?","opts":["1 जोड़ा (2)","2 जोड़े","22 जोड़े","23 जोड़े"],"ans":0},
+  {"q":"प्राकृतिक चयन (Natural selection) का सिद्धांत किसने दिया?","opts":["मेंडल","लैमार्क","डार्विन (Darwin)","हुगो डी व्रीज"],"ans":2},
+  {"q":"डार्विन (Darwin) ने किस पुस्तक में अपना सिद्धांत प्रस्तुत किया?","opts":["Philosophie Zoologique","The Origin of Species","Genetics","Heredity"],"ans":1},
+  {"q":"डार्विन के अनुसार जैव विकास का मुख्य कारण क्या है?","opts":["उपार्जित लक्षण","प्राकृतिक चयन (Natural selection)","उत्परिवर्तन","भगवान की इच्छा"],"ans":1},
+  {"q":"'योग्यतम की उत्तरजीविता' (Survival of the fittest) का क्या अर्थ है?","opts":["सबसे बड़ा जीव बचता है","पर्यावरण के अनुकूल जीव जीवित रहते हैं","सबसे तेज जीव बचता है","कोई नहीं बचता"],"ans":1},
+  {"q":"लैमार्क (Lamarck) का सिद्धांत क्या कहलाता है?","opts":["प्राकृतिक चयन","उपार्जित लक्षणों की वंशागति (Inheritance of acquired characters)","उत्परिवर्तन सिद्धांत","आनुवंशिकता का नियम"],"ans":1},
+  {"q":"लैमार्क (Lamarck) ने किस जीव का उदाहरण दिया?","opts":["मटर","जिराफ (Giraffe)","कबूतर","खरगोश"],"ans":1},
+  {"q":"लैमार्क के अनुसार जिराफ की गर्दन लंबी क्यों हुई?","opts":["प्राकृतिक चयन से","ऊँचे पेड़ों की पत्तियाँ खाने के लिए लगातार खींचने से","उत्परिवर्तन से","जन्म से"],"ans":1},
+  {"q":"क्या उपार्जित लक्षण (Acquired characters) वंशागत होते हैं?","opts":["हाँ, हमेशा","नहीं, ये वंशागत नहीं होते","कभी-कभी","केवल जंतुओं में"],"ans":1},
+  {"q":"उत्परिवर्तन सिद्धांत (Mutation theory) किसने दिया?","opts":["डार्विन","लैमार्क","हुगो डी व्रीज (Hugo de Vries)","मेंडल"],"ans":2},
+  {"q":"उत्परिवर्तन (Mutation) किसे कहते हैं?","opts":["धीमा परिवर्तन","DNA में अचानक होने वाला परिवर्तन","कोई परिवर्तन नहीं","पर्यावरणीय परिवर्तन"],"ans":1},
+  {"q":"जैव विकास (Evolution) से क्या तात्पर्य है?","opts":["जीवों में कोई बदलाव नहीं","जीवों में लंबे समय में होने वाला क्रमिक परिवर्तन (Gradual change)","जीवों का नष्ट होना","जीवों का एक साथ बनना"],"ans":1},
+  {"q":"समजात अंग (Homologous organs) किसे कहते हैं?","opts":["समान कार्य लेकिन भिन्न उत्पत्ति वाले अंग","समान उत्पत्ति (Origin) लेकिन भिन्न कार्य वाले अंग","समान आकार वाले अंग","कोई अंग नहीं"],"ans":1},
+  {"q":"समजात अंग (Homologous organs) का उदाहरण कौन-सा है?","opts":["पक्षी का पंख और तितली का पंख","मानव का हाथ, बिल्ली का अग्रपाद, व्हेल का फ्लिपर","मानव का हाथ और कीट का पैर","कोई नहीं"],"ans":1},
+  {"q":"समजात अंग (Homologous organs) क्या दर्शाते हैं?","opts":["समान कार्य","समान पूर्वज (Common ancestor) से विकास","कोई संबंध नहीं","भिन्न उत्पत्ति"],"ans":1},
+  {"q":"समवृत्ति अंग (Analogous organs) किसे कहते हैं?","opts":["समान उत्पत्ति लेकिन भिन्न कार्य","समान कार्य लेकिन भिन्न उत्पत्ति (Origin) वाले अंग","समान संरचना","कोई नहीं"],"ans":1},
+  {"q":"समवृत्ति अंग (Analogous organs) का उदाहरण कौन-सा है?","opts":["मानव का हाथ और व्हेल का फ्लिपर","पक्षी का पंख और कीट (तितली) का पंख","मानव का हाथ और बिल्ली का पैर","कोई नहीं"],"ans":1},
+  {"q":"अवशेषी अंग (Vestigial organs) किसे कहते हैं?","opts":["बहुत उपयोगी अंग","ऐसे अंग जो पूर्वजों में क्रियाशील थे लेकिन अब अनुपयोगी हैं","नए विकसित अंग","कोई अंग नहीं"],"ans":1},
+  {"q":"मानव शरीर में अवशेषी अंग (Vestigial organ) का उदाहरण कौन-सा है?","opts":["हृदय (Heart)","एपेंडिक्स (Appendix)","फेफड़ा (Lungs)","वृक्क (Kidney)"],"ans":1},
+  {"q":"अवशेषी अंग (Vestigial organs) किसका प्रमाण हैं?","opts":["भविष्य के विकास","जैव विकास (Evolution)","अलैंगिक जनन","प्रतिवर्ती क्रिया"],"ans":1},
+  {"q":"जीवाश्म (Fossils) क्या हैं?","opts":["जीवित जीव","चट्टानों में संरक्षित प्राचीन जीवों के अवशेष या छाप","कृत्रिम वस्तुएँ","नए जीव"],"ans":1},
+  {"q":"जीवाश्म (Fossils) किसका प्रमाण हैं?","opts":["प्रकाश संश्लेषण","जैव विकास (Evolution)","प्रतिवर्ती क्रिया","पाचन"],"ans":1},
+  {"q":"जीवाश्म (Fossils) की आयु निर्धारण किस विधि से होती है?","opts":["तापमान से","कार्बन डेटिंग (Carbon dating) / खुदाई की गहराई से","वजन से","रंग से"],"ans":1},
+  {"q":"जाति उद्भवन (Speciation) किसे कहते हैं?","opts":["जीवों का विलुप्त होना","नई जातियों (Species) का बनना","जीवों का प्रवास","जीवों का मर जाना"],"ans":1},
+  {"q":"जाति उद्भवन (Speciation) का मुख्य कारण क्या है?","opts":["समान वातावरण","भौगोलिक पृथक्करण (Geographical isolation)","एक ही स्थान पर रहना","कोई कारण नहीं"],"ans":1},
+  {"q":"भौगोलिक पृथक्करण (Geographical isolation) से क्या होता है?","opts":["जीव एक जैसे रहते हैं","दो समूहों में भिन्न विभिन्नताएँ जमा होती हैं → नई जाति बनती है","कोई बदलाव नहीं","जीव मर जाते हैं"],"ans":1},
+  {"q":"आनुवंशिक विचलन (Genetic drift) क्या है?","opts":["बड़ी जनसंख्या में बदलाव","छोटी जनसंख्या में जीन आवृत्ति (Gene frequency) में अचानक बदलाव","कोई बदलाव नहीं","DNA टूटना"],"ans":1},
+  {"q":"डार्विन ने किन द्वीपों पर फिंच पक्षियों (Finches) का अध्ययन किया?","opts":["हवाई द्वीप","गैलापागोस द्वीप (Galápagos Islands)","अंडमान द्वीप","मालदीव"],"ans":1},
+  {"q":"डार्विन की फिंच पक्षियों (Darwin's finches) में क्या अंतर पाया गया?","opts":["रंग में","चोंच (Beak) के आकार और साइज में","पंखों में","पैर में"],"ans":1},
+  {"q":"फिंच पक्षियों की चोंच में अंतर का क्या कारण था?","opts":["अलग-अलग भोजन (खाने की आदत) के अनुसार प्राकृतिक चयन","कोई कारण नहीं","कृत्रिम चयन","उत्परिवर्तन"],"ans":0},
+  {"q":"जैव विकास (Evolution) और वर्गीकरण (Classification) में क्या संबंध है?","opts":["कोई संबंध नहीं","जो जीव अधिक समान हैं, उनका साझा पूर्वज अधिक हालिया है","वर्गीकरण से विकास रुक जाता है","विकास से वर्गीकरण नहीं होता"],"ans":1},
+  {"q":"दो जातियों (Species) के बीच अधिक समानता का क्या अर्थ है?","opts":["वे बिल्कुल अलग हैं","उनका साझा पूर्वज (Common ancestor) अधिक निकट है","कोई संबंध नहीं","वे एक ही जाति हैं"],"ans":1},
+  {"q":"मानव (Human) का वैज्ञानिक नाम क्या है?","opts":["होमो इरेक्टस","होमो सैपियंस (Homo sapiens)","होमो हैबिलिस","ड्रायोपिथेकस"],"ans":1},
+  {"q":"विकास (Evolution) का अर्थ 'निम्न श्रेणी से उच्च श्रेणी' की ओर जाना है — यह कथन _______ है।","opts":["सही","गलत — विकास का अर्थ केवल क्रमिक परिवर्तन है, कोई 'उच्च-निम्न' नहीं","आंशिक सही","निश्चित नहीं"],"ans":1},
+  {"q":"क्या मनुष्य बंदर से विकसित हुआ है?","opts":["हाँ, सीधे बंदर से","नहीं — मनुष्य और बंदर दोनों का एक समान पूर्वज (Common ancestor) था","बंदर मनुष्य से विकसित हुआ","कोई संबंध नहीं"],"ans":1},
+  {"q":"गुणसूत्र (Chromosome) किसे कहते हैं?","opts":["कोशिका की झिल्ली","केन्द्रक में पाई जाने वाली धागे जैसी संरचना जो जीन वहन करती है","एक एंजाइम","एक हॉर्मोन"],"ans":1},
+  {"q":"मनुष्य की प्रत्येक कोशिका में गुणसूत्रों (Chromosomes) के कितने जोड़े होते हैं?","opts":["22 जोड़े","23 जोड़े","46 जोड़े","44 जोड़े"],"ans":1},
+  {"q":"युग्मक (Gamete) में गुणसूत्रों की संख्या शरीर की कोशिकाओं से _______ होती है।","opts":["दोगुनी","आधी (Half — 23)","बराबर","तिगुनी"],"ans":1},
+  {"q":"निषेचन (Fertilization) के बाद युग्मनज (Zygote) में गुणसूत्रों की संख्या कितनी होती है?","opts":["23","46 (पूर्ण संख्या बहाल)","92","12"],"ans":1},
+  {"q":"एक जीव में एक लक्षण के लिए कितने जीन (Genes) होते हैं?","opts":["1","2 (एक जोड़ा — एक माता से, एक पिता से)","3","4"],"ans":1},
+  {"q":"लक्षण (Trait) कैसे नियंत्रित होते हैं?","opts":["पर्यावरण से","जीन (Gene) द्वारा — जो प्रोटीन बनाने की सूचना देते हैं","भोजन से","केवल माता से"],"ans":1},
+  {"q":"जीन (Gene) किस प्रकार लक्षण को नियंत्रित करता है?","opts":["सीधे लक्षण बनाता है","जीन → प्रोटीन (एंजाइम) बनाता है → प्रोटीन लक्षण नियंत्रित करती है","जीन का कोई कार्य नहीं","जीन केवल रंग बनाता है"],"ans":1},
+  {"q":"यदि किसी जीव में लम्बाई का जीन 'T' (प्रभावी) और 't' (अप्रभावी) है, तो Tt जीव कैसा दिखेगा?","opts":["बौना","लंबा (क्योंकि T प्रभावी है)","मध्यम","कोई नहीं"],"ans":1},
+  {"q":"F₂ पीढ़ी में 3:1 अनुपात में _______ लक्षण अधिक दिखते हैं।","opts":["अप्रभावी","प्रभावी (Dominant)","दोनों बराबर","कोई नहीं"],"ans":1},
+  {"q":"F₁ पीढ़ी (Tt) के स्वपरागण से F₂ में कौन-कौन से जीनोटाइप बनेंगे?","opts":["केवल TT","केवल Tt","TT, Tt, tt","केवल tt"],"ans":2},
+  {"q":"एक लम्बे (TT) और बौने (tt) पौधे के क्रॉस से F₁ पीढ़ी का जीनोटाइप क्या होगा?","opts":["TT","tt","Tt","TT और tt"],"ans":2},
+  {"q":"मटर में तने की ऊँचाई, बीज का रंग, बीज का आकार — ये सब _______ के उदाहरण हैं।","opts":["विभिन्नता","विपरीत लक्षण (Contrasting characters)","उत्परिवर्तन","जीवाश्म"],"ans":1},
+  {"q":"आनुवंशिक (Hereditary) और उपार्जित (Acquired) लक्षणों में मुख्य अंतर क्या है?","opts":["कोई अंतर नहीं","आनुवंशिक लक्षण DNA में होते हैं और वंशागत होते हैं; उपार्जित नहीं होते","दोनों वंशागत होते हैं","दोनों वंशागत नहीं होते"],"ans":1},
+  {"q":"उपार्जित लक्षण (Acquired characters) का उदाहरण क्या है?","opts":["आँखों का रंग","शरीर सौष्ठव (Body building) से बनी मांसपेशियाँ","रक्त समूह","ऊँचाई"],"ans":1},
+  {"q":"आनुवंशिक लक्षण (Inherited characters) का उदाहरण क्या है?","opts":["कटी उँगली","बालों का कटना","आँखों का रंग, त्वचा का रंग","चोट का निशान"],"ans":2},
+  {"q":"जैव विकास (Evolution) के प्रमाण कौन-कौन से हैं?","opts":["केवल जीवाश्म","समजात अंग, समवृत्ति अंग, अवशेषी अंग, जीवाश्म","केवल समजात अंग","कोई प्रमाण नहीं"],"ans":1},
+  {"q":"पक्षियों के पंख (Wings) और चमगादड़ (Bat) के पंख कैसे अंग हैं?","opts":["समवृत्ति अंग (Analogous)","समजात अंग (Homologous) — दोनों अग्रपाद से विकसित","अवशेषी अंग","कोई संबंध नहीं"],"ans":1},
+  {"q":"तितली और पक्षी दोनों उड़ते हैं — उनके पंख कैसे अंग हैं?","opts":["समजात (Homologous)","समवृत्ति (Analogous) — समान कार्य, भिन्न उत्पत्ति","अवशेषी","कोई नहीं"],"ans":1},
+  {"q":"मानव का हाथ और घोड़े का अग्रपाद कैसे अंग हैं?","opts":["समवृत्ति","समजात (Homologous) — समान अस्थि संरचना","अवशेषी","कोई संबंध नहीं"],"ans":1},
+  {"q":"आर्कियोप्टेरिक्स (Archaeopteryx) क्या है?","opts":["एक जीवित पक्षी","सरीसृप (Reptile) और पक्षी (Bird) के बीच की कड़ी (Connecting link) का जीवाश्म","एक स्तनधारी","एक मछली"],"ans":1},
+  {"q":"आर्कियोप्टेरिक्स (Archaeopteryx) में किन दो समूहों के लक्षण पाए जाते हैं?","opts":["मछली और मेंढक","सरीसृप (दाँत, पूँछ) और पक्षी (पंख, चोंच)","स्तनधारी और पक्षी","मेंढक और सरीसृप"],"ans":1},
+  {"q":"विकास (Evolution) की दृष्टि से मछली, उभयचर, सरीसृप, पक्षी, स्तनधारी में सबसे पहले कौन आया?","opts":["पक्षी","स्तनधारी","मछली (Fish)","सरीसृप"],"ans":2},
+  {"q":"विकास (Evolution) में जीवों की जटिलता (Complexity) कैसे बढ़ी?","opts":["अचानक","पीढ़ी-दर-पीढ़ी क्रमिक रूप से विभिन्नताओं के जमा होने से","एक ही पीढ़ी में","कोई बदलाव नहीं"],"ans":1},
+  {"q":"कौन-सा प्रमाण बताता है कि सभी कशेरुकियों (Vertebrates) का एक समान पूर्वज था?","opts":["समवृत्ति अंग","समजात अंग (Homologous organs) — सबमें समान अस्थि संरचना","अवशेषी अंग","कोई प्रमाण नहीं"],"ans":1},
+  {"q":"'प्राकृतिक चयन' (Natural selection) का क्या अर्थ है?","opts":["मनुष्य द्वारा चयन","प्रकृति उन जीवों को चुनती है जो वातावरण के सबसे अनुकूल हैं","सभी जीव जीवित रहते हैं","कोई चयन नहीं"],"ans":1},
+  {"q":"काली और हल्की रंग की बीटल (Beetle) के उदाहरण से डार्विन का कौन-सा सिद्धांत समझाया जाता है?","opts":["उत्परिवर्तन","प्राकृतिक चयन (Natural selection) — हरी झाड़ियों में हरे रंग की बीटल बचती हैं","लैमार्क का सिद्धांत","मेंडल का नियम"],"ans":1},
+  {"q":"पेड़ पर कौवे द्वारा लाल बीटल खा लिए जाने से हरी बीटल की संख्या बढ़ गई — यह किसका उदाहरण है?","opts":["उत्परिवर्तन","प्राकृतिक चयन (Natural selection)","उपार्जित लक्षण","कृत्रिम चयन"],"ans":1},
+  {"q":"DNA में परिवर्तन (Change in DNA) का क्या प्रभाव होता है?","opts":["कोई प्रभाव नहीं","प्रोटीन बदलती है → शारीरिक अभिकल्प (Body design) बदलता है","केवल रंग बदलता है","केवल ऊँचाई बदलती है"],"ans":1},
+  {"q":"विकास (Evolution) में जननद्रव्य (Germ cells) के DNA में हुए परिवर्तन _______ होते हैं।","opts":["वंशागत (Inherited)","वंशागत नहीं","अस्थायी","कोई प्रभाव नहीं"],"ans":0},
+  {"q":"शारीरिक कोशिकाओं (Somatic cells) में हुए परिवर्तन _______ होते हैं।","opts":["वंशागत","वंशागत नहीं (Not inherited)","हमेशा हानिकारक","हमेशा लाभदायक"],"ans":1},
+  {"q":"कृत्रिम चयन (Artificial selection) किसे कहते हैं?","opts":["प्रकृति द्वारा चयन","मनुष्य द्वारा वांछित लक्षणों वाले जीवों का चयन और प्रजनन","कोई चयन नहीं","स्वतः चयन"],"ans":1},
+  {"q":"कृत्रिम चयन (Artificial selection) का उदाहरण कौन-सा है?","opts":["डार्विन की फिंच","जंगली गोभी (Wild cabbage) से ब्रोकोली, फूलगोभी, पत्तागोभी आदि बनाना","जीवाश्म बनना","प्राकृतिक चयन"],"ans":1},
+  {"q":"जंगली गोभी (Wild cabbage) से विभिन्न सब्जियाँ कैसे बनीं?","opts":["प्राकृतिक चयन से","किसानों ने अलग-अलग लक्षणों (पत्ते, फूल, तना) का कृत्रिम चयन किया","उत्परिवर्तन से","कोई कारण नहीं"],"ans":1},
+  {"q":"मनुष्य और चिम्पैंज़ी (Chimpanzee) का समान पूर्वज (Common ancestor) होने का प्रमाण क्या है?","opts":["कोई प्रमाण नहीं","DNA में अधिक समानता और समजात अंग","दोनों पानी में रहते हैं","दोनों उड़ सकते हैं"],"ans":1},
+  {"q":"विकास (Evolution) हमेशा 'प्रगति' (Progress) नहीं होता — इसका क्या अर्थ है?","opts":["विकास हमेशा बेहतर बनाता है","विकास केवल पर्यावरण अनुकूलन (Adaptation) की दिशा में होता है, जरूरी नहीं कि जटिलता बढ़े","विकास रुक गया","विकास पीछे जाता है"],"ans":1},
+  {"q":"सरल शरीर वाले जीव (जैसे बैक्टीरिया) आज भी क्यों मौजूद हैं?","opts":["वे विकसित नहीं हो सकते","वे अपने वातावरण के लिए पूर्णतः अनुकूल हैं","वे नए बने हैं","कोई कारण नहीं"],"ans":1},
+  {"q":"'जाति' (Species) की परिभाषा क्या है?","opts":["एक ही रंग के जीव","ऐसे जीव जो आपस में प्रजनन कर उपजाऊ संतान दे सकें","एक ही स्थान पर रहने वाले जीव","एक ही भोजन खाने वाले जीव"],"ans":1},
+  {"q":"मेंडल के प्रयोग में शुद्ध लम्बा (TT) × शुद्ध बौना (tt) से F₁ सभी _______ थे।","opts":["बौने","लम्बे (Tt)","मध्यम","मिश्रित"],"ans":1},
+  {"q":"मेंडल ने F₁ पीढ़ी को F₁ क्यों कहा?","opts":["First Flower","First Filial (प्रथम संतति पीढ़ी)","First Fusion","First Family"],"ans":1},
+  {"q":"मेंडल ने अपने प्रयोगों के परिणाम किस वर्ष प्रकाशित किए?","opts":["1856","1866","1900","1910"],"ans":1},
+  {"q":"मेंडल के कार्य को किस वर्ष पुनः खोजा गया?","opts":["1866","1900 (डी व्रीज, कॉरेन्स, शेर्मैक द्वारा)","1950","1953"],"ans":1},
+  {"q":"जीवाश्मों (Fossils) का अध्ययन करने वाली शाखा क्या कहलाती है?","opts":["पारिस्थितिकी (Ecology)","जीवाश्म विज्ञान (Palaeontology)","आनुवंशिकी (Genetics)","वर्गिकी (Taxonomy)"],"ans":1},
+  {"q":"मनुष्य की पूँछ की हड्डी (Coccyx) किसका उदाहरण है?","opts":["समजात अंग","समवृत्ति अंग","अवशेषी अंग (Vestigial organ)","सक्रिय अंग"],"ans":2},
+  {"q":"निकटिटेटिंग झिल्ली (Nictitating membrane / तीसरी पलक) मनुष्य में किसका उदाहरण है?","opts":["समजात अंग","समवृत्ति अंग","अवशेषी अंग (Vestigial organ)","सक्रिय अंग"],"ans":2},
+  {"q":"विकास (Evolution) में 'संयोजक कड़ी' (Connecting link) किसे कहते हैं?","opts":["एक ही वर्ग के जीव","ऐसे जीव/जीवाश्म जिनमें दो भिन्न वर्गों के लक्षण पाए जाते हैं (जैसे आर्कियोप्टेरिक्स)","केवल स्तनधारी","कोई नहीं"],"ans":1},
+  {"q":"मेंडल के प्रयोग में जब लम्बे (TT) और बौने (tt) पौधों का क्रॉस कराया गया तो F₁ में सभी पौधे लम्बे (Tt) निकले। इससे मेंडल का कौन-सा नियम सिद्ध होता है?","opts":["पृथक्करण का नियम","प्रभाविता का नियम (Law of Dominance)","स्वतंत्र अपव्यूहन का नियम","उत्परिवर्तन"],"ans":1}
+  ],
+  5: [
+{"q":"पारिस्थितिक तंत्र (Ecosystem) में ऊर्जा का प्रवाह कैसा होता है?","opts":["चक्रीय (Cyclic)","एकदिशीय (Unidirectional)","द्विदिशीय","बहुदिशीय"],"ans":1},
+  {"q":"खाद्य श्रृंखला (Food chain) में ऊर्जा का कितना प्रतिशत अगले स्तर को मिलता है?","opts":["1%","5%","10%","50%"],"ans":2},
+  {"q":"ओजोन परत (Ozone layer) किस हानिकारक विकिरण को रोकती है?","opts":["अवरक्त किरणें (Infrared)","पराबैंगनी किरणें (Ultraviolet / UV)","एक्स-रे","गामा किरणें"],"ans":1},
+  {"q":"जैव विघटनीय (Biodegradable) पदार्थ का उदाहरण कौन-सा है?","opts":["प्लास्टिक","काँच","सब्जी के छिलके","पॉलिथीन"],"ans":2},
+  {"q":"अजैव विघटनीय (Non-biodegradable) पदार्थ का उदाहरण कौन-सा है?","opts":["कागज","सूती कपड़ा","प्लास्टिक (Plastic)","लकड़ी"],"ans":2},
+  {"q":"खाद्य श्रृंखला (Food chain) में प्रथम पोषी स्तर (First trophic level) पर कौन होता है?","opts":["शाकाहारी","मांसाहारी","उत्पादक (Producer / हरे पौधे)","अपघटक"],"ans":2},
+  {"q":"ओजोन (Ozone) का रासायनिक सूत्र क्या है?","opts":["O","O₂","O₃","O₄"],"ans":2},
+  {"q":"CFC (क्लोरोफ्लोरोकार्बन) का ओजोन परत पर क्या प्रभाव पड़ता है?","opts":["ओजोन बढ़ती है","ओजोन परत का क्षरण (Depletion) होता है","कोई प्रभाव नहीं","ओजोन मजबूत होती है"],"ans":1},
+  {"q":"पारिस्थितिक तंत्र (Ecosystem) के अजैव (Abiotic) घटक कौन-से हैं?","opts":["पौधे और जंतु","सूर्य का प्रकाश, वायु, जल, ताप, मिट्टी","केवल जंतु","केवल सूक्ष्मजीव"],"ans":1},
+  {"q":"पारिस्थितिक तंत्र (Ecosystem) के जैव (Biotic) घटक कौन-से हैं?","opts":["सूर्य, जल, वायु","उत्पादक, उपभोक्ता और अपघटक","केवल पौधे","केवल जल"],"ans":1},
+  {"q":"जैव आवर्धन (Biological magnification) में विषैले पदार्थ किस स्तर पर सर्वाधिक होते हैं?","opts":["उत्पादक स्तर","प्राथमिक उपभोक्ता","द्वितीयक उपभोक्ता","शीर्ष उपभोक्ता (Top consumer)"],"ans":3},
+  {"q":"खाद्य जाल (Food web) क्या है?","opts":["एक ही खाद्य श्रृंखला","कई खाद्य श्रृंखलाओं का आपस में जुड़ा हुआ जाल","केवल उत्पादकों का समूह","केवल उपभोक्ताओं का समूह"],"ans":1},
+  {"q":"अपघटक (Decomposers) का कार्य क्या है?","opts":["प्रकाश संश्लेषण करना","मृत जीवों और कार्बनिक पदार्थों को सड़ाकर सरल पदार्थों में बदलना","शिकार करना","भोजन बनाना"],"ans":1},
+  {"q":"पर्यावरण दिवस (World Environment Day) कब मनाया जाता है?","opts":["5 जून","22 अप्रैल","21 मार्च","14 नवंबर"],"ans":0},
+  {"q":"ओजोन परत का क्षरण (Ozone depletion) किसके कारण होता है?","opts":["CO₂","CFC (क्लोरोफ्लोरोकार्बन)","O₂","N₂"],"ans":1},
+  {"q":"शाकाहारी जंतु (Herbivore) खाद्य श्रृंखला में किस पोषी स्तर पर आते हैं?","opts":["प्रथम (First)","द्वितीय (Second)","तृतीय (Third)","चतुर्थ (Fourth)"],"ans":1},
+  {"q":"किसी पारिस्थितिक तंत्र में ऊर्जा का प्रारंभिक (Ultimate) स्रोत क्या है?","opts":["जल","मिट्टी","सूर्य (Sun)","हवा"],"ans":2},
+  {"q":"उत्पादक (Producer) किसे कहते हैं?","opts":["भोजन खाने वाले जीव","हरे पौधे जो प्रकाश संश्लेषण द्वारा भोजन बनाते हैं","मृत पदार्थ खाने वाले","शिकार करने वाले"],"ans":1},
+  {"q":"UNEP का पूरा नाम क्या है?","opts":["United Nations Education Programme","United Nations Environment Programme","Universal Nature Environment Plan","United Nations Ecology Programme"],"ans":1},
+  {"q":"ऊर्जा का 10% नियम (10% law) किसने दिया?","opts":["ओडम (Odum)","लिंडमैन (Lindeman)","डार्विन","मेंडल"],"ans":1},
+  {"q":"पारिस्थितिक तंत्र (Ecosystem) की परिभाषा क्या है?","opts":["केवल जीवों का समूह","केवल अजैव कारकों का समूह","जैव और अजैव घटकों की परस्पर क्रिया का तंत्र","केवल पौधों का समूह"],"ans":2},
+  {"q":"प्राकृतिक पारिस्थितिक तंत्र (Natural ecosystem) का उदाहरण कौन-सा है?","opts":["बगीचा","वन, तालाब, समुद्र","एक्वेरियम","खेत"],"ans":1},
+  {"q":"कृत्रिम पारिस्थितिक तंत्र (Artificial ecosystem) का उदाहरण कौन-सा है?","opts":["वन","समुद्र","एक्वेरियम, बगीचा, खेत","तालाब"],"ans":2},
+  {"q":"प्राथमिक उपभोक्ता (Primary consumer) कौन-से जीव हैं?","opts":["मांसाहारी","शाकाहारी (Herbivore) जैसे हिरण, खरगोश","सर्वाहारी","अपघटक"],"ans":1},
+  {"q":"द्वितीयक उपभोक्ता (Secondary consumer) कौन-से जीव हैं?","opts":["शाकाहारी","छोटे मांसाहारी जो शाकाहारियों को खाते हैं (जैसे मेंढक)","उत्पादक","अपघटक"],"ans":1},
+  {"q":"तृतीयक उपभोक्ता (Tertiary consumer) कौन-से जीव हैं?","opts":["शाकाहारी","उत्पादक","बड़े मांसाहारी जो छोटे मांसाहारियों को खाते हैं (जैसे बाज, शेर)","अपघटक"],"ans":2},
+  {"q":"सर्वाहारी (Omnivore) किसे कहते हैं?","opts":["केवल पौधे खाने वाले","केवल मांस खाने वाले","पौधे और जंतु दोनों खाने वाले (जैसे मनुष्य, कौवा)","कुछ नहीं खाने वाले"],"ans":2},
+  {"q":"इस खाद्य श्रृंखला में द्वितीयक उपभोक्ता कौन है? घास → हिरण → शेर","opts":["घास","हिरण","शेर","कोई नहीं"],"ans":2},
+  {"q":"इस खाद्य श्रृंखला में प्राथमिक उपभोक्ता कौन है? घास → टिड्डा → मेंढक → सांप → बाज","opts":["घास","टिड्डा","मेंढक","सांप"],"ans":1},
+  {"q":"इस खाद्य श्रृंखला में शीर्ष उपभोक्ता (Top consumer) कौन है? घास → टिड्डा → मेंढक → सांप → बाज","opts":["घास","मेंढक","सांप","बाज"],"ans":3},
+  {"q":"अपघटक (Decomposers) में कौन-से जीव शामिल होते हैं?","opts":["शेर और बाज","जीवाणु (Bacteria) और कवक (Fungi)","घास और पौधे","मेंढक और सांप"],"ans":1},
+  {"q":"अपघटक (Decomposers) का पर्यावरण में क्या महत्व है?","opts":["कोई महत्व नहीं","मृत जीवों को सड़ाकर पोषक तत्वों को मिट्टी में लौटाते हैं — पदार्थों का पुनर्चक्रण","प्रदूषण बढ़ाते हैं","ऑक्सीजन बनाते हैं"],"ans":1},
+  {"q":"खाद्य श्रृंखला (Food chain) में अधिकतम ऊर्जा किस पोषी स्तर पर होती है?","opts":["प्राथमिक उपभोक्ता","द्वितीयक उपभोक्ता","उत्पादक (Producer)","शीर्ष उपभोक्ता"],"ans":2},
+  {"q":"खाद्य श्रृंखला (Food chain) में सबसे कम ऊर्जा किस पोषी स्तर पर होती है?","opts":["उत्पादक","प्राथमिक उपभोक्ता","शीर्ष उपभोक्ता (Top consumer)","द्वितीयक उपभोक्ता"],"ans":2},
+  {"q":"यदि उत्पादक को 10000 J ऊर्जा मिलती है, तो 10% नियम से प्राथमिक उपभोक्ता को कितनी मिलेगी?","opts":["10000 J","1000 J","100 J","10 J"],"ans":1},
+  {"q":"यदि प्राथमिक उपभोक्ता को 1000 J ऊर्जा मिलती है, तो द्वितीयक उपभोक्ता को कितनी मिलेगी?","opts":["1000 J","100 J","10 J","1 J"],"ans":1},
+  {"q":"यदि उत्पादक को 10000 J ऊर्जा मिली, तो तृतीयक उपभोक्ता (3rd level) को कितनी मिलेगी?","opts":["1000 J","100 J","10 J","1 J"],"ans":2},
+  {"q":"ऊर्जा का 10% नियम (10% rule) का क्या अर्थ है?","opts":["90% ऊर्जा अगले स्तर को मिलती है","प्रत्येक पोषी स्तर पर केवल 10% ऊर्जा अगले स्तर को स्थानांतरित होती है, 90% जीवन प्रक्रियाओं में खर्च होती है","100% ऊर्जा स्थानांतरित होती है","1% ऊर्जा स्थानांतरित होती है"],"ans":1},
+  {"q":"खाद्य श्रृंखला (Food chain) में आमतौर पर कितने पोषी स्तर (Trophic levels) होते हैं?","opts":["1-2","3-4 (अधिकतम 4-5)","10-15","20-30"],"ans":1},
+  {"q":"खाद्य श्रृंखला (Food chain) में 4-5 से अधिक पोषी स्तर क्यों नहीं होते?","opts":["जगह कम होती है","प्रत्येक स्तर पर ऊर्जा कम होती जाती है (10% नियम) — शीर्ष पर बहुत कम बचती है","जीव नहीं मिलते","कोई कारण नहीं"],"ans":1},
+  {"q":"जैव आवर्धन (Biological magnification) किसे कहते हैं?","opts":["जीवों का बड़ा होना","खाद्य श्रृंखला में ऊपर जाने पर विषैले पदार्थों (जैसे DDT) की सांद्रता बढ़ते जाना","जीवों की संख्या बढ़ना","ऊर्जा बढ़ना"],"ans":1},
+  {"q":"DDT जैसे रसायन खाद्य श्रृंखला में शीर्ष उपभोक्ता में सर्वाधिक क्यों होते हैं?","opts":["वे DDT खाते हैं","DDT अजैव विघटनीय है — शरीर में जमा होता जाता है और प्रत्येक स्तर पर बढ़ता जाता है","DDT बनाते हैं","कोई कारण नहीं"],"ans":1},
+  {"q":"जैव विघटनीय (Biodegradable) पदार्थ किसे कहते हैं?","opts":["जो कभी नहीं सड़ते","जो जैविक प्रक्रियाओं (सूक्ष्मजीवों) द्वारा अपघटित हो सकते हैं","जो बहुत कठोर हैं","जो प्लास्टिक से बने हैं"],"ans":1},
+  {"q":"अजैव विघटनीय (Non-biodegradable) पदार्थ किसे कहते हैं?","opts":["जो आसानी से सड़ जाते हैं","जो जैविक प्रक्रियाओं द्वारा अपघटित नहीं होते","जो पानी में घुल जाते हैं","जो हवा में उड़ जाते हैं"],"ans":1},
+  {"q":"निम्नलिखित में से कौन-सा जैव विघटनीय (Biodegradable) है?","opts":["प्लास्टिक की थैली","एल्युमीनियम कैन","गाय का गोबर, सब्जी के छिलके","DDT"],"ans":2},
+  {"q":"निम्नलिखित में से कौन-सा अजैव विघटनीय (Non-biodegradable) है?","opts":["कागज","कपड़ा","प्लास्टिक, DDT, पॉलिथीन","गोबर"],"ans":2},
+  {"q":"अजैव विघटनीय पदार्थों का पर्यावरण पर क्या प्रभाव पड़ता है?","opts":["कोई प्रभाव नहीं","भूमि और जल प्रदूषण, जैव आवर्धन","पोषक तत्व बढ़ते हैं","मिट्टी उपजाऊ बनती है"],"ans":1},
+  {"q":"ओजोन परत (Ozone layer) वायुमंडल के किस स्तर में पाई जाती है?","opts":["क्षोभमंडल (Troposphere)","समतापमंडल (Stratosphere)","मध्यमंडल","बाह्यमंडल"],"ans":1},
+  {"q":"ओजोन (O₃) कैसे बनती है?","opts":["CO₂ से","UV किरणों द्वारा O₂ अणु टूटकर O₃ बनता है","CFC से","N₂ से"],"ans":1},
+  {"q":"ओजोन परत (Ozone layer) पृथ्वी पर जीवन के लिए क्यों आवश्यक है?","opts":["ऑक्सीजन देती है","हानिकारक UV किरणों को अवशोषित करके जीवों की रक्षा करती है","बारिश कराती है","तापमान बढ़ाती है"],"ans":1},
+  {"q":"ओजोन परत के क्षरण (Ozone depletion) से क्या हानि होती है?","opts":["कोई हानि नहीं","UV किरणें सीधे पृथ्वी पर आएंगी — त्वचा कैंसर, मोतियाबिंद, फसल क्षति","बारिश बढ़ेगी","ठंड बढ़ेगी"],"ans":1},
+  {"q":"CFC (क्लोरोफ्लोरोकार्बन) का उपयोग कहाँ होता है?","opts":["खाना पकाने में","रेफ्रिजरेटर, एयर कंडीशनर, अग्निशामक में","कपड़े धोने में","खेती में"],"ans":1},
+  {"q":"ओजोन परत के संरक्षण के लिए क्या कदम उठाए गए?","opts":["कोई कदम नहीं","CFC के उपयोग पर प्रतिबंध (UNEP द्वारा)","अधिक CFC बनाना","ओजोन को नष्ट करना"],"ans":1},
+  {"q":"पारिस्थितिक तंत्र (Ecosystem) में पदार्थों (Matter) का प्रवाह कैसा होता है?","opts":["एकदिशीय","चक्रीय (Cyclic)","कोई प्रवाह नहीं","अनियमित"],"ans":1},
+  {"q":"ऊर्जा का प्रवाह एकदिशीय (Unidirectional) होता है, जबकि पदार्थों का प्रवाह _______ होता है।","opts":["एकदिशीय","चक्रीय (Cyclic)","कोई प्रवाह नहीं","दोनों एकदिशीय"],"ans":1},
+  {"q":"खाद्य श्रृंखला (Food chain) में ऊर्जा का प्रवाह किस दिशा में होता है?","opts":["उपभोक्ता → उत्पादक","उत्पादक → प्राथमिक → द्वितीयक → तृतीयक उपभोक्ता","किसी भी दिशा में","चक्रीय"],"ans":1},
+  {"q":"एक तालाब (Pond) की खाद्य श्रृंखला का सही उदाहरण कौन-सा है?","opts":["शेर → हिरण → घास","शैवाल → छोटी मछली → बड़ी मछली → बगुला","बाज → सांप → मेंढक","कोई नहीं"],"ans":1},
+  {"q":"एक वन (Forest) की खाद्य श्रृंखला का सही उदाहरण कौन-सा है?","opts":["शैवाल → मछली → बगुला","घास → हिरण → शेर","मेंढक → सांप → घास","कोई नहीं"],"ans":1},
+  {"q":"एक घास के मैदान (Grassland) की खाद्य श्रृंखला का उदाहरण दीजिए:","opts":["शैवाल → मछली → बगुला","घास → टिड्डा → मेंढक → सांप → बाज","शेर → हिरण → घास","कोई नहीं"],"ans":1},
+  {"q":"खाद्य जाल (Food web) खाद्य श्रृंखला से अधिक स्थिर (Stable) क्यों है?","opts":["एक ही रास्ता होता है","कई वैकल्पिक खाद्य रास्ते होते हैं — एक श्रृंखला टूटने पर भी तंत्र चलता रहता है","कम जीव होते हैं","अधिक ऊर्जा मिलती है"],"ans":1},
+  {"q":"यदि किसी खाद्य श्रृंखला से सभी मेंढक हटा दिए जाएँ तो क्या होगा?","opts":["कोई प्रभाव नहीं","कीटों की संख्या बढ़ जाएगी, सांपों की घट जाएगी — पारिस्थितिक असंतुलन","सांप बढ़ जाएंगे","घास कम हो जाएगी"],"ans":1},
+  {"q":"किसी पारिस्थितिक तंत्र में यदि सभी अपघटक (Decomposers) नष्ट हो जाएँ तो क्या होगा?","opts":["कोई प्रभाव नहीं","मृत पदार्थ जमा होते रहेंगे, पोषक तत्वों का पुनर्चक्रण रुक जाएगा","पौधे तेजी से बढ़ेंगे","जीव स्वस्थ होंगे"],"ans":1},
+  {"q":"पारिस्थितिक पिरामिड (Ecological pyramid) में आधार (Base) पर कौन होता है?","opts":["शीर्ष उपभोक्ता","द्वितीयक उपभोक्ता","प्राथमिक उपभोक्ता","उत्पादक (Producers)"],"ans":3},
+  {"q":"ऊर्जा का पिरामिड (Pyramid of energy) हमेशा कैसा होता है?","opts":["उल्टा (Inverted)","सीधा (Upright)","समतल","अनियमित"],"ans":1},
+  {"q":"ऊर्जा का पिरामिड हमेशा सीधा क्यों होता है?","opts":["ऊर्जा बढ़ती जाती है","प्रत्येक स्तर पर ऊर्जा कम होती जाती है (10% नियम)","ऊर्जा बराबर रहती है","कोई कारण नहीं"],"ans":1},
+  {"q":"ग्रीनहाउस प्रभाव (Greenhouse effect) क्या है?","opts":["पौधों का बढ़ना","वायुमंडल में CO₂, मीथेन जैसी गैसें सूर्य की ऊष्मा को रोककर पृथ्वी का तापमान बढ़ाती हैं","ओजोन बनना","बारिश होना"],"ans":1},
+  {"q":"ग्रीनहाउस प्रभाव (Greenhouse effect) से क्या होता है?","opts":["पृथ्वी ठंडी होती है","पृथ्वी का तापमान बढ़ता है (Global warming)","बारिश बढ़ती है","ओजोन बढ़ती है"],"ans":1},
+  {"q":"ग्रीनहाउस गैसों (Greenhouse gases) का उदाहरण कौन-सा है?","opts":["ऑक्सीजन, नाइट्रोजन","CO₂, मीथेन (CH₄), नाइट्रस ऑक्साइड (N₂O), CFC","केवल O₂","केवल N₂"],"ans":1},
+  {"q":"वैश्विक तापन (Global warming) का प्रमुख कारण कौन-सी गैस है?","opts":["ऑक्सीजन","नाइट्रोजन","कार्बन डाइऑक्साइड (CO₂)","हीलियम"],"ans":2},
+  {"q":"जैव-विविधता (Biodiversity) किसे कहते हैं?","opts":["एक ही प्रकार के जीव","किसी क्षेत्र में पाए जाने वाले सभी प्रकार के जीवों की विविधता","केवल पौधे","केवल जंतु"],"ans":1},
+  {"q":"जैव-विविधता (Biodiversity) के ह्रास का मुख्य कारण क्या है?","opts":["वृक्षारोपण","वनों का विनाश (Deforestation), प्रदूषण, अतिदोहन","बारिश","सूर्य का प्रकाश"],"ans":1},
+  {"q":"'पर्यावरण' (Environment) शब्द का क्या अर्थ है?","opts":["केवल हवा","हमारे चारों ओर का भौतिक, रासायनिक और जैविक परिवेश","केवल पानी","केवल पौधे"],"ans":1},
+  {"q":"प्रदूषण (Pollution) कितने प्रकार का होता है?","opts":["1","2","3 — वायु, जल और भूमि प्रदूषण","4"],"ans":2},
+  {"q":"वायु प्रदूषण (Air pollution) का मुख्य कारण क्या है?","opts":["पेड़ लगाना","वाहनों और कारखानों से निकलने वाला धुआँ","वर्षा","सूर्य का प्रकाश"],"ans":1},
+  {"q":"जल प्रदूषण (Water pollution) का मुख्य कारण क्या है?","opts":["वर्षा का जल","कारखानों का अपशिष्ट जल, सीवेज, कीटनाशक","भूमिगत जल","वाष्पीकरण"],"ans":1},
+  {"q":"मृदा प्रदूषण (Soil pollution) का कारण क्या है?","opts":["वृक्षारोपण","अत्यधिक कीटनाशक, उर्वरक, प्लास्टिक कचरा","बारिश","सिंचाई"],"ans":1},
+  {"q":"कम्पोस्ट (Compost) किन पदार्थों से बनता है?","opts":["प्लास्टिक और काँच","जैव विघटनीय पदार्थ (रसोई का कचरा, पत्तियाँ, गोबर)","धातुएँ","रबड़"],"ans":1},
+  {"q":"वर्मी कम्पोस्ट (Vermicompost) किसकी सहायता से बनता है?","opts":["जीवाणु","केंचुआ (Earthworm)","कवक","शैवाल"],"ans":1},
+  {"q":"पृथ्वी दिवस (Earth Day) कब मनाया जाता है?","opts":["5 जून","22 अप्रैल","21 मार्च","16 सितंबर"],"ans":1},
+  {"q":"विश्व ओजोन दिवस (World Ozone Day) कब मनाया जाता है?","opts":["5 जून","22 अप्रैल","16 सितंबर","21 मार्च"],"ans":2},
+  {"q":"CNG (Compressed Natural Gas) को स्वच्छ ईंधन क्यों कहते हैं?","opts":["यह सस्ता है","यह जलने पर कम प्रदूषक गैसें छोड़ता है","यह तरल है","यह ठोस है"],"ans":1},
+  {"q":"प्रदूषण को कम करने का सबसे अच्छा उपाय क्या है?","opts":["अधिक कारखाने लगाना","वृक्षारोपण, जन जागरूकता, नवीकरणीय ऊर्जा का उपयोग","अधिक वाहन चलाना","प्लास्टिक बढ़ाना"],"ans":1},
+  {"q":"शाकाहारी (Herbivore) का उदाहरण कौन-सा है?","opts":["शेर","बाज","हिरण, खरगोश, गाय","मेंढक"],"ans":2},
+  {"q":"मांसाहारी (Carnivore) का उदाहरण कौन-सा है?","opts":["गाय","खरगोश","शेर, बाज, सांप","मनुष्य"],"ans":2},
+  {"q":"परजीवी (Parasite) किस प्रकार का उपभोक्ता है?","opts":["उत्पादक","ऐसा जीव जो दूसरे जीव (Host) के शरीर पर/में रहकर पोषण लेता है","अपघटक","शाकाहारी"],"ans":1},
+  {"q":"मृतोपजीवी (Saprophyte) किसे कहते हैं?","opts":["जीवित जीवों से पोषण लेने वाले","मृत और सड़े-गले पदार्थों से पोषण लेने वाले (जैसे कवक, जीवाणु)","प्रकाश संश्लेषण करने वाले","शिकार करने वाले"],"ans":1},
+  {"q":"यदि सभी उत्पादक (Producers) नष्ट हो जाएँ तो क्या होगा?","opts":["कोई प्रभाव नहीं","सभी उपभोक्ता और अपघटक भी नष्ट हो जाएंगे — पूरा पारिस्थितिक तंत्र नष्ट","केवल मांसाहारी मरेंगे","अपघटक बढ़ेंगे"],"ans":1},
+  {"q":"ऊर्जा का प्रवाह एकदिशीय (Unidirectional) क्यों होता है?","opts":["ऊर्जा वापस नहीं आती — एक बार उपयोग होने पर ऊष्मा के रूप में खो जाती है","ऊर्जा चक्रीय है","ऊर्जा बढ़ती जाती है","कोई कारण नहीं"],"ans":0},
+  {"q":"पोषी स्तर (Trophic level) किसे कहते हैं?","opts":["खाद्य श्रृंखला में जीव की स्थिति (Position) — उत्पादक T₁, प्राथमिक T₂ आदि","जीव का आकार","जीव की आयु","जीव का रंग"],"ans":0},
+  {"q":"एक खाद्य श्रृंखला में चार पोषी स्तर हैं। उत्पादक को 10000 J ऊर्जा मिली। शीर्ष उपभोक्ता को कितनी मिलेगी?","opts":["1000 J","100 J","10 J","1 J"],"ans":2},
+  {"q":"उत्पादक (Producer) को _______ स्वपोषी (Autotroph) भी कहते हैं।","opts":["परपोषी","स्वपोषी (Autotroph)","विषमपोषी","अपघटक"],"ans":1},
+  {"q":"उपभोक्ता (Consumer) को _______ भी कहते हैं।","opts":["स्वपोषी (Autotroph)","परपोषी (Heterotroph)","उत्पादक","अपघटक"],"ans":1},
+  {"q":"जंगली जानवरों के शिकार (Hunting) से पारिस्थितिक तंत्र पर क्या प्रभाव पड़ता है?","opts":["कोई प्रभाव नहीं","खाद्य श्रृंखला अस्थिर होती है, जैव-विविधता घटती है","पारिस्थितिक तंत्र मजबूत होता है","ऊर्जा बढ़ती है"],"ans":1},
+  {"q":"वनों के कटने (Deforestation) से पर्यावरण पर क्या प्रभाव पड़ता है?","opts":["CO₂ घटती है","CO₂ बढ़ती है, जैव-विविधता घटती है, मृदा अपरदन बढ़ता है","बारिश बढ़ती है","कोई प्रभाव नहीं"],"ans":1},
+  {"q":"'हरित पट्टी' (Green belt) लगाने का क्या उद्देश्य है?","opts":["सुंदरता बढ़ाना","शहरों के आसपास वायु प्रदूषण और ध्वनि प्रदूषण कम करना","फसल उगाना","कोई उद्देश्य नहीं"],"ans":1},
+  {"q":"DDT एक _______ पदार्थ है।","opts":["जैव विघटनीय","अजैव विघटनीय (Non-biodegradable)","खाद्य","पोषक"],"ans":1},
+  {"q":"ओजोन परत (Ozone layer) को 'पृथ्वी की छतरी (Umbrella)' क्यों कहते हैं?","opts":["बारिश से बचाती है","UV किरणों से पृथ्वी के जीवों की रक्षा करती है","हवा रोकती है","धूप रोकती है"],"ans":1},
+  {"q":"पर्यावरण संरक्षण (Environmental conservation) के उपाय क्या हैं?","opts":["प्रदूषण बढ़ाना","वृक्षारोपण, CFC कम करना, 3R (Reduce, Reuse, Recycle), स्वच्छ ईंधन","वनों की कटाई","कुछ नहीं करना"],"ans":1},
+  {"q":"कागज (Paper) जैव विघटनीय है या अजैव विघटनीय?","opts":["अजैव विघटनीय","जैव विघटनीय (Biodegradable)","कोई नहीं","दोनों"],"ans":1},
+  {"q":"काँच (Glass) जैव विघटनीय है या अजैव विघटनीय?","opts":["जैव विघटनीय","अजैव विघटनीय (Non-biodegradable)","कोई नहीं","दोनों"],"ans":1},
+  {"q":"लकड़ी (Wood) जैव विघटनीय है या अजैव विघटनीय?","opts":["अजैव विघटनीय","जैव विघटनीय (Biodegradable)","कोई नहीं","दोनों"],"ans":1},
+  {"q":"थर्मोकोल (Thermocol) जैव विघटनीय है या अजैव विघटनीय?","opts":["जैव विघटनीय","अजैव विघटनीय (Non-biodegradable)","कोई नहीं","दोनों"],"ans":1},
+  {"q":"रबड़ (Rubber) जैव विघटनीय है या अजैव विघटनीय?","opts":["जैव विघटनीय","अजैव विघटनीय (Non-biodegradable)","कोई नहीं","दोनों"],"ans":1},
+  {"q":"ऊन (Wool) जैव विघटनीय है या अजैव विघटनीय?","opts":["अजैव विघटनीय","जैव विघटनीय (Biodegradable)","कोई नहीं","दोनों"],"ans":1},
+  {"q":"नायलॉन (Nylon) जैव विघटनीय है या अजैव विघटनीय?","opts":["जैव विघटनीय","अजैव विघटनीय (Non-biodegradable)","कोई नहीं","दोनों"],"ans":1},
+  {"q":"सूती कपड़ा (Cotton cloth) जैव विघटनीय है या अजैव विघटनीय?","opts":["अजैव विघटनीय","जैव विघटनीय (Biodegradable)","कोई नहीं","दोनों"],"ans":1},
+  {"q":"पॉलिथीन (Polythene) की थैली की जगह क्या उपयोग करना चाहिए?","opts":["और पॉलिथीन","जूट/कपड़े का थैला","कागज","प्लास्टिक बैग"],"ans":1},
+  {"q":"DDT का पूरा नाम क्या है?","opts":["Di Dichloro Toluene","Dichloro Diphenyl Trichloroethane","Di Diphenyl Toluene","Dichloro Di Trichloroethane"],"ans":1},
+  {"q":"खाद्य श्रृंखला (Food chain) का क्या अर्थ है?","opts":["जीवों की सूची","जीवों की वह शृंखला जिसमें एक जीव दूसरे को खाता है और ऊर्जा स्थानांतरित होती है","जीवों का समूह","कोई नहीं"],"ans":1},
+  {"q":"निम्नलिखित में से कौन-सी सही खाद्य श्रृंखला है?","opts":["शेर → हिरण → घास","घास → हिरण → शेर","मेंढक → सांप → घास → बाज","बाज → सांप → मेंढक → घास"],"ans":1},
+  {"q":"किसी पारिस्थितिक तंत्र में सबसे अधिक संख्या किसकी होती है?","opts":["शीर्ष उपभोक्ता","द्वितीयक उपभोक्ता","प्राथमिक उपभोक्ता","उत्पादक (Producers)"],"ans":3},
+  {"q":"संख्या का पिरामिड (Pyramid of numbers) वन पारिस्थितिक तंत्र में कैसा होता है?","opts":["हमेशा सीधा","हमेशा उल्टा","सीधा (आमतौर पर) — उत्पादक सबसे अधिक, शीर्ष उपभोक्ता सबसे कम","समतल"],"ans":2},
+  {"q":"अजैव विघटनीय पदार्थ पर्यावरण में _______ तक बने रहते हैं।","opts":["कुछ दिन","कुछ सप्ताह","सैकड़ों-हजारों वर्षों तक","कुछ घंटे"],"ans":2},
+  {"q":"जैव विघटनीय कचरे (Biodegradable waste) से क्या उपयोगी पदार्थ बनाया जा सकता है?","opts":["प्लास्टिक","खाद/कम्पोस्ट (Compost)","काँच","धातु"],"ans":1},
+  {"q":"कीटनाशकों (Pesticides) के अत्यधिक उपयोग से क्या हानि होती है?","opts":["फसल बढ़ती है","मिट्टी, जल प्रदूषण और जैव आवर्धन (Biomagnification)","कोई हानि नहीं","वायु शुद्ध होती है"],"ans":1},
+  {"q":"'3R' का क्या अर्थ है?","opts":["Read, Redo, Rewrite","Reduce (कम करो), Reuse (पुनः उपयोग), Recycle (पुनर्चक्रण)","Run, Rest, Repeat","कोई नहीं"],"ans":1},
+  {"q":"एक पारिस्थितिक तंत्र में ऊर्जा का 90% भाग कहाँ खर्च होता है?","opts":["अगले पोषी स्तर को","जीव अपनी जीवन प्रक्रियाओं (श्वसन, पाचन, गति) में उपयोग करता है और ऊष्मा के रूप में खो देता है","वातावरण में","मिट्टी में"],"ans":1},
+  {"q":"खाद्य श्रृंखला (Food chain) और खाद्य जाल (Food web) में क्या अंतर है?","opts":["कोई अंतर नहीं","खाद्य श्रृंखला एकल रेखीय होती है जबकि खाद्य जाल कई श्रृंखलाओं का जटिल जाल होता है","दोनों एक ही हैं","खाद्य जाल सरल होता है"],"ans":1},
+  {"q":"पारिस्थितिक तंत्र (Ecosystem) को स्वस्थ रखने के लिए किसका संतुलन जरूरी है?","opts":["केवल उत्पादकों का","केवल उपभोक्ताओं का","उत्पादक, उपभोक्ता और अपघटक — तीनों का संतुलन","केवल अपघटकों का"],"ans":2}
+  ],
+  6: [
+{"q":"प्राकृतिक संसाधनों (Natural Resources) के प्रबंधन का मुख्य उद्देश्य क्या है?","opts":["संसाधनों का अत्यधिक दोहन","संसाधनों का संपोषित उपयोग (Sustainable use)","संसाधनों को नष्ट करना","केवल उद्योगों के लिए उपयोग"],"ans":1},
+  {"q":"3R का अर्थ क्या है?","opts":["Reduce, Reuse, Recycle","Read, Rewrite, Recycle","Reduce, Remake, Reuse","Redo, Reuse, Recycle"],"ans":0},
+  {"q":"'Reduce' का हिंदी अर्थ क्या है?","opts":["पुन: उपयोग","कम उपयोग (कम करना)","पुनर्चक्रण","पुनर्निर्माण"],"ans":1},
+  {"q":"'Reuse' का क्या अर्थ है?","opts":["किसी वस्तु को फेंकना","किसी वस्तु का पुन: उपयोग करना","किसी वस्तु को जलाना","किसी वस्तु को गलाना"],"ans":1},
+  {"q":"'Recycle' में क्या किया जाता है?","opts":["वस्तु को फेंक दिया जाता है","वस्तु को पुनर्चक्रित कर नई वस्तु बनाई जाती है","वस्तु को जला दिया जाता है","वस्तु को दफना दिया जाता है"],"ans":1},
+  {"q":"गंगा कार्य योजना (Ganga Action Plan) कब शुरू की गई थी?","opts":["1980","1985","1990","1975"],"ans":1},
+  {"q":"गंगा कार्य योजना (Ganga Action Plan) का मुख्य उद्देश्य क्या था?","opts":["गंगा में मछली पालन","गंगा के जल की गुणवत्ता सुधारना","गंगा में बाँध बनाना","गंगा में नौकायन"],"ans":1},
+  {"q":"कोलिफॉर्म (Coliform) क्या है?","opts":["एक प्रकार का वायरस","एक जीवाणु जो मानव आंत में पाया जाता है","एक प्रकार का कवक","एक प्रकार का शैवाल"],"ans":1},
+  {"q":"जल में कोलिफॉर्म (Coliform) की उपस्थिति किसका संकेत है?","opts":["जल शुद्ध है","जल संदूषित (Contaminated) है","जल में खनिज हैं","जल में ऑक्सीजन अधिक है"],"ans":1},
+  {"q":"स्वच्छ पेयजल का pH मान कितना होना चाहिए?","opts":["5","7","9","11"],"ans":1},
+  {"q":"जल की गुणवत्ता जांचने के लिए किस जीवाणु की जांच की जाती है?","opts":["लैक्टोबैसिलस (Lactobacillus)","कोलिफॉर्म (Coliform)","राइजोबियम (Rhizobium)","स्ट्रेप्टोकॉकस (Streptococcus)"],"ans":1},
+  {"q":"चिपको आंदोलन (Chipko Movement) किस राज्य में शुरू हुआ?","opts":["बिहार","उत्तर प्रदेश","उत्तराखंड (गढ़वाल)","राजस्थान"],"ans":2},
+  {"q":"चिपको आंदोलन (Chipko Movement) का नेतृत्व किसने किया?","opts":["मेधा पाटकर","सुंदरलाल बहुगुणा","अमृता देवी बिश्नोई","सलीम अली"],"ans":1},
+  {"q":"अमृता देवी बिश्नोई ने किस वृक्ष की रक्षा के लिए अपने प्राण दिए?","opts":["नीम","पीपल","खेजरी (Khejri)","बरगद"],"ans":2},
+  {"q":"अमृता देवी बिश्नोई किस राज्य से संबंधित थीं?","opts":["गुजरात","राजस्थान","बिहार","मध्य प्रदेश"],"ans":1},
+  {"q":"वन्यजीव संरक्षण अधिनियम (Wildlife Protection Act) कब लागू हुआ?","opts":["1970","1972","1975","1980"],"ans":1},
+  {"q":"भारत में बाघ परियोजना (Project Tiger) कब शुरू की गई?","opts":["1970","1972","1973","1975"],"ans":2},
+  {"q":"वनों के स्टेकहोल्डर (Stakeholder) कौन हैं?","opts":["केवल सरकार","केवल उद्योगपति","स्थानीय लोग, सरकार, उद्योगपति एवं वन्यजीव प्रेमी","केवल वन्यजीव प्रेमी"],"ans":2},
+  {"q":"वनों का संरक्षण (Forest Conservation) क्यों आवश्यक है?","opts":["लकड़ी प्राप्त करने के लिए","जैव विविधता (Biodiversity) बनाए रखने के लिए","खनन के लिए","शिकार के लिए"],"ans":1},
+  {"q":"जीवाश्म ईंधन (Fossil Fuel) का उदाहरण कौन सा है?","opts":["लकड़ी","कोयला (Coal)","बायोगैस","सौर ऊर्जा"],"ans":1},
+  {"q":"कोयला (Coal) किस प्रकार का संसाधन है?","opts":["नवीकरणीय (Renewable)","अनवीकरणीय (Non-renewable)","अक्षय (Inexhaustible)","जैव (Biotic)"],"ans":1},
+  {"q":"पेट्रोलियम (Petroleum) को किस नाम से भी जाना जाता है?","opts":["काला सोना (Black Gold)","श्वेत सोना","हरा सोना","लाल सोना"],"ans":0},
+  {"q":"नवीकरणीय ऊर्जा (Renewable Energy) का उदाहरण कौन सा है?","opts":["कोयला (Coal)","पेट्रोलियम (Petroleum)","सौर ऊर्जा (Solar Energy)","प्राकृतिक गैस (Natural Gas)"],"ans":2},
+  {"q":"अनवीकरणीय ऊर्जा (Non-renewable Energy) के स्रोत कौन से हैं?","opts":["सौर ऊर्जा, पवन ऊर्जा","कोयला, पेट्रोलियम, प्राकृतिक गैस","जल ऊर्जा, भूतापीय ऊर्जा","बायोमास, बायोगैस"],"ans":1},
+  {"q":"सतत विकास (Sustainable Development) का अर्थ क्या है?","opts":["वर्तमान आवश्यकताओं की पूर्ति बिना भविष्य की पीढ़ियों के संसाधनों को नुकसान पहुँचाए","केवल वर्तमान के लिए विकास","केवल भविष्य के लिए विकास","अत्यधिक दोहन"],"ans":0},
+  {"q":"जल संभर प्रबंधन (Watershed Management) का उद्देश्य क्या है?","opts":["जल को बर्बाद करना","वर्षा जल को एकत्र करना एवं भूजल स्तर बढ़ाना","बाँध तोड़ना","जल प्रदूषण करना"],"ans":1},
+  {"q":"बाँध (Dam) का मुख्य कार्य क्या है?","opts":["जल को प्रदूषित करना","सिंचाई एवं विद्युत उत्पादन","मछली पालन","जल बर्बाद करना"],"ans":1},
+  {"q":"टिहरी बाँध (Tehri Dam) किस नदी पर बना है?","opts":["गंगा","भागीरथी","यमुना","गोदावरी"],"ans":1},
+  {"q":"सरदार सरोवर बाँध (Sardar Sarovar Dam) किस नदी पर स्थित है?","opts":["गंगा","नर्मदा","ताप्ती","कावेरी"],"ans":1},
+  {"q":"बड़े बाँधों (Large Dams) के विरोध का मुख्य कारण क्या है?","opts":["विद्युत उत्पादन","विस्थापन, वन विनाश एवं पारिस्थितिकी हानि","सिंचाई","मछली पालन"],"ans":1},
+  {"q":"नर्मदा बचाओ आंदोलन (Narmada Bachao Andolan) का नेतृत्व किसने किया?","opts":["सुंदरलाल बहुगुणा","मेधा पाटकर","अमृता देवी","राजेंद्र सिंह"],"ans":1},
+  {"q":"जल संग्रहण (Water Harvesting) का मुख्य उद्देश्य क्या है?","opts":["जल को बर्बाद करना","वर्षा जल को एकत्र कर भूजल पुनर्भरण करना","नदियों को सुखाना","बाँध तोड़ना"],"ans":1},
+  {"q":"राजस्थान में जल संग्रहण (Water Harvesting) की पारंपरिक विधि कौन सी है?","opts":["तालाब","खादीन (Khadin)","नहर","बोरवेल"],"ans":1},
+  {"q":"बावड़ी (Stepwell) किसे कहते हैं?","opts":["एक प्रकार का बाँध","सीढ़ीदार कुआँ जिसमें जल संग्रहित होता है","एक प्रकार की नहर","एक प्रकार का तालाब"],"ans":1},
+  {"q":"कुंड (Tank) का उपयोग किसके लिए होता है?","opts":["खनन","वर्षा जल संग्रहण (Rainwater Harvesting)","वन कटाई","प्रदूषण"],"ans":1},
+  {"q":"पर्यावरण संरक्षण अधिनियम (Environment Protection Act) कब लागू हुआ?","opts":["1972","1980","1986","1990"],"ans":2},
+  {"q":"जैव विविधता (Biodiversity) का संरक्षण क्यों आवश्यक है?","opts":["पारिस्थितिक संतुलन (Ecological Balance) बनाए रखने के लिए","शिकार बढ़ाने के लिए","वनों को काटने के लिए","प्रदूषण बढ़ाने के लिए"],"ans":0},
+  {"q":"वन संरक्षण (Forest Conservation) का सबसे प्रभावी तरीका कौन सा है?","opts":["वन कटाई (Deforestation)","वनों का पुनर्रोपण (Afforestation) एवं सामुदायिक भागीदारी","खनन","अवैध शिकार"],"ans":1},
+  {"q":"भारत में वन क्षेत्र कुल भौगोलिक क्षेत्रफल का लगभग कितना प्रतिशत है?","opts":["10%","24%","33%","50%"],"ans":1},
+  {"q":"राष्ट्रीय वन नीति के अनुसार कुल भूमि का कितना भाग वन होना चाहिए?","opts":["10%","24%","33%","50%"],"ans":2},
+  {"q":"वन जीवों (Wildlife) के लिए सबसे बड़ा खतरा क्या है?","opts":["वन संरक्षण","आवास विनाश (Habitat Destruction) एवं अवैध शिकार","वनारोपण","जल संग्रहण"],"ans":1},
+  {"q":"'चिपको' शब्द का अर्थ क्या है?","opts":["काटना","गले लगाना (चिपकना)","भागना","जलाना"],"ans":1},
+  {"q":"चिपको आंदोलन (Chipko Movement) किस दशक में हुआ?","opts":["1950 के दशक में","1960 के दशक में","1970 के दशक में","1990 के दशक में"],"ans":2},
+  {"q":"जीवाश्म ईंधन (Fossil Fuels) के जलने से कौन सी गैस निकलती है?","opts":["ऑक्सीजन (O₂)","कार्बन डाइऑक्साइड (CO₂)","नाइट्रोजन (N₂)","हाइड्रोजन (H₂)"],"ans":1},
+  {"q":"कोयले (Coal) का निर्माण किससे हुआ है?","opts":["जंतु अवशेषों से","पौधों के अवशेषों (Plant Remains) से","खनिजों से","जल से"],"ans":1},
+  {"q":"पेट्रोलियम (Petroleum) का निर्माण किससे हुआ है?","opts":["पौधों से","सूक्ष्म समुद्री जीवों (Marine Organisms) के अवशेषों से","खनिजों से","मिट्टी से"],"ans":1},
+  {"q":"प्राकृतिक गैस (Natural Gas) का मुख्य घटक कौन सा है?","opts":["एथेन (Ethane)","मीथेन (Methane)","प्रोपेन (Propane)","ब्यूटेन (Butane)"],"ans":1},
+  {"q":"जीवाश्म ईंधन (Fossil Fuels) को बनने में कितना समय लगता है?","opts":["कुछ दिन","कुछ वर्ष","लाखों वर्ष (Millions of Years)","कुछ महीने"],"ans":2},
+  {"q":"'सतत विकास' (Sustainable Development) की अवधारणा किस रिपोर्ट में दी गई?","opts":["ब्रंटलैंड रिपोर्ट (Brundtland Report)","क्योटो रिपोर्ट","पेरिस रिपोर्ट","रियो रिपोर्ट"],"ans":0},
+  {"q":"वर्षा जल संग्रहण (Rainwater Harvesting) से क्या लाभ होता है?","opts":["भूजल स्तर (Groundwater Level) बढ़ता है","प्रदूषण बढ़ता है","वनों का विनाश होता है","मिट्टी का कटाव बढ़ता है"],"ans":0},
+  {"q":"भारत में जल संग्रहण (Water Harvesting) की प्राचीन पद्धतियों में कौन शामिल है?","opts":["बोरवेल","तालाब, बावड़ी, खादीन, कुंड","हैंडपंप","मोटर पंप"],"ans":1},
+  {"q":"खादीन (Khadin) प्रणाली किस राज्य में प्रचलित है?","opts":["बिहार","राजस्थान","केरल","असम"],"ans":1},
+  {"q":"बांध (Dam) से जुड़ी प्रमुख समस्या कौन सी है?","opts":["जल की उपलब्धता","बड़ी संख्या में लोगों का विस्थापन (Displacement)","विद्युत उत्पादन","सिंचाई सुविधा"],"ans":1},
+  {"q":"जल का pH मान 7 से कम होने पर जल कैसा होता है?","opts":["उदासीन (Neutral)","अम्लीय (Acidic)","क्षारीय (Basic)","शुद्ध"],"ans":1},
+  {"q":"जल का pH मान 7 से अधिक होने पर जल कैसा होता है?","opts":["अम्लीय (Acidic)","उदासीन (Neutral)","क्षारीय (Basic/Alkaline)","प्रदूषित"],"ans":2},
+  {"q":"गंगा नदी में प्रदूषण का प्रमुख कारण क्या है?","opts":["वर्षा जल","औद्योगिक कचरा एवं सीवेज (Industrial Waste & Sewage)","भूजल","हिमनद"],"ans":1},
+  {"q":"वन एक प्रकार के किस संसाधन हैं?","opts":["अनवीकरणीय (Non-renewable)","नवीकरणीय (Renewable)","खनिज (Mineral)","जीवाश्म (Fossil)"],"ans":1},
+  {"q":"कोयला (Coal), पेट्रोलियम (Petroleum) और प्राकृतिक गैस (Natural Gas) को सामूहिक रूप से क्या कहते हैं?","opts":["नवीकरणीय संसाधन","जीवाश्म ईंधन (Fossil Fuels)","जैव ईंधन (Biofuels)","परमाणु ईंधन"],"ans":1},
+  {"q":"वन्यजीव अभयारण्य (Wildlife Sanctuary) का मुख्य उद्देश्य क्या है?","opts":["शिकार करना","वन्य जीवों का संरक्षण (Conservation)","खनन","वन कटाई"],"ans":1},
+  {"q":"राष्ट्रीय उद्यान (National Park) में क्या प्रतिबंधित होता है?","opts":["पर्यटन","शिकार, चराई एवं खेती (Hunting, Grazing & Farming)","पैदल चलना","वृक्षारोपण"],"ans":1},
+  {"q":"जैव आरक्षित क्षेत्र (Biosphere Reserve) में कौन से क्षेत्र शामिल होते हैं?","opts":["केवल राष्ट्रीय उद्यान","क्रोड क्षेत्र (Core), बफर क्षेत्र (Buffer) एवं संक्रमण क्षेत्र (Transition)","केवल अभयारण्य","केवल वन"],"ans":1},
+  {"q":"पर्यावरण संरक्षण अधिनियम 1986 (Environment Protection Act 1986) किस आपदा के बाद बनाया गया?","opts":["भोपाल गैस त्रासदी (Bhopal Gas Tragedy)","सुनामी","भूकंप","बाढ़"],"ans":0},
+  {"q":"भोपाल गैस त्रासदी (Bhopal Gas Tragedy) किस वर्ष हुई थी?","opts":["1982","1984","1986","1990"],"ans":1},
+  {"q":"जल संसाधन (Water Resources) का सबसे बड़ा उपभोक्ता कौन है?","opts":["उद्योग (Industry)","घरेलू उपयोग (Domestic Use)","कृषि (Agriculture)","परिवहन"],"ans":2},
+  {"q":"वन से प्राप्त होने वाले उत्पाद कौन से हैं?","opts":["केवल लकड़ी","लकड़ी, फल, औषधि, रबर, गोंद आदि","केवल फल","केवल औषधि"],"ans":1},
+  {"q":"प्राकृतिक संसाधनों (Natural Resources) का अत्यधिक दोहन करने से क्या होता है?","opts":["संसाधन बढ़ते हैं","पर्यावरण क्षरण (Environmental Degradation) होता है","कुछ नहीं होता","संसाधन शुद्ध होते हैं"],"ans":1},
+  {"q":"वनों के विनाश (Deforestation) से क्या होता है?","opts":["वर्षा बढ़ती है","मृदा अपरदन (Soil Erosion) एवं बाढ़ बढ़ती है","जैव विविधता बढ़ती है","तापमान घटता है"],"ans":1},
+  {"q":"सौर ऊर्जा (Solar Energy) किस प्रकार का संसाधन है?","opts":["अनवीकरणीय (Non-renewable)","नवीकरणीय (Renewable)","जीवाश्म (Fossil)","खनिज (Mineral)"],"ans":1},
+  {"q":"पवन ऊर्जा (Wind Energy) किस प्रकार का संसाधन है?","opts":["अनवीकरणीय","नवीकरणीय (Renewable)","जीवाश्म","परमाणु"],"ans":1},
+  {"q":"जल विद्युत (Hydroelectric Power) किस प्रकार का ऊर्जा स्रोत है?","opts":["अनवीकरणीय","नवीकरणीय (Renewable)","जीवाश्म ईंधन","परमाणु ऊर्जा"],"ans":1},
+  {"q":"भारत में सबसे ऊँचा बाँध कौन सा है?","opts":["भाखड़ा बाँध","हीराकुड बाँध","टिहरी बाँध (Tehri Dam)","सरदार सरोवर बाँध"],"ans":2},
+  {"q":"वन संरक्षण अधिनियम (Forest Conservation Act) कब लागू हुआ?","opts":["1972","1980","1986","1990"],"ans":1},
+  {"q":"3R में सबसे पहले कौन सा कदम उठाना चाहिए?","opts":["Recycle","Reuse","Reduce (कम करना)","Refuse"],"ans":2},
+  {"q":"प्लास्टिक बैग (Plastic Bag) के स्थान पर क्या उपयोग करना चाहिए?","opts":["और प्लास्टिक बैग","कपड़े या जूट का थैला (Cloth/Jute Bag)","पॉलिथीन","एल्युमीनियम फॉइल"],"ans":1},
+  {"q":"जीवाश्म ईंधन (Fossil Fuels) जलाने से कौन सी पर्यावरणीय समस्या उत्पन्न होती है?","opts":["वायु प्रदूषण एवं ग्लोबल वार्मिंग (Air Pollution & Global Warming)","जल शुद्धि","वन वृद्धि","मृदा उर्वरता"],"ans":0},
+  {"q":"ग्लोबल वार्मिंग (Global Warming) का प्रमुख कारण कौन सी गैस है?","opts":["ऑक्सीजन (O₂)","नाइट्रोजन (N₂)","कार्बन डाइऑक्साइड (CO₂)","हाइड्रोजन (H₂)"],"ans":2},
+  {"q":"अम्ल वर्षा (Acid Rain) किन गैसों के कारण होती है?","opts":["O₂ और N₂","SO₂ और NO₂","CO₂ और H₂","H₂O और O₃"],"ans":1},
+  {"q":"बिश्नोई समुदाय किसके संरक्षण के लिए प्रसिद्ध है?","opts":["जल संरक्षण","वन एवं वन्य जीव संरक्षण (Forest & Wildlife Conservation)","खनन","मछली पालन"],"ans":1},
+  {"q":"खेजरी (Khejri) वृक्ष मुख्यतः कहाँ पाया जाता है?","opts":["केरल","राजस्थान","असम","मणिपुर"],"ans":1},
+  {"q":"जल प्रदूषण (Water Pollution) का एक प्रमुख कारण क्या है?","opts":["वर्षा जल","औद्योगिक बहिःस्राव (Industrial Effluents)","भूजल","हिमनद"],"ans":1},
+  {"q":"कोलिफॉर्म (Coliform) बैक्टीरिया की जांच जल में किसकी उपस्थिति दर्शाती है?","opts":["खनिज लवण","मल जनित संदूषण (Faecal Contamination)","ऑक्सीजन","क्लोरीन"],"ans":1},
+  {"q":"भूजल (Groundwater) के स्तर को बढ़ाने का सबसे अच्छा उपाय क्या है?","opts":["अधिक बोरवेल खोदना","वर्षा जल संग्रहण (Rainwater Harvesting)","नदियों पर बाँध बनाना","भूजल का अत्यधिक दोहन"],"ans":1},
+  {"q":"भारत में परंपरागत जल संग्रहण (Traditional Water Harvesting) की कौन सी विधि बिहार में प्रचलित है?","opts":["खादीन (Khadin)","आहर-पइन (Ahar-Pyne)","कुल्ह","एरी"],"ans":1},
+  {"q":"हिमाचल प्रदेश में पारंपरिक जल संग्रहण को क्या कहते हैं?","opts":["खादीन","कुल्ह (Kulh)","आहर-पइन","एरी"],"ans":1},
+  {"q":"तमिलनाडु में पारंपरिक जल संग्रहण संरचना को क्या कहते हैं?","opts":["खादीन","कुल्ह","एरी (Eri)","बावड़ी"],"ans":2},
+  {"q":"'स्टेकहोल्डर' (Stakeholder) का क्या अर्थ है?","opts":["केवल सरकार","वे सभी लोग जिनका किसी संसाधन से हित (Interest) जुड़ा हो","केवल उद्योगपति","केवल वैज्ञानिक"],"ans":1},
+  {"q":"वनों के प्रमुख स्टेकहोल्डर (Stakeholders) कौन-कौन हैं?","opts":["केवल वन विभाग","वन के आसपास रहने वाले लोग, वन विभाग, उद्योगपति, प्रकृति प्रेमी","केवल आदिवासी","केवल पर्यटक"],"ans":1},
+  {"q":"स्थानीय लोगों की वन प्रबंधन में भागीदारी को क्या कहते हैं?","opts":["सरकारी नियंत्रण","सहभागी वन प्रबंधन (Participatory Forest Management)","वन कटाई","निजीकरण"],"ans":1},
+  {"q":"'सिल्वीकल्चर' (Silviculture) का क्या अर्थ है?","opts":["मछली पालन","वनों का वैज्ञानिक प्रबंधन एवं विकास","पशुपालन","कृषि"],"ans":1},
+  {"q":"जैव विविधता (Biodiversity) हॉटस्पॉट (Hotspot) का क्या अर्थ है?","opts":["जहाँ जीवों की विविधता बहुत कम हो","जहाँ जीवों की विविधता बहुत अधिक हो एवं खतरे में हो","जहाँ कोई जीव न हो","जहाँ केवल पौधे हों"],"ans":1},
+  {"q":"भारत में कितने जैव विविधता हॉटस्पॉट (Biodiversity Hotspots) हैं?","opts":["2","4","6","8"],"ans":1},
+  {"q":"CNG (Compressed Natural Gas) का उपयोग किसके लिए किया जाता है?","opts":["खाना पकाने","वाहनों में ईंधन (Vehicle Fuel) के रूप में","कपड़े धोने","निर्माण कार्य"],"ans":1},
+  {"q":"CNG को स्वच्छ ईंधन (Clean Fuel) क्यों कहा जाता है?","opts":["यह सस्ता है","यह कम प्रदूषण (Less Pollution) करता है","यह अधिक ऊष्मा देता है","यह आसानी से मिलता है"],"ans":1},
+  {"q":"कोयले (Coal) के प्रकारों में सबसे उत्तम कौन सा है?","opts":["पीट (Peat)","लिग्नाइट (Lignite)","बिटुमिनस (Bituminous)","एन्थ्रेसाइट (Anthracite)"],"ans":3},
+  {"q":"जीवाश्म ईंधन (Fossil Fuels) किस प्रकार के संसाधन हैं?","opts":["नवीकरणीय (Renewable)","अनवीकरणीय (Non-renewable)","असीमित (Unlimited)","जैव (Biotic)"],"ans":1},
+  {"q":"वर्षा जल संग्रहण (Rainwater Harvesting) में छत (Rooftop) से जल कहाँ संग्रहित किया जाता है?","opts":["नदी में","भूमिगत टैंक (Underground Tank) या कुएँ में","समुद्र में","बाँध में"],"ans":1},
+  {"q":"जल संग्रहण (Water Harvesting) से सबसे अधिक लाभ किस क्षेत्र को होता है?","opts":["शहरी क्षेत्र","औद्योगिक क्षेत्र","शुष्क एवं अर्ध-शुष्क क्षेत्र (Arid & Semi-arid Regions)","तटीय क्षेत्र"],"ans":2},
+  {"q":"बाँधों (Dams) को 'आधुनिक भारत के मंदिर' किसने कहा था?","opts":["महात्मा गांधी","जवाहरलाल नेहरू (Jawaharlal Nehru)","सरदार पटेल","डॉ. भीमराव अंबेडकर"],"ans":1},
+  {"q":"बड़े बाँधों (Large Dams) से कौन सी समस्या नहीं होती?","opts":["विस्थापन (Displacement)","वन जलमग्न होना","भूकंप का खतरा","भूजल स्तर बढ़ना"],"ans":3},
+  {"q":"गंगा जल में कोलिफॉर्म (Coliform) की संख्या अधिक होना किसका सूचक है?","opts":["जल शुद्ध है","जल में ऑक्सीजन अधिक है","जल मल (Sewage) से प्रदूषित है","जल में खनिज अधिक हैं"],"ans":2},
+  {"q":"निम्न में से कौन सा नवीकरणीय संसाधन (Renewable Resource) नहीं है?","opts":["वायु (Air)","सूर्य प्रकाश (Sunlight)","कोयला (Coal)","जल (Water)"],"ans":2},
+  {"q":"वनों को 'हरा सोना' (Green Gold) क्यों कहा जाता है?","opts":["वे हरे रंग के होते हैं","वे अत्यंत मूल्यवान संसाधन हैं","वे सोना उत्पन्न करते हैं","वे हरे पत्थरों से बने होते हैं"],"ans":1},
+  {"q":"प्राकृतिक संसाधनों (Natural Resources) के समान वितरण (Equitable Distribution) का क्या अर्थ है?","opts":["केवल अमीरों को संसाधन देना","सभी लोगों को संसाधनों का उचित एवं न्यायपूर्ण हिस्सा मिलना","केवल सरकार का उपयोग","संसाधनों को बर्बाद करना"],"ans":1},
+  {"q":"किसी क्षेत्र में जल संभर (Watershed) क्या होता है?","opts":["वह क्षेत्र जहाँ से जल बहकर एक नदी या जलधारा में एकत्र होता है","वह क्षेत्र जहाँ जल नहीं होता","वह क्षेत्र जहाँ बाँध बनाया जाता है","वह क्षेत्र जहाँ उद्योग लगाए जाते हैं"],"ans":0},
+  {"q":"जल प्रदूषण (Water Pollution) को रोकने का एक उपाय क्या है?","opts":["अधिक कारखाने लगाना","सीवेज (Sewage) का उपचार (Treatment) करना","नदियों में कचरा डालना","रासायनिक खाद का अत्यधिक उपयोग"],"ans":1},
+  {"q":"खनन (Mining) से पर्यावरण पर क्या प्रभाव पड़ता है?","opts":["वन बढ़ते हैं","वनस्पति विनाश, मृदा अपरदन एवं प्रदूषण","जैव विविधता बढ़ती है","कोई प्रभाव नहीं"],"ans":1},
+  {"q":"वायु प्रदूषण (Air Pollution) का एक प्रमुख कारण क्या है?","opts":["वृक्षारोपण","जीवाश्म ईंधन (Fossil Fuels) का दहन","जल संग्रहण","सौर ऊर्जा"],"ans":1},
+  {"q":"भारत में बाघ (Tiger) की आबादी बढ़ाने के लिए कौन सी परियोजना चलाई गई?","opts":["गिद्ध परियोजना","बाघ परियोजना (Project Tiger)","हाथी परियोजना","मगरमच्छ परियोजना"],"ans":1},
+  {"q":"संरक्षित वन (Reserved Forest) में किन गतिविधियों पर प्रतिबंध होता है?","opts":["पर्यटन","शिकार, लकड़ी कटाई एवं अतिचारण (Hunting, Logging & Overgrazing)","अनुसंधान","वृक्षारोपण"],"ans":1},
+  {"q":"जीवाश्म ईंधन (Fossil Fuels) का विकल्प कौन सा है?","opts":["अधिक कोयला जलाना","नवीकरणीय ऊर्जा स्रोत जैसे सौर, पवन, जल ऊर्जा (Solar, Wind, Hydro Energy)","अधिक पेट्रोलियम निकालना","परमाणु ऊर्जा"],"ans":1},
+  {"q":"'रेड डाटा बुक' (Red Data Book) में किनका विवरण दिया जाता है?","opts":["सभी जीवों का","संकटग्रस्त प्रजातियों (Endangered Species) का","केवल पौधों का","केवल कीटों का"],"ans":1},
+  {"q":"IUCN का पूरा नाम क्या है?","opts":["International Union for Conservation of Nature","Indian Union for Conservation of Nature","International Unit for Conservation of Nature","International Union for Control of Nature"],"ans":0},
+  {"q":"गंगा कार्य योजना (Ganga Action Plan) किस शहर से प्रारंभ की गई?","opts":["दिल्ली","वाराणसी","कानपुर","इलाहाबाद"],"ans":2},
+  {"q":"जल का तापमान बढ़ने से जल में घुलित ऑक्सीजन (Dissolved Oxygen) पर क्या प्रभाव पड़ता है?","opts":["बढ़ती है","घटती है","कोई प्रभाव नहीं","दोगुनी होती है"],"ans":1},
+  {"q":"BOD (Biochemical Oxygen Demand) अधिक होना जल में क्या दर्शाता है?","opts":["जल शुद्ध है","जल अत्यधिक प्रदूषित (Highly Polluted) है","जल में खनिज हैं","जल में ऑक्सीजन अधिक है"],"ans":1},
+  {"q":"'Reduce' का सबसे अच्छा उदाहरण कौन सा है?","opts":["पुराने कागज से नया कागज बनाना","बिजली एवं पानी का कम उपयोग करना","पुरानी बोतल को गमले के रूप में उपयोग करना","कचरा जलाना"],"ans":1},
+  {"q":"'Reuse' का सबसे अच्छा उदाहरण कौन सा है?","opts":["प्लास्टिक को पिघलाकर नया बनाना","पुरानी बोतल में पानी भरकर पुनः उपयोग करना","कागज को जलाना","कम बिजली उपयोग करना"],"ans":1},
+  {"q":"'Recycle' का सबसे अच्छा उदाहरण कौन सा है?","opts":["पुरानी बोतल में पानी भरना","प्लास्टिक कचरे से नई वस्तुएँ बनाना","कम पानी उपयोग करना","पैदल चलना"],"ans":1},
+  {"q":"भारत में कुल जल का कितना प्रतिशत पेयजल (Drinking Water) के रूप में उपलब्ध है?","opts":["97%","3%","50%","25%"],"ans":1},
+  {"q":"ताजे जल (Fresh Water) का सबसे बड़ा स्रोत क्या है?","opts":["नदियाँ","हिमनद एवं बर्फ की चोटियाँ (Glaciers & Ice Caps)","झीलें","भूजल"],"ans":1}
+  ]
+};
+
+// ─────────────────────────────────────────────────────────
+//  CHAPTER DATA (Bihar Board Class 10 Biology NCERT)
+// ─────────────────────────────────────────────────────────
+const CHAPTERS = [
+  {id:1, name:"Life Processes", icon:"🫀", hindi:"जैव प्रक्रम", ch:"अध्याय 6"},
+  {id:2, name:"Control & Coordination", icon:"🧠", hindi:"नियंत्रण और समन्वय", ch:"अध्याय 7"},
+  {id:3, name:"How Do Organisms Reproduce?", icon:"🌸", hindi:"जीव जनन कैसे करते हैं?", ch:"अध्याय 8"},
+  {id:4, name:"Heredity & Evolution", icon:"🧬", hindi:"आनुवंशिकता तथा जैव विकास", ch:"अध्याय 9"},
+  {id:5, name:"Our Environment", icon:"🌍", hindi:"हमारा पर्यावरण", ch:"अध्याय 15"},
+  {id:6, name:"Management of Natural Resources", icon:"💧", hindi:"प्राकृतिक संसाधनों का संपोषित प्रबंधन", ch:"अध्याय 16"},
+];
+
+// ─────────────────────────────────────────────────────────
+//  GLOBAL STATE
+// ─────────────────────────────────────────────────────────
+let currentChapterQA = [];
+let quizQuestions = [], currentQ = 0, score = 0, timerInterval, timeLeft, userAnswers = [];
+
+// ─────────────────────────────────────────────────────────
+//  INITIALIZATION
+// ─────────────────────────────────────────────────────────
+buildGrid('chapterGrid', 'openChapterObj');
+buildGrid('objChapterGrid', 'openChapterObj');
+
+CHAPTERS.forEach(c => {
+  const o = document.createElement('option');
+  o.value = c.id;
+  o.textContent = `Ch${c.id}: ${c.name} (${c.hindi})`;
+  document.getElementById('testChapter').appendChild(o);
+});
+
+// ─────────────────────────────────────────────────────────
+//  CHAPTER GRID BUILDER
+// ─────────────────────────────────────────────────────────
+function buildGrid(id, fn) {
+  document.getElementById(id).innerHTML = CHAPTERS.map(c => `
+    <div class="chapter-card" onclick="${fn}(${c.id})">
+      <div class="chapter-icon">${c.icon}</div>
+      <div>
+        <h3>${c.name}</h3>
+        <span>${c.ch} • ${c.hindi}</span>
+      </div>
+      <span class="qbadge">${ALL_QUESTIONS[c.id] ? ALL_QUESTIONS[c.id].length + ' Q' : '20 Q'}</span>
+    </div>`).join('');
+}
+
+// ─────────────────────────────────────────────────────────
+//  TAB / PAGE ROUTING
+// ─────────────────────────────────────────────────────────
+function showTab(tab) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('nav button').forEach(b => b.classList.remove('active'));
+  document.getElementById(tab).classList.add('active');
+  const tabs = ['home', 'objectives', 'test'];
+  document.querySelectorAll('nav button')[tabs.indexOf(tab)].classList.add('active');
+}
+
+// ─────────────────────────────────────────────────────────
+//  OBJECTIVES PAGE
+// ─────────────────────────────────────────────────────────
+function openChapterObj(id) {
+  showTab('objectives');
+  document.getElementById('objChapterList').style.display = 'none';
+  document.getElementById('objQAPage').style.display = 'block';
+  const ch = CHAPTERS.find(c => c.id === id);
+  document.getElementById('objChapterTitle').innerHTML = `${ch.icon} ${ch.name} — ${ch.hindi}`;
+  document.getElementById('qaSearch').value = '';
+
+  currentChapterQA = ALL_QUESTIONS[id] || [];
+  renderQA(currentChapterQA);
+}
+
+function renderQA(list) {
+  document.getElementById('qaList').innerHTML = list.map((item, i) => `
+    <div class="qa-item">
+      <div class="qa-q" onclick="toggleQA(${i})">
+        <div class="qa-q-left">
+          <button class="btn-speak" onclick="event.stopPropagation(); speakQuestion(${i})" title="सुनें 🔊" id="spk${i}">🔊</button>
+          <span>${i + 1}. ${item.q}</span>
+        </div>
+        <span class="arrow" id="arrow${i}">▼</span>
+      </div>
+      <div class="qa-a" id="ans${i}">✅ उत्तर: ${item.opts[item.ans]}</div>
+    </div>`).join('');
+  renderQA._list = list;
+}
+
+function filterQA(val) {
+  if (!currentChapterQA.length) return;
+  const filtered = val
+    ? currentChapterQA.filter(q => q.q.toLowerCase().includes(val.toLowerCase()))
+    : currentChapterQA;
+  renderQA(filtered);
+}
+
+function toggleQA(i) {
+  const el = document.getElementById('ans' + i);
+  const ar = document.getElementById('arrow' + i);
+  if (!el || !ar) return;
+  const open = el.classList.toggle('open');
+  ar.style.transform = open ? 'rotate(180deg)' : '';
+}
+
+function showObjChapters() {
+  document.getElementById('objChapterList').style.display = 'block';
+  document.getElementById('objQAPage').style.display = 'none';
+}
+
+// ─────────────────────────────────────────────────────────
+//  TEST ENGINE
+// ─────────────────────────────────────────────────────────
+function startTest() {
+  const chap = document.getElementById('testChapter').value;
+  const count = Math.min(parseInt(document.getElementById('testQCount').value) || 20, 120);
+  const time = parseInt(document.getElementById('testTime').value);
+
+  // Assemble quiz pool
+  let pool = [];
+  if (chap === 'all') {
+    Object.values(ALL_QUESTIONS).forEach(qs => pool.push(...qs));
+  } else {
+    pool = [...(ALL_QUESTIONS[parseInt(chap)] || [])];
+  }
+
+  if (pool.length === 0) {
+    alert("❌ कोई Question available नहीं है।");
+    return;
+  }
+
+  pool = pool.sort(() => Math.random() - 0.5).slice(0, Math.min(count, pool.length));
+  quizQuestions = pool;
+  currentQ = 0;
+  score = 0;
+  userAnswers = [];
+
+  document.getElementById('testSetup').style.display = 'none';
+  document.getElementById('quizArea').style.display = 'block';
+  document.getElementById('resultArea').style.display = 'none';
+
+  if (time > 0) {
+    timeLeft = time;
+    updateTimer();
+    timerInterval = setInterval(() => {
+      timeLeft--;
+      updateTimer();
+      if (timeLeft <= 0) { clearInterval(timerInterval); showResult(); }
+    }, 1000);
+  } else {
+    document.getElementById('timerDisplay').textContent = '';
+  }
+
+  showQuestion();
+}
+
+function updateTimer() {
+  const m = Math.floor(timeLeft / 60).toString().padStart(2, '0');
+  const s = (timeLeft % 60).toString().padStart(2, '0');
+  const timerEl = document.getElementById('timerDisplay');
+  timerEl.textContent = `⏱ ${m}:${s}`;
+  timerEl.style.color = timeLeft <= 60 ? 'var(--red)' : '';
+}
+
+function showQuestion() {
+  const q = quizQuestions[currentQ];
+  document.getElementById('qCount').textContent = `Q ${currentQ + 1} / ${quizQuestions.length}`;
+  document.getElementById('progressFill').style.width = ((currentQ / quizQuestions.length) * 100) + '%';
+  document.getElementById('qNo').textContent = `सवाल ${currentQ + 1}`;
+  document.getElementById('qText').textContent = q.q;
+  const L = ['A', 'B', 'C', 'D'];
+  document.getElementById('optionsDiv').innerHTML = `
+    <div class="tq-speak-row">
+      <button class="btn-speak" onclick="speakTest()" id="testSpkBtn" title="सुनें 🔊">🔊</button>
+      <span style="color:var(--muted);font-size:0.85rem">🔊 सवाल सुनने के लिए बटन दबाएँ</span>
+    </div>` + q.opts.map((o, i) => `
+    <button class="option-btn" onclick="selectOption(${i})" id="opt${i}">
+      <span class="opt-label">${L[i]}</span><span>${o}</span>
+    </button>`).join('');
+  document.getElementById('nextBtn').classList.remove('show');
+}
+
+function selectOption(idx) {
+  const q = quizQuestions[currentQ];
+  userAnswers.push({ q: q.q, chosen: idx, correct: q.ans, opts: q.opts });
+  document.querySelectorAll('.option-btn').forEach(b => b.disabled = true);
+  const btns = document.querySelectorAll('.option-btn');
+  btns[idx].classList.add(idx === q.ans ? 'correct' : 'wrong');
+  if (idx !== q.ans) btns[q.ans].classList.add('correct');
+  if (idx === q.ans) score++;
+  const nb = document.getElementById('nextBtn');
+  nb.classList.add('show');
+  nb.textContent = currentQ < quizQuestions.length - 1 ? 'अगला सवाल →' : '📊 Result देखें';
+}
+
+function nextQuestion() {
+  currentQ++;
+  if (currentQ >= quizQuestions.length) showResult();
+  else showQuestion();
+}
+
+function showResult() {
+  clearInterval(timerInterval);
+  document.getElementById('quizArea').style.display = 'none';
+  document.getElementById('resultArea').style.display = 'block';
+  const pct = Math.round((score / quizQuestions.length) * 100);
+  document.getElementById('scoreNum').textContent = pct + '%';
+  document.getElementById('statCorrect').textContent = score;
+  document.getElementById('statWrong').textContent = quizQuestions.length - score;
+  document.getElementById('statTotal').textContent = quizQuestions.length;
+
+  const msg = pct >= 80 ? 'शाबाश! 🎉 बहुत बढ़िया!'
+    : pct >= 60 ? 'अच्छा किया! 👍 और बेहतर हो सकते हो'
+    : pct >= 40 ? 'ठीक है 💪 और मेहनत करो'
+    : 'हार मत मानो! 📚 फिर से पढ़ो';
+  document.getElementById('resultMsg').textContent = msg;
+
+  document.getElementById('reviewList').innerHTML =
+    '<div style="font-family:Baloo 2,cursive;font-size:1rem;font-weight:700;color:var(--green);margin-bottom:12px">📋 Answers Review</div>' +
+    userAnswers.map((a, i) => {
+      const ok = a.chosen === a.correct;
+      return `<div class="review-item ${ok ? 'r-correct' : 'r-wrong'}">
+        <div class="ri-q">${i + 1}. ${a.q}</div>
+        ${!ok ? `<div class="ri-your">❌ आपका: ${a.opts[a.chosen]}</div>` : ''}
+        <div class="ri-correct">✅ सही: ${a.opts[a.correct]}</div>
+      </div>`;
+    }).join('');
+}
+
+function retryTest() {
+  currentQ = 0; score = 0; userAnswers = [];
+  quizQuestions = quizQuestions.sort(() => Math.random() - 0.5);
+  document.getElementById('resultArea').style.display = 'none';
+  document.getElementById('quizArea').style.display = 'block';
+  showQuestion();
+}
+
+function showSetup() {
+  clearInterval(timerInterval);
+  speechSynthesis.cancel();
+  document.getElementById('resultArea').style.display = 'none';
+  document.getElementById('quizArea').style.display = 'none';
+  document.getElementById('testSetup').style.display = 'block';
+}
+
+// ─────────────────────────────────────────────────────────
+//  TEXT-TO-SPEECH (TTS) ENGINE 🔊
+// ─────────────────────────────────────────────────────────
+let currentSpeakBtn = null;
+let hindiVoice = null;
+
+// Find best Hindi voice
+function getHindiVoice() {
+  if (hindiVoice) return hindiVoice;
+  const voices = speechSynthesis.getVoices();
+  hindiVoice = voices.find(v => v.lang === 'hi-IN') 
+    || voices.find(v => v.lang.startsWith('hi'))
+    || voices.find(v => v.name.toLowerCase().includes('hindi'))
+    || null;
+  return hindiVoice;
+}
+
+// Load voices (some browsers load async)
+if (speechSynthesis.onvoiceschanged !== undefined) {
+  speechSynthesis.onvoiceschanged = getHindiVoice;
+}
+setTimeout(getHindiVoice, 500);
+
+function speakText(text, btnEl) {
+  // If already speaking, stop
+  if (speechSynthesis.speaking) {
+    speechSynthesis.cancel();
+    if (currentSpeakBtn) currentSpeakBtn.classList.remove('speaking');
+    // If same button clicked, just stop
+    if (currentSpeakBtn === btnEl) {
+      currentSpeakBtn = null;
+      return;
+    }
+  }
+
+  const utterance = new SpeechSynthesisUtterance(text);
+  const voice = getHindiVoice();
+  if (voice) utterance.voice = voice;
+  utterance.lang = 'hi-IN';
+  utterance.rate = 0.9;
+  utterance.pitch = 1.0;
+
+  // Animate button
+  if (btnEl) {
+    btnEl.classList.add('speaking');
+    currentSpeakBtn = btnEl;
+  }
+
+  utterance.onend = () => {
+    if (btnEl) btnEl.classList.remove('speaking');
+    currentSpeakBtn = null;
+  };
+  utterance.onerror = () => {
+    if (btnEl) btnEl.classList.remove('speaking');
+    currentSpeakBtn = null;
+  };
+
+  speechSynthesis.speak(utterance);
+}
+
+// Speak question in Objectives page
+function speakQuestion(index) {
+  const list = renderQA._list || currentChapterQA;
+  if (!list || !list[index]) return;
+  const item = list[index];
+  const L = ['A', 'B', 'C', 'D'];
+  let text = `सवाल ${index + 1}। ${item.q}। `;
+  text += `विकल्प हैं: `;
+  item.opts.forEach((o, i) => {
+    text += `${L[i]}, ${o}। `;
+  });
+  text += `सही उत्तर है: ${L[item.ans]}, ${item.opts[item.ans]}।`;
+  
+  const btn = document.getElementById('spk' + index);
+  speakText(text, btn);
+}
+
+// Speak question in Test page (without answer!)
+function speakTest() {
+  const q = quizQuestions[currentQ];
+  if (!q) return;
+  const L = ['A', 'B', 'C', 'D'];
+  let text = `सवाल ${currentQ + 1}। ${q.q}। `;
+  text += `विकल्प हैं: `;
+  q.opts.forEach((o, i) => {
+    text += `${L[i]}, ${o}। `;
+  });
+  // NOTE: Test mode me answer NAHI bolega - safe!
+  
+  const btn = document.getElementById('testSpkBtn');
+  speakText(text, btn);
+}
+
+</script>
+</body>
+</html>
