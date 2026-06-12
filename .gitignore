@@ -1,0 +1,25 @@
+# PyInstaller build directories
+build/
+dist/
+
+# Python cache and compiled files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Backup files
+*.bak
+
+# OS-specific files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+
+# Temporary scratch or validation scripts
+check_science_ids.py
+check_streams_div.py
+print_step_args.py
+count_q.py
+run_headless_test.py
